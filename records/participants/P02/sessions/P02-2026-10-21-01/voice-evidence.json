@@ -1,0 +1,2336 @@
+{
+  "source_audio": "C:\\Users\\choi0\\Desktop\\game-engine-client-interview-ai\\records\\participants\\P02\\sessions\\P02-2026-10-21-01\\객체 지향 프로그래밍 및 유니티 개발 기술 면접.mp3",
+  "analysis_mode": "local_asr_evidence_only",
+  "model": "small",
+  "language": "ko",
+  "language_probability": 1,
+  "audio_duration_seconds": 468.193,
+  "spoken_duration_seconds": 352.8,
+  "recognized_character_count_without_spaces": 920,
+  "estimated_speech_rate_chars_per_minute": 156.5,
+  "pause_threshold_seconds": 0.75,
+  "pauses": [
+    {
+      "start": 3.82,
+      "end": 6.18,
+      "duration_seconds": 2.36
+    },
+    {
+      "start": 53.13,
+      "end": 54.13,
+      "duration_seconds": 1.0
+    },
+    {
+      "start": 71.51,
+      "end": 74.32,
+      "duration_seconds": 2.81
+    },
+    {
+      "start": 110.54,
+      "end": 111.54,
+      "duration_seconds": 1.0
+    },
+    {
+      "start": 151.42,
+      "end": 160.98,
+      "duration_seconds": 9.56
+    },
+    {
+      "start": 162.38,
+      "end": 172.56,
+      "duration_seconds": 10.18
+    },
+    {
+      "start": 189.12,
+      "end": 194.22,
+      "duration_seconds": 5.1
+    },
+    {
+      "start": 204.64,
+      "end": 205.64,
+      "duration_seconds": 1.0
+    },
+    {
+      "start": 240.23,
+      "end": 246.18,
+      "duration_seconds": 5.95
+    },
+    {
+      "start": 249.96,
+      "end": 252.32,
+      "duration_seconds": 2.36
+    },
+    {
+      "start": 260.08,
+      "end": 273.01,
+      "duration_seconds": 12.93
+    },
+    {
+      "start": 312.92,
+      "end": 318.44,
+      "duration_seconds": 5.52
+    },
+    {
+      "start": 338.52,
+      "end": 343.94,
+      "duration_seconds": 5.42
+    },
+    {
+      "start": 360.34,
+      "end": 364.22,
+      "duration_seconds": 3.88
+    },
+    {
+      "start": 372.26,
+      "end": 397.36,
+      "duration_seconds": 25.1
+    },
+    {
+      "start": 399.0,
+      "end": 401.86,
+      "duration_seconds": 2.86
+    },
+    {
+      "start": 407.08,
+      "end": 408.0,
+      "duration_seconds": 0.92
+    },
+    {
+      "start": 412.44,
+      "end": 421.4,
+      "duration_seconds": 8.96
+    },
+    {
+      "start": 426.54,
+      "end": 428.7,
+      "duration_seconds": 2.16
+    },
+    {
+      "start": 462.71,
+      "end": 464.66,
+      "duration_seconds": 1.95
+    }
+  ],
+  "segments": [
+    {
+      "start": 1.58,
+      "end": 3.82,
+      "text": "면접을 진행하도록 하겠습니다",
+      "avg_logprob": -0.3513,
+      "no_speech_probability": 0.313,
+      "words": [
+        {
+          "start": 1.58,
+          "end": 2.56,
+          "text": " 면접을",
+          "probability": 0.7502
+        },
+        {
+          "start": 2.56,
+          "end": 3.22,
+          "text": " 진행하도록",
+          "probability": 0.9397
+        },
+        {
+          "start": 3.22,
+          "end": 3.82,
+          "text": " 하겠습니다",
+          "probability": 0.9957
+        }
+      ]
+    },
+    {
+      "start": 6.18,
+      "end": 10.44,
+      "text": "객체지한 프로그래밍의 4대 특징인",
+      "avg_logprob": -0.3513,
+      "no_speech_probability": 0.313,
+      "words": [
+        {
+          "start": 6.18,
+          "end": 7.16,
+          "text": " 객체지한",
+          "probability": 0.4126
+        },
+        {
+          "start": 7.16,
+          "end": 8.12,
+          "text": " 프로그래밍의",
+          "probability": 0.7367
+        },
+        {
+          "start": 8.12,
+          "end": 9.58,
+          "text": " 4대",
+          "probability": 0.9433
+        },
+        {
+          "start": 9.58,
+          "end": 10.44,
+          "text": " 특징인",
+          "probability": 0.8837
+        }
+      ]
+    },
+    {
+      "start": 11.18,
+      "end": 21.22,
+      "text": "4대 특징인 캡슈라, 상속, 다형성, 추상화에 대해서 설명해 주실 수 있나요?",
+      "avg_logprob": -0.3513,
+      "no_speech_probability": 0.313,
+      "words": [
+        {
+          "start": 11.18,
+          "end": 11.96,
+          "text": " 4대",
+          "probability": 0.7088
+        },
+        {
+          "start": 11.96,
+          "end": 12.46,
+          "text": " 특징인",
+          "probability": 0.9897
+        },
+        {
+          "start": 12.46,
+          "end": 13.04,
+          "text": " 캡슈라,",
+          "probability": 0.8503
+        },
+        {
+          "start": 14.08,
+          "end": 14.44,
+          "text": " 상속,",
+          "probability": 0.9638
+        },
+        {
+          "start": 14.8,
+          "end": 16.64,
+          "text": " 다형성,",
+          "probability": 0.5209
+        },
+        {
+          "start": 16.92,
+          "end": 18.4,
+          "text": " 추상화에",
+          "probability": 0.7968
+        },
+        {
+          "start": 18.4,
+          "end": 18.66,
+          "text": " 대해서",
+          "probability": 0.929
+        },
+        {
+          "start": 18.66,
+          "end": 19.68,
+          "text": " 설명해",
+          "probability": 0.9218
+        },
+        {
+          "start": 19.68,
+          "end": 19.96,
+          "text": " 주실",
+          "probability": 0.9299
+        },
+        {
+          "start": 19.96,
+          "end": 20.08,
+          "text": " 수",
+          "probability": 0.9744
+        },
+        {
+          "start": 20.08,
+          "end": 21.22,
+          "text": " 있나요?",
+          "probability": 0.982
+        }
+      ]
+    },
+    {
+      "start": 21.22,
+      "end": 23.74,
+      "text": "일단 캡슈라는...",
+      "avg_logprob": -0.3513,
+      "no_speech_probability": 0.313,
+      "words": [
+        {
+          "start": 21.22,
+          "end": 21.78,
+          "text": " 일단",
+          "probability": 0.682
+        },
+        {
+          "start": 21.78,
+          "end": 23.74,
+          "text": " 캡슈라는...",
+          "probability": 0.8309
+        }
+      ]
+    },
+    {
+      "start": 23.74,
+      "end": 53.13,
+      "text": "좀 도움을 드리자면 저희가 약 같은 걸 캡슐해서 당연히 뭐가를 보호하려고",
+      "avg_logprob": -0.3513,
+      "no_speech_probability": 0.313,
+      "words": [
+        {
+          "start": 23.74,
+          "end": 24.88,
+          "text": " 좀",
+          "probability": 0.4444
+        },
+        {
+          "start": 48.47,
+          "end": 48.87,
+          "text": " 도움을",
+          "probability": 0.8884
+        },
+        {
+          "start": 48.87,
+          "end": 49.51,
+          "text": " 드리자면",
+          "probability": 0.9146
+        },
+        {
+          "start": 49.51,
+          "end": 49.85,
+          "text": " 저희가",
+          "probability": 0.689
+        },
+        {
+          "start": 49.85,
+          "end": 50.31,
+          "text": " 약",
+          "probability": 0.6852
+        },
+        {
+          "start": 50.31,
+          "end": 50.49,
+          "text": " 같은",
+          "probability": 0.6174
+        },
+        {
+          "start": 50.49,
+          "end": 50.63,
+          "text": " 걸",
+          "probability": 0.3322
+        },
+        {
+          "start": 50.63,
+          "end": 51.13,
+          "text": " 캡슐해서",
+          "probability": 0.794
+        },
+        {
+          "start": 51.13,
+          "end": 51.57,
+          "text": " 당연히",
+          "probability": 0.5666
+        },
+        {
+          "start": 51.57,
+          "end": 52.53,
+          "text": " 뭐가를",
+          "probability": 0.3131
+        },
+        {
+          "start": 52.53,
+          "end": 53.13,
+          "text": " 보호하려고",
+          "probability": 0.9119
+        }
+      ]
+    },
+    {
+      "start": 54.13,
+      "end": 58.17,
+      "text": "그런 점에서 아빠는 다 변해오시면 좋을 것 같습니다",
+      "avg_logprob": -0.3305,
+      "no_speech_probability": 0.105,
+      "words": [
+        {
+          "start": 54.13,
+          "end": 54.87,
+          "text": " 그런",
+          "probability": 0.0189
+        },
+        {
+          "start": 54.87,
+          "end": 55.59,
+          "text": " 점에서",
+          "probability": 0.5638
+        },
+        {
+          "start": 55.59,
+          "end": 56.13,
+          "text": " 아빠는",
+          "probability": 0.4367
+        },
+        {
+          "start": 56.13,
+          "end": 56.23,
+          "text": " 다",
+          "probability": 0.236
+        },
+        {
+          "start": 56.23,
+          "end": 56.87,
+          "text": " 변해오시면",
+          "probability": 0.757
+        },
+        {
+          "start": 56.87,
+          "end": 57.77,
+          "text": " 좋을",
+          "probability": 0.908
+        },
+        {
+          "start": 57.77,
+          "end": 57.91,
+          "text": " 것",
+          "probability": 0.93
+        },
+        {
+          "start": 57.91,
+          "end": 58.17,
+          "text": " 같습니다",
+          "probability": 0.9592
+        }
+      ]
+    },
+    {
+      "start": 58.17,
+      "end": 71.51,
+      "text": "다른 곳에서 값이 변화되지 않게 좀 프라이딧하게 하는 것으로 알고 있고",
+      "avg_logprob": -0.3305,
+      "no_speech_probability": 0.105,
+      "words": [
+        {
+          "start": 58.17,
+          "end": 59.97,
+          "text": " 다른",
+          "probability": 0.1195
+        },
+        {
+          "start": 59.97,
+          "end": 62.41,
+          "text": " 곳에서",
+          "probability": 0.9643
+        },
+        {
+          "start": 62.41,
+          "end": 63.89,
+          "text": " 값이",
+          "probability": 0.9246
+        },
+        {
+          "start": 63.89,
+          "end": 64.89,
+          "text": " 변화되지",
+          "probability": 0.7971
+        },
+        {
+          "start": 64.89,
+          "end": 65.29,
+          "text": " 않게",
+          "probability": 0.9696
+        },
+        {
+          "start": 65.29,
+          "end": 65.73,
+          "text": " 좀",
+          "probability": 0.6861
+        },
+        {
+          "start": 65.73,
+          "end": 68.45,
+          "text": " 프라이딧하게",
+          "probability": 0.6879
+        },
+        {
+          "start": 68.45,
+          "end": 69.77,
+          "text": " 하는",
+          "probability": 0.9314
+        },
+        {
+          "start": 69.77,
+          "end": 70.31,
+          "text": " 것으로",
+          "probability": 0.6985
+        },
+        {
+          "start": 70.31,
+          "end": 70.83,
+          "text": " 알고",
+          "probability": 0.9496
+        },
+        {
+          "start": 70.83,
+          "end": 71.51,
+          "text": " 있고",
+          "probability": 0.8547
+        }
+      ]
+    },
+    {
+      "start": 74.32,
+      "end": 106.28,
+      "text": "다형성은 이제 뭐가 있는지 다시 한 번 해주세요",
+      "avg_logprob": -0.3305,
+      "no_speech_probability": 0.105,
+      "words": [
+        {
+          "start": 74.32,
+          "end": 76.0,
+          "text": " 다형성은",
+          "probability": 0.462
+        },
+        {
+          "start": 76.0,
+          "end": 76.18,
+          "text": " 이제",
+          "probability": 0.5535
+        },
+        {
+          "start": 76.18,
+          "end": 77.08,
+          "text": " 뭐가",
+          "probability": 0.5553
+        },
+        {
+          "start": 104.22,
+          "end": 104.72,
+          "text": " 있는지",
+          "probability": 0.9205
+        },
+        {
+          "start": 104.72,
+          "end": 104.92,
+          "text": " 다시",
+          "probability": 0.9098
+        },
+        {
+          "start": 104.92,
+          "end": 105.08,
+          "text": " 한",
+          "probability": 0.3065
+        },
+        {
+          "start": 105.08,
+          "end": 105.14,
+          "text": " 번",
+          "probability": 0.9906
+        },
+        {
+          "start": 105.14,
+          "end": 106.28,
+          "text": " 해주세요",
+          "probability": 0.4465
+        }
+      ]
+    },
+    {
+      "start": 106.28,
+      "end": 110.54,
+      "text": "상속, 캡슐화, 다형성, 추상화",
+      "avg_logprob": -0.3305,
+      "no_speech_probability": 0.105,
+      "words": [
+        {
+          "start": 106.28,
+          "end": 107.4,
+          "text": " 상속,",
+          "probability": 0.6153
+        },
+        {
+          "start": 107.84,
+          "end": 108.7,
+          "text": " 캡슐화,",
+          "probability": 0.6621
+        },
+        {
+          "start": 109.26,
+          "end": 109.82,
+          "text": " 다형성,",
+          "probability": 0.9634
+        },
+        {
+          "start": 110.14,
+          "end": 110.54,
+          "text": " 추상화",
+          "probability": 0.2755
+        }
+      ]
+    },
+    {
+      "start": 111.54,
+      "end": 119.28,
+      "text": "이제 상속은 부모한테서 자식이 물려받는 걸 얘기하고",
+      "avg_logprob": -0.1644,
+      "no_speech_probability": 0.01,
+      "words": [
+        {
+          "start": 111.54,
+          "end": 113.06,
+          "text": " 이제",
+          "probability": 0.2184
+        },
+        {
+          "start": 113.06,
+          "end": 114.34,
+          "text": " 상속은",
+          "probability": 0.6868
+        },
+        {
+          "start": 114.34,
+          "end": 116.4,
+          "text": " 부모한테서",
+          "probability": 0.6534
+        },
+        {
+          "start": 116.4,
+          "end": 117.12,
+          "text": " 자식이",
+          "probability": 0.946
+        },
+        {
+          "start": 117.12,
+          "end": 118.56,
+          "text": " 물려받는",
+          "probability": 0.7491
+        },
+        {
+          "start": 118.56,
+          "end": 118.56,
+          "text": " 걸",
+          "probability": 0.7829
+        },
+        {
+          "start": 118.56,
+          "end": 119.28,
+          "text": " 얘기하고",
+          "probability": 0.9623
+        }
+      ]
+    },
+    {
+      "start": 119.28,
+      "end": 142.54,
+      "text": "추상화는 같은 함수를 받아와서 각자 자식들마다 오버라이딩 하는 것으로 알고 있습니다",
+      "avg_logprob": -0.1644,
+      "no_speech_probability": 0.01,
+      "words": [
+        {
+          "start": 119.28,
+          "end": 120.84,
+          "text": " 추상화는",
+          "probability": 0.6987
+        },
+        {
+          "start": 128.74,
+          "end": 129.16,
+          "text": " 같은",
+          "probability": 0.9359
+        },
+        {
+          "start": 129.16,
+          "end": 129.68,
+          "text": " 함수를",
+          "probability": 0.8773
+        },
+        {
+          "start": 129.68,
+          "end": 131.5,
+          "text": " 받아와서",
+          "probability": 0.9315
+        },
+        {
+          "start": 134.16,
+          "end": 135.02,
+          "text": " 각자",
+          "probability": 0.8952
+        },
+        {
+          "start": 135.02,
+          "end": 136.84,
+          "text": " 자식들마다",
+          "probability": 0.9749
+        },
+        {
+          "start": 136.84,
+          "end": 137.62,
+          "text": " 오버라이딩",
+          "probability": 0.884
+        },
+        {
+          "start": 137.62,
+          "end": 138.42,
+          "text": " 하는",
+          "probability": 0.5069
+        },
+        {
+          "start": 141.68,
+          "end": 141.86,
+          "text": " 것으로",
+          "probability": 0.8704
+        },
+        {
+          "start": 141.86,
+          "end": 142.16,
+          "text": " 알고",
+          "probability": 0.9979
+        },
+        {
+          "start": 142.16,
+          "end": 142.54,
+          "text": " 있습니다",
+          "probability": 0.6823
+        }
+      ]
+    },
+    {
+      "start": 142.54,
+      "end": 143.94,
+      "text": "알겠습니다",
+      "avg_logprob": -0.1644,
+      "no_speech_probability": 0.01,
+      "words": [
+        {
+          "start": 142.54,
+          "end": 143.94,
+          "text": " 알겠습니다",
+          "probability": 0.5957
+        }
+      ]
+    },
+    {
+      "start": 143.94,
+      "end": 151.42,
+      "text": "방금 오버라이딩 얘기하셨는데 혹시 오버라이드랑 오버로드랑 살쪄업에 대해서 설명해 주실 수 있을까요?",
+      "avg_logprob": -0.1644,
+      "no_speech_probability": 0.01,
+      "words": [
+        {
+          "start": 143.94,
+          "end": 146.02,
+          "text": " 방금",
+          "probability": 0.9142
+        },
+        {
+          "start": 146.02,
+          "end": 146.66,
+          "text": " 오버라이딩",
+          "probability": 0.9889
+        },
+        {
+          "start": 146.66,
+          "end": 147.34,
+          "text": " 얘기하셨는데",
+          "probability": 0.8376
+        },
+        {
+          "start": 147.34,
+          "end": 147.54,
+          "text": " 혹시",
+          "probability": 0.8896
+        },
+        {
+          "start": 147.54,
+          "end": 148.52,
+          "text": " 오버라이드랑",
+          "probability": 0.9816
+        },
+        {
+          "start": 148.52,
+          "end": 149.5,
+          "text": " 오버로드랑",
+          "probability": 0.8683
+        },
+        {
+          "start": 149.5,
+          "end": 150.18,
+          "text": " 살쪄업에",
+          "probability": 0.6786
+        },
+        {
+          "start": 150.18,
+          "end": 150.32,
+          "text": " 대해서",
+          "probability": 0.7535
+        },
+        {
+          "start": 150.32,
+          "end": 150.8,
+          "text": " 설명해",
+          "probability": 0.5721
+        },
+        {
+          "start": 150.8,
+          "end": 150.94,
+          "text": " 주실",
+          "probability": 0.6486
+        },
+        {
+          "start": 150.94,
+          "end": 151.16,
+          "text": " 수",
+          "probability": 0.974
+        },
+        {
+          "start": 151.16,
+          "end": 151.42,
+          "text": " 있을까요?",
+          "probability": 0.9945
+        }
+      ]
+    },
+    {
+      "start": 160.98,
+      "end": 162.38,
+      "text": "알겠습니다",
+      "avg_logprob": -0.1599,
+      "no_speech_probability": 0.0529,
+      "words": [
+        {
+          "start": 160.98,
+          "end": 162.38,
+          "text": " 알겠습니다",
+          "probability": 0.4904
+        }
+      ]
+    },
+    {
+      "start": 172.56,
+      "end": 184.68,
+      "text": "혹시 이동을 구현하거나 물리를 구현할 때 델타타임을 곱합니다",
+      "avg_logprob": -0.1599,
+      "no_speech_probability": 0.0529,
+      "words": [
+        {
+          "start": 172.56,
+          "end": 173.02,
+          "text": " 혹시",
+          "probability": 0.2049
+        },
+        {
+          "start": 174.91,
+          "end": 176.87,
+          "text": " 이동을",
+          "probability": 0.8779
+        },
+        {
+          "start": 176.87,
+          "end": 177.75,
+          "text": " 구현하거나",
+          "probability": 0.9266
+        },
+        {
+          "start": 180.66,
+          "end": 181.62,
+          "text": " 물리를",
+          "probability": 0.7111
+        },
+        {
+          "start": 181.62,
+          "end": 182.16,
+          "text": " 구현할",
+          "probability": 0.9415
+        },
+        {
+          "start": 182.16,
+          "end": 182.34,
+          "text": " 때",
+          "probability": 0.9696
+        },
+        {
+          "start": 182.34,
+          "end": 183.68,
+          "text": " 델타타임을",
+          "probability": 0.9072
+        },
+        {
+          "start": 183.68,
+          "end": 184.68,
+          "text": " 곱합니다",
+          "probability": 0.6672
+        }
+      ]
+    },
+    {
+      "start": 184.68,
+      "end": 189.12,
+      "text": "혹시 델타타임을 곱하는 이유를 설명해 주실 수 있나요?",
+      "avg_logprob": -0.1599,
+      "no_speech_probability": 0.0529,
+      "words": [
+        {
+          "start": 184.68,
+          "end": 185.62,
+          "text": " 혹시",
+          "probability": 0.8405
+        },
+        {
+          "start": 185.62,
+          "end": 186.58,
+          "text": " 델타타임을",
+          "probability": 0.9052
+        },
+        {
+          "start": 186.58,
+          "end": 187.0,
+          "text": " 곱하는",
+          "probability": 0.9816
+        },
+        {
+          "start": 187.0,
+          "end": 187.48,
+          "text": " 이유를",
+          "probability": 0.9527
+        },
+        {
+          "start": 187.48,
+          "end": 188.02,
+          "text": " 설명해",
+          "probability": 0.8189
+        },
+        {
+          "start": 188.02,
+          "end": 188.26,
+          "text": " 주실",
+          "probability": 0.9734
+        },
+        {
+          "start": 188.26,
+          "end": 188.38,
+          "text": " 수",
+          "probability": 0.8986
+        },
+        {
+          "start": 188.38,
+          "end": 189.12,
+          "text": " 있나요?",
+          "probability": 0.7476
+        }
+      ]
+    },
+    {
+      "start": 194.22,
+      "end": 204.64,
+      "text": "이동이나 물리적인 것을 연산을 할 때 타임, 델타타임을 곱하는 이유는",
+      "avg_logprob": -0.1599,
+      "no_speech_probability": 0.0529,
+      "words": [
+        {
+          "start": 194.22,
+          "end": 195.62,
+          "text": " 이동이나",
+          "probability": 0.8691
+        },
+        {
+          "start": 195.62,
+          "end": 196.72,
+          "text": " 물리적인",
+          "probability": 0.9781
+        },
+        {
+          "start": 196.72,
+          "end": 197.08,
+          "text": " 것을",
+          "probability": 0.9414
+        },
+        {
+          "start": 197.08,
+          "end": 198.88,
+          "text": " 연산을",
+          "probability": 0.7092
+        },
+        {
+          "start": 198.88,
+          "end": 199.0,
+          "text": " 할",
+          "probability": 0.7081
+        },
+        {
+          "start": 199.0,
+          "end": 199.14,
+          "text": " 때",
+          "probability": 0.9877
+        },
+        {
+          "start": 199.14,
+          "end": 200.82,
+          "text": " 타임,",
+          "probability": 0.8117
+        },
+        {
+          "start": 202.56,
+          "end": 203.36,
+          "text": " 델타타임을",
+          "probability": 0.9846
+        },
+        {
+          "start": 203.36,
+          "end": 203.9,
+          "text": " 곱하는",
+          "probability": 0.8945
+        },
+        {
+          "start": 203.9,
+          "end": 204.64,
+          "text": " 이유는",
+          "probability": 0.7727
+        }
+      ]
+    },
+    {
+      "start": 205.64,
+      "end": 208.24,
+      "text": "컴퓨터마다 사형이 다르기 때문에",
+      "avg_logprob": -0.1208,
+      "no_speech_probability": 0.0076,
+      "words": [
+        {
+          "start": 205.64,
+          "end": 206.72,
+          "text": " 컴퓨터마다",
+          "probability": 0.8781
+        },
+        {
+          "start": 206.72,
+          "end": 207.44,
+          "text": " 사형이",
+          "probability": 0.7843
+        },
+        {
+          "start": 207.44,
+          "end": 207.8,
+          "text": " 다르기",
+          "probability": 0.9401
+        },
+        {
+          "start": 207.8,
+          "end": 208.24,
+          "text": " 때문에",
+          "probability": 0.9933
+        }
+      ]
+    },
+    {
+      "start": 208.24,
+      "end": 217.18,
+      "text": "좋은 사형의 컴퓨터에서는 프레임이 높게 나오고 좋지 않은 컴퓨터는 프레임에 맞게 나오고",
+      "avg_logprob": -0.1208,
+      "no_speech_probability": 0.0076,
+      "words": [
+        {
+          "start": 208.24,
+          "end": 209.9,
+          "text": " 좋은",
+          "probability": 0.5427
+        },
+        {
+          "start": 209.9,
+          "end": 210.4,
+          "text": " 사형의",
+          "probability": 0.8714
+        },
+        {
+          "start": 210.4,
+          "end": 211.06,
+          "text": " 컴퓨터에서는",
+          "probability": 0.9588
+        },
+        {
+          "start": 211.06,
+          "end": 212.34,
+          "text": " 프레임이",
+          "probability": 0.9428
+        },
+        {
+          "start": 212.34,
+          "end": 213.02,
+          "text": " 높게",
+          "probability": 0.8685
+        },
+        {
+          "start": 213.02,
+          "end": 213.64,
+          "text": " 나오고",
+          "probability": 0.8914
+        },
+        {
+          "start": 213.64,
+          "end": 214.4,
+          "text": " 좋지",
+          "probability": 0.8521
+        },
+        {
+          "start": 214.4,
+          "end": 214.56,
+          "text": " 않은",
+          "probability": 0.302
+        },
+        {
+          "start": 214.56,
+          "end": 215.48,
+          "text": " 컴퓨터는",
+          "probability": 0.7954
+        },
+        {
+          "start": 215.48,
+          "end": 216.2,
+          "text": " 프레임에",
+          "probability": 0.957
+        },
+        {
+          "start": 216.2,
+          "end": 216.48,
+          "text": " 맞게",
+          "probability": 0.9676
+        },
+        {
+          "start": 216.48,
+          "end": 217.18,
+          "text": " 나오고",
+          "probability": 0.7397
+        }
+      ]
+    },
+    {
+      "start": 217.3,
+      "end": 226.13,
+      "text": "그런 차이점들이 있기 때문에",
+      "avg_logprob": -0.1208,
+      "no_speech_probability": 0.0076,
+      "words": [
+        {
+          "start": 217.3,
+          "end": 217.64,
+          "text": " 그런",
+          "probability": 0.6159
+        },
+        {
+          "start": 217.64,
+          "end": 218.58,
+          "text": " 차이점들이",
+          "probability": 0.8694
+        },
+        {
+          "start": 218.58,
+          "end": 219.54,
+          "text": " 있기",
+          "probability": 0.962
+        },
+        {
+          "start": 223.73,
+          "end": 226.13,
+          "text": " 때문에",
+          "probability": 0.9959
+        }
+      ]
+    },
+    {
+      "start": 226.83,
+      "end": 233.83,
+      "text": "타임, 델타타임을 곱하면 어느 컴퓨터에서 실행을 하던",
+      "avg_logprob": -0.1208,
+      "no_speech_probability": 0.0076,
+      "words": [
+        {
+          "start": 226.83,
+          "end": 228.45,
+          "text": " 타임,",
+          "probability": 0.6658
+        },
+        {
+          "start": 228.57,
+          "end": 229.19,
+          "text": " 델타타임을",
+          "probability": 0.6818
+        },
+        {
+          "start": 229.19,
+          "end": 229.67,
+          "text": " 곱하면",
+          "probability": 0.3471
+        },
+        {
+          "start": 229.67,
+          "end": 231.23,
+          "text": " 어느",
+          "probability": 0.9331
+        },
+        {
+          "start": 231.23,
+          "end": 232.19,
+          "text": " 컴퓨터에서",
+          "probability": 0.9938
+        },
+        {
+          "start": 232.19,
+          "end": 233.47,
+          "text": " 실행을",
+          "probability": 0.9643
+        },
+        {
+          "start": 233.47,
+          "end": 233.83,
+          "text": " 하던",
+          "probability": 0.9401
+        }
+      ]
+    },
+    {
+      "start": 233.83,
+      "end": 240.23,
+      "text": "같은 시간에 이동할 수 있는 거리가 똑같기 때문에 타임, 델타타임 곱하는 것으로 알고 있습니다",
+      "avg_logprob": -0.1645,
+      "no_speech_probability": 0.0358,
+      "words": [
+        {
+          "start": 233.83,
+          "end": 235.19,
+          "text": " 같은",
+          "probability": 0.0092
+        },
+        {
+          "start": 235.19,
+          "end": 235.79,
+          "text": " 시간에",
+          "probability": 0.5882
+        },
+        {
+          "start": 235.79,
+          "end": 236.33,
+          "text": " 이동할",
+          "probability": 0.9337
+        },
+        {
+          "start": 236.33,
+          "end": 236.43,
+          "text": " 수",
+          "probability": 0.9673
+        },
+        {
+          "start": 236.43,
+          "end": 236.55,
+          "text": " 있는",
+          "probability": 0.9748
+        },
+        {
+          "start": 236.55,
+          "end": 236.93,
+          "text": " 거리가",
+          "probability": 0.9237
+        },
+        {
+          "start": 236.93,
+          "end": 237.39,
+          "text": " 똑같기",
+          "probability": 0.9203
+        },
+        {
+          "start": 237.39,
+          "end": 237.77,
+          "text": " 때문에",
+          "probability": 0.9966
+        },
+        {
+          "start": 237.77,
+          "end": 238.47,
+          "text": " 타임,",
+          "probability": 0.5403
+        },
+        {
+          "start": 238.57,
+          "end": 239.05,
+          "text": " 델타타임",
+          "probability": 0.4165
+        },
+        {
+          "start": 239.05,
+          "end": 239.47,
+          "text": " 곱하는",
+          "probability": 0.2889
+        },
+        {
+          "start": 239.47,
+          "end": 239.71,
+          "text": " 것으로",
+          "probability": 0.1006
+        },
+        {
+          "start": 239.71,
+          "end": 239.95,
+          "text": " 알고",
+          "probability": 0.9786
+        },
+        {
+          "start": 239.95,
+          "end": 240.23,
+          "text": " 있습니다",
+          "probability": 0.5935
+        }
+      ]
+    },
+    {
+      "start": 246.18,
+      "end": 249.96,
+      "text": "혹시 유니티로 개발을 많이 해보신 것 같은데",
+      "avg_logprob": -0.1645,
+      "no_speech_probability": 0.0358,
+      "words": [
+        {
+          "start": 246.18,
+          "end": 246.64,
+          "text": " 혹시",
+          "probability": 0.0268
+        },
+        {
+          "start": 246.64,
+          "end": 248.54,
+          "text": " 유니티로",
+          "probability": 0.8266
+        },
+        {
+          "start": 248.54,
+          "end": 248.94,
+          "text": " 개발을",
+          "probability": 0.9879
+        },
+        {
+          "start": 248.94,
+          "end": 249.1,
+          "text": " 많이",
+          "probability": 0.9841
+        },
+        {
+          "start": 249.1,
+          "end": 249.52,
+          "text": " 해보신",
+          "probability": 0.8826
+        },
+        {
+          "start": 249.52,
+          "end": 249.64,
+          "text": " 것",
+          "probability": 0.726
+        },
+        {
+          "start": 249.64,
+          "end": 249.96,
+          "text": " 같은데",
+          "probability": 0.9953
+        }
+      ]
+    },
+    {
+      "start": 252.32,
+      "end": 260.08,
+      "text": "상속기반 개발이랑 컴포넘트기반 개발에 차이점을 말씀해 주실 수 있나요?",
+      "avg_logprob": -0.1645,
+      "no_speech_probability": 0.0358,
+      "words": [
+        {
+          "start": 252.32,
+          "end": 253.24,
+          "text": " 상속기반",
+          "probability": 0.8688
+        },
+        {
+          "start": 253.24,
+          "end": 254.16,
+          "text": " 개발이랑",
+          "probability": 0.8746
+        },
+        {
+          "start": 254.16,
+          "end": 255.92,
+          "text": " 컴포넘트기반",
+          "probability": 0.8918
+        },
+        {
+          "start": 255.92,
+          "end": 257.18,
+          "text": " 개발에",
+          "probability": 0.8373
+        },
+        {
+          "start": 257.18,
+          "end": 258.62,
+          "text": " 차이점을",
+          "probability": 0.9673
+        },
+        {
+          "start": 258.62,
+          "end": 259.16,
+          "text": " 말씀해",
+          "probability": 0.9436
+        },
+        {
+          "start": 259.16,
+          "end": 259.4,
+          "text": " 주실",
+          "probability": 0.9925
+        },
+        {
+          "start": 259.4,
+          "end": 259.56,
+          "text": " 수",
+          "probability": 0.9853
+        },
+        {
+          "start": 259.56,
+          "end": 260.08,
+          "text": " 있나요?",
+          "probability": 0.8878
+        }
+      ]
+    },
+    {
+      "start": 273.01,
+      "end": 284.8,
+      "text": "상속기반 개발은 부모로부터 상속을 받기 때문에 자식이",
+      "avg_logprob": -0.1645,
+      "no_speech_probability": 0.0358,
+      "words": [
+        {
+          "start": 273.01,
+          "end": 273.73,
+          "text": " 상속기반",
+          "probability": 0.9605
+        },
+        {
+          "start": 273.73,
+          "end": 275.33,
+          "text": " 개발은",
+          "probability": 0.7345
+        },
+        {
+          "start": 280.9,
+          "end": 283.04,
+          "text": " 부모로부터",
+          "probability": 0.8561
+        },
+        {
+          "start": 283.04,
+          "end": 283.5,
+          "text": " 상속을",
+          "probability": 0.9134
+        },
+        {
+          "start": 283.5,
+          "end": 283.76,
+          "text": " 받기",
+          "probability": 0.5679
+        },
+        {
+          "start": 283.76,
+          "end": 284.12,
+          "text": " 때문에",
+          "probability": 0.9775
+        },
+        {
+          "start": 284.12,
+          "end": 284.8,
+          "text": " 자식이",
+          "probability": 0.9371
+        }
+      ]
+    },
+    {
+      "start": 284.8,
+      "end": 311.1,
+      "text": "혹시 디자인 패턴 중에 대표적으로 아는 것 한 두 개 정도만 소개해 줄 수 있을까요?",
+      "avg_logprob": -0.2548,
+      "no_speech_probability": 0.0344,
+      "words": [
+        {
+          "start": 284.8,
+          "end": 285.88,
+          "text": " 혹시",
+          "probability": 0.0652
+        },
+        {
+          "start": 305.08,
+          "end": 305.7,
+          "text": " 디자인",
+          "probability": 0.9563
+        },
+        {
+          "start": 305.7,
+          "end": 306.34,
+          "text": " 패턴",
+          "probability": 0.883
+        },
+        {
+          "start": 306.34,
+          "end": 306.58,
+          "text": " 중에",
+          "probability": 0.6861
+        },
+        {
+          "start": 306.58,
+          "end": 307.9,
+          "text": " 대표적으로",
+          "probability": 0.8764
+        },
+        {
+          "start": 307.9,
+          "end": 308.34,
+          "text": " 아는",
+          "probability": 0.6171
+        },
+        {
+          "start": 308.34,
+          "end": 308.48,
+          "text": " 것",
+          "probability": 0.395
+        },
+        {
+          "start": 308.48,
+          "end": 308.94,
+          "text": " 한",
+          "probability": 0.6445
+        },
+        {
+          "start": 308.94,
+          "end": 309.08,
+          "text": " 두",
+          "probability": 0.4026
+        },
+        {
+          "start": 309.08,
+          "end": 309.16,
+          "text": " 개",
+          "probability": 0.3443
+        },
+        {
+          "start": 309.16,
+          "end": 309.62,
+          "text": " 정도만",
+          "probability": 0.8706
+        },
+        {
+          "start": 309.62,
+          "end": 310.22,
+          "text": " 소개해",
+          "probability": 0.7761
+        },
+        {
+          "start": 310.22,
+          "end": 310.32,
+          "text": " 줄",
+          "probability": 0.9495
+        },
+        {
+          "start": 310.32,
+          "end": 310.5,
+          "text": " 수",
+          "probability": 0.9551
+        },
+        {
+          "start": 310.5,
+          "end": 311.1,
+          "text": " 있을까요?",
+          "probability": 0.9642
+        }
+      ]
+    },
+    {
+      "start": 311.62,
+      "end": 312.92,
+      "text": "본인의 프로젝트에서 사용했었던?",
+      "avg_logprob": -0.2548,
+      "no_speech_probability": 0.0344,
+      "words": [
+        {
+          "start": 311.62,
+          "end": 311.92,
+          "text": " 본인의",
+          "probability": 0.8735
+        },
+        {
+          "start": 311.92,
+          "end": 312.38,
+          "text": " 프로젝트에서",
+          "probability": 0.9737
+        },
+        {
+          "start": 312.38,
+          "end": 312.92,
+          "text": " 사용했었던?",
+          "probability": 0.8395
+        }
+      ]
+    },
+    {
+      "start": 318.44,
+      "end": 324.06,
+      "text": "디자인 패턴에 대해서 설명해 드리자면",
+      "avg_logprob": -0.2548,
+      "no_speech_probability": 0.0344,
+      "words": [
+        {
+          "start": 318.44,
+          "end": 319.02,
+          "text": " 디자인",
+          "probability": 0.9399
+        },
+        {
+          "start": 319.02,
+          "end": 321.42,
+          "text": " 패턴에",
+          "probability": 0.728
+        },
+        {
+          "start": 321.42,
+          "end": 322.3,
+          "text": " 대해서",
+          "probability": 0.9739
+        },
+        {
+          "start": 322.3,
+          "end": 323.68,
+          "text": " 설명해",
+          "probability": 0.4984
+        },
+        {
+          "start": 323.68,
+          "end": 324.06,
+          "text": " 드리자면",
+          "probability": 0.6339
+        }
+      ]
+    },
+    {
+      "start": 324.06,
+      "end": 326.32,
+      "text": "제가 사용했던 거 설명해 드리자면",
+      "avg_logprob": -0.2548,
+      "no_speech_probability": 0.0344,
+      "words": [
+        {
+          "start": 324.06,
+          "end": 324.48,
+          "text": " 제가",
+          "probability": 0.5792
+        },
+        {
+          "start": 324.48,
+          "end": 325.1,
+          "text": " 사용했던",
+          "probability": 0.9374
+        },
+        {
+          "start": 325.1,
+          "end": 325.34,
+          "text": " 거",
+          "probability": 0.5248
+        },
+        {
+          "start": 325.34,
+          "end": 325.98,
+          "text": " 설명해",
+          "probability": 0.6348
+        },
+        {
+          "start": 325.98,
+          "end": 326.32,
+          "text": " 드리자면",
+          "probability": 0.9779
+        }
+      ]
+    },
+    {
+      "start": 326.32,
+      "end": 335.3,
+      "text": "이게 정확히 디자인 패턴지 사실 잘 모르겠지만",
+      "avg_logprob": -0.2548,
+      "no_speech_probability": 0.0344,
+      "words": [
+        {
+          "start": 326.32,
+          "end": 327.08,
+          "text": " 이게",
+          "probability": 0.8052
+        },
+        {
+          "start": 331.84,
+          "end": 333.08,
+          "text": " 정확히",
+          "probability": 0.9863
+        },
+        {
+          "start": 333.08,
+          "end": 333.52,
+          "text": " 디자인",
+          "probability": 0.9412
+        },
+        {
+          "start": 333.52,
+          "end": 333.88,
+          "text": " 패턴지",
+          "probability": 0.8015
+        },
+        {
+          "start": 333.88,
+          "end": 334.18,
+          "text": " 사실",
+          "probability": 0.9106
+        },
+        {
+          "start": 334.18,
+          "end": 334.66,
+          "text": " 잘",
+          "probability": 0.9844
+        },
+        {
+          "start": 334.66,
+          "end": 335.3,
+          "text": " 모르겠지만",
+          "probability": 0.9954
+        }
+      ]
+    },
+    {
+      "start": 335.3,
+      "end": 338.52,
+      "text": "유한 상태 머신으로 이제",
+      "avg_logprob": -0.2548,
+      "no_speech_probability": 0.0344,
+      "words": [
+        {
+          "start": 335.3,
+          "end": 336.54,
+          "text": " 유한",
+          "probability": 0.8428
+        },
+        {
+          "start": 336.54,
+          "end": 336.8,
+          "text": " 상태",
+          "probability": 0.9667
+        },
+        {
+          "start": 336.8,
+          "end": 338.52,
+          "text": " 머신으로",
+          "probability": 0.7244
+        },
+        {
+          "start": 338.52,
+          "end": 338.52,
+          "text": " 이제",
+          "probability": 0.6855
+        }
+      ]
+    },
+    {
+      "start": 343.94,
+      "end": 360.34,
+      "text": "척의 이동, 추적, 잠시 멈춤, 멈춤 이런 것들을 관리하여 개발한 적이 있었습니다",
+      "avg_logprob": -0.2218,
+      "no_speech_probability": 0.0057,
+      "words": [
+        {
+          "start": 343.94,
+          "end": 344.94,
+          "text": " 척의",
+          "probability": 0.5356
+        },
+        {
+          "start": 344.94,
+          "end": 345.26,
+          "text": " 이동,",
+          "probability": 0.9743
+        },
+        {
+          "start": 345.76,
+          "end": 347.24,
+          "text": " 추적,",
+          "probability": 0.9817
+        },
+        {
+          "start": 350.32,
+          "end": 351.1,
+          "text": " 잠시",
+          "probability": 0.8413
+        },
+        {
+          "start": 351.1,
+          "end": 351.92,
+          "text": " 멈춤,",
+          "probability": 0.9001
+        },
+        {
+          "start": 353.46,
+          "end": 354.02,
+          "text": " 멈춤",
+          "probability": 0.8839
+        },
+        {
+          "start": 354.02,
+          "end": 354.28,
+          "text": " 이런",
+          "probability": 0.652
+        },
+        {
+          "start": 354.28,
+          "end": 355.06,
+          "text": " 것들을",
+          "probability": 0.8931
+        },
+        {
+          "start": 355.06,
+          "end": 357.5,
+          "text": " 관리하여",
+          "probability": 0.7327
+        },
+        {
+          "start": 359.06,
+          "end": 359.52,
+          "text": " 개발한",
+          "probability": 0.4866
+        },
+        {
+          "start": 359.52,
+          "end": 359.66,
+          "text": " 적이",
+          "probability": 0.9686
+        },
+        {
+          "start": 359.66,
+          "end": 360.34,
+          "text": " 있었습니다",
+          "probability": 0.9225
+        }
+      ]
+    },
+    {
+      "start": 364.22,
+      "end": 368.3,
+      "text": "혹시 디자인 패턴 중에 업주업업 패턴이나",
+      "avg_logprob": -0.2218,
+      "no_speech_probability": 0.0057,
+      "words": [
+        {
+          "start": 364.22,
+          "end": 364.56,
+          "text": " 혹시",
+          "probability": 0.0723
+        },
+        {
+          "start": 364.56,
+          "end": 365.24,
+          "text": " 디자인",
+          "probability": 0.9754
+        },
+        {
+          "start": 365.24,
+          "end": 365.54,
+          "text": " 패턴",
+          "probability": 0.9549
+        },
+        {
+          "start": 365.54,
+          "end": 365.78,
+          "text": " 중에",
+          "probability": 0.9449
+        },
+        {
+          "start": 365.78,
+          "end": 367.8,
+          "text": " 업주업업",
+          "probability": 0.5202
+        },
+        {
+          "start": 367.8,
+          "end": 368.3,
+          "text": " 패턴이나",
+          "probability": 0.9091
+        }
+      ]
+    },
+    {
+      "start": 368.3,
+      "end": 372.26,
+      "text": "중재적 패턴 이것에 대해서 혹시 들어보신 적 있으실까요?",
+      "avg_logprob": -0.2218,
+      "no_speech_probability": 0.0057,
+      "words": [
+        {
+          "start": 368.3,
+          "end": 369.76,
+          "text": " 중재적",
+          "probability": 0.537
+        },
+        {
+          "start": 369.76,
+          "end": 370.18,
+          "text": " 패턴",
+          "probability": 0.9894
+        },
+        {
+          "start": 370.18,
+          "end": 370.62,
+          "text": " 이것에",
+          "probability": 0.6753
+        },
+        {
+          "start": 370.62,
+          "end": 370.8,
+          "text": " 대해서",
+          "probability": 0.906
+        },
+        {
+          "start": 370.8,
+          "end": 371.06,
+          "text": " 혹시",
+          "probability": 0.6744
+        },
+        {
+          "start": 371.06,
+          "end": 371.64,
+          "text": " 들어보신",
+          "probability": 0.961
+        },
+        {
+          "start": 371.64,
+          "end": 371.76,
+          "text": " 적",
+          "probability": 0.4144
+        },
+        {
+          "start": 371.76,
+          "end": 372.26,
+          "text": " 있으실까요?",
+          "probability": 0.9688
+        }
+      ]
+    },
+    {
+      "start": 397.36,
+      "end": 399.0,
+      "text": "마지막 질문 할게요",
+      "avg_logprob": -0.2218,
+      "no_speech_probability": 0.0057,
+      "words": [
+        {
+          "start": 397.36,
+          "end": 397.7,
+          "text": " 마지막",
+          "probability": 0.6499
+        },
+        {
+          "start": 397.7,
+          "end": 398.28,
+          "text": " 질문",
+          "probability": 0.9572
+        },
+        {
+          "start": 398.28,
+          "end": 399.0,
+          "text": " 할게요",
+          "probability": 0.9291
+        }
+      ]
+    },
+    {
+      "start": 401.86,
+      "end": 407.08,
+      "text": "유니티에서 3 연락이 있으니까 데이터 직녀라를 하는데요",
+      "avg_logprob": -0.2798,
+      "no_speech_probability": 0.1771,
+      "words": [
+        {
+          "start": 401.86,
+          "end": 402.9,
+          "text": " 유니티에서",
+          "probability": 0.6716
+        },
+        {
+          "start": 402.9,
+          "end": 403.94,
+          "text": " 3",
+          "probability": 0.3067
+        },
+        {
+          "start": 403.94,
+          "end": 404.34,
+          "text": " 연락이",
+          "probability": 0.5308
+        },
+        {
+          "start": 404.34,
+          "end": 404.6,
+          "text": " 있으니까",
+          "probability": 0.2609
+        },
+        {
+          "start": 404.6,
+          "end": 405.4,
+          "text": " 데이터",
+          "probability": 0.8446
+        },
+        {
+          "start": 405.4,
+          "end": 406.38,
+          "text": " 직녀라를",
+          "probability": 0.6446
+        },
+        {
+          "start": 406.38,
+          "end": 407.08,
+          "text": " 하는데요",
+          "probability": 0.8716
+        }
+      ]
+    },
+    {
+      "start": 408.0,
+      "end": 412.44,
+      "text": "혹시 직녀라를 하는 이유에 대해 알고 계신가요?",
+      "avg_logprob": -0.2798,
+      "no_speech_probability": 0.1771,
+      "words": [
+        {
+          "start": 408.0,
+          "end": 408.72,
+          "text": " 혹시",
+          "probability": 0.2094
+        },
+        {
+          "start": 408.72,
+          "end": 410.1,
+          "text": " 직녀라를",
+          "probability": 0.9803
+        },
+        {
+          "start": 410.1,
+          "end": 410.28,
+          "text": " 하는",
+          "probability": 0.9658
+        },
+        {
+          "start": 410.28,
+          "end": 411.5,
+          "text": " 이유에",
+          "probability": 0.9315
+        },
+        {
+          "start": 411.5,
+          "end": 411.66,
+          "text": " 대해",
+          "probability": 0.9563
+        },
+        {
+          "start": 411.66,
+          "end": 411.98,
+          "text": " 알고",
+          "probability": 0.9917
+        },
+        {
+          "start": 411.98,
+          "end": 412.44,
+          "text": " 계신가요?",
+          "probability": 0.9858
+        }
+      ]
+    },
+    {
+      "start": 421.4,
+      "end": 426.54,
+      "text": "솔직하게 말씀드리자면 직녀라를 하는 이유 자체는 잘 모르고",
+      "avg_logprob": -0.2798,
+      "no_speech_probability": 0.1771,
+      "words": [
+        {
+          "start": 421.4,
+          "end": 421.82,
+          "text": " 솔직하게",
+          "probability": 0.3058
+        },
+        {
+          "start": 421.82,
+          "end": 422.62,
+          "text": " 말씀드리자면",
+          "probability": 0.6918
+        },
+        {
+          "start": 422.62,
+          "end": 424.0,
+          "text": " 직녀라를",
+          "probability": 0.9676
+        },
+        {
+          "start": 424.0,
+          "end": 424.28,
+          "text": " 하는",
+          "probability": 0.9883
+        },
+        {
+          "start": 424.28,
+          "end": 424.56,
+          "text": " 이유",
+          "probability": 0.9891
+        },
+        {
+          "start": 424.56,
+          "end": 425.08,
+          "text": " 자체는",
+          "probability": 0.8958
+        },
+        {
+          "start": 425.08,
+          "end": 425.3,
+          "text": " 잘",
+          "probability": 0.8931
+        },
+        {
+          "start": 425.3,
+          "end": 426.54,
+          "text": " 모르고",
+          "probability": 0.9793
+        }
+      ]
+    },
+    {
+      "start": 428.7,
+      "end": 437.64,
+      "text": "그렇게 적게 되면 컴포넘트에 다 나오기 때문에 그런 각들이",
+      "avg_logprob": -0.3203,
+      "no_speech_probability": 0.5647,
+      "words": [
+        {
+          "start": 428.7,
+          "end": 430.1,
+          "text": " 그렇게",
+          "probability": 0.1119
+        },
+        {
+          "start": 430.1,
+          "end": 431.32,
+          "text": " 적게",
+          "probability": 0.9369
+        },
+        {
+          "start": 431.32,
+          "end": 431.6,
+          "text": " 되면",
+          "probability": 0.9659
+        },
+        {
+          "start": 431.6,
+          "end": 433.48,
+          "text": " 컴포넘트에",
+          "probability": 0.7096
+        },
+        {
+          "start": 433.48,
+          "end": 434.62,
+          "text": " 다",
+          "probability": 0.64
+        },
+        {
+          "start": 434.62,
+          "end": 435.9,
+          "text": " 나오기",
+          "probability": 0.9545
+        },
+        {
+          "start": 435.9,
+          "end": 436.28,
+          "text": " 때문에",
+          "probability": 0.9868
+        },
+        {
+          "start": 436.28,
+          "end": 437.08,
+          "text": " 그런",
+          "probability": 0.866
+        },
+        {
+          "start": 437.08,
+          "end": 437.64,
+          "text": " 각들이",
+          "probability": 0.413
+        }
+      ]
+    },
+    {
+      "start": 437.64,
+      "end": 452.61,
+      "text": "그래서 게임을 에디터에 대해서 실행하면서 그런 각들을",
+      "avg_logprob": -0.3203,
+      "no_speech_probability": 0.5647,
+      "words": [
+        {
+          "start": 437.64,
+          "end": 439.76,
+          "text": " 그래서",
+          "probability": 0.3371
+        },
+        {
+          "start": 442.77,
+          "end": 446.41,
+          "text": " 게임을",
+          "probability": 0.7687
+        },
+        {
+          "start": 446.41,
+          "end": 448.81,
+          "text": " 에디터에",
+          "probability": 0.7089
+        },
+        {
+          "start": 448.81,
+          "end": 449.09,
+          "text": " 대해서",
+          "probability": 0.6676
+        },
+        {
+          "start": 449.09,
+          "end": 451.01,
+          "text": " 실행하면서",
+          "probability": 0.8943
+        },
+        {
+          "start": 451.01,
+          "end": 451.91,
+          "text": " 그런",
+          "probability": 0.9526
+        },
+        {
+          "start": 451.91,
+          "end": 452.61,
+          "text": " 각들을",
+          "probability": 0.8927
+        }
+      ]
+    },
+    {
+      "start": 452.61,
+      "end": 459.53,
+      "text": "자유자재를 바꿔서 기획자분이 편하게 값을",
+      "avg_logprob": -0.1891,
+      "no_speech_probability": 0.3161,
+      "words": [
+        {
+          "start": 452.61,
+          "end": 454.33,
+          "text": " 자유자재를",
+          "probability": 0.5819
+        },
+        {
+          "start": 454.33,
+          "end": 455.67,
+          "text": " 바꿔서",
+          "probability": 0.9585
+        },
+        {
+          "start": 455.67,
+          "end": 457.77,
+          "text": " 기획자분이",
+          "probability": 0.7792
+        },
+        {
+          "start": 457.77,
+          "end": 458.95,
+          "text": " 편하게",
+          "probability": 0.885
+        },
+        {
+          "start": 458.95,
+          "end": 459.53,
+          "text": " 값을",
+          "probability": 0.8453
+        }
+      ]
+    },
+    {
+      "start": 459.53,
+      "end": 462.71,
+      "text": "조정할 수 있는 걸로 알고 있습니다",
+      "avg_logprob": -0.1891,
+      "no_speech_probability": 0.3161,
+      "words": [
+        {
+          "start": 459.53,
+          "end": 460.61,
+          "text": " 조정할",
+          "probability": 0.9589
+        },
+        {
+          "start": 460.61,
+          "end": 460.75,
+          "text": " 수",
+          "probability": 0.9565
+        },
+        {
+          "start": 460.75,
+          "end": 461.07,
+          "text": " 있는",
+          "probability": 0.9789
+        },
+        {
+          "start": 461.07,
+          "end": 462.09,
+          "text": " 걸로",
+          "probability": 0.5333
+        },
+        {
+          "start": 462.09,
+          "end": 462.33,
+          "text": " 알고",
+          "probability": 0.9978
+        },
+        {
+          "start": 462.33,
+          "end": 462.71,
+          "text": " 있습니다",
+          "probability": 0.6968
+        }
+      ]
+    },
+    {
+      "start": 464.66,
+      "end": 465.66,
+      "text": "알겠습니다",
+      "avg_logprob": -0.1891,
+      "no_speech_probability": 0.3161,
+      "words": [
+        {
+          "start": 464.66,
+          "end": 465.66,
+          "text": " 알겠습니다",
+          "probability": 0.5525
+        }
+      ]
+    },
+    {
+      "start": 465.66,
+      "end": 467.48,
+      "text": "고생하셨습니다",
+      "avg_logprob": -0.1891,
+      "no_speech_probability": 0.3161,
+      "words": [
+        {
+          "start": 465.66,
+          "end": 467.48,
+          "text": " 고생하셨습니다",
+          "probability": 0.8922
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "ASR confidence is not a calibrated intelligibility score.",
+    "The transcript does not identify interviewer and candidate speakers.",
+    "This report cannot assess voice quality, emotion, personality, or accent.",
+    "Review segment timestamps against the source audio before assigning a voice score."
+  ]
+}

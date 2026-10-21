@@ -1,0 +1,5168 @@
+{
+  "source_audio": "C:\\Users\\choi0\\Desktop\\game-engine-client-interview-ai\\records\\participants\\P01\\sessions\\P01-2026-10-21-01\\게임 개발 메모리 최적화_ 스택_힙_ 객체 풀링_ 메모리 단편화.mp3",
+  "analysis_mode": "local_asr_evidence_only",
+  "model": "small",
+  "language": "ko",
+  "language_probability": 1,
+  "audio_duration_seconds": 583.193,
+  "spoken_duration_seconds": 484.89,
+  "recognized_character_count_without_spaces": 2006,
+  "estimated_speech_rate_chars_per_minute": 248.2,
+  "pause_threshold_seconds": 0.75,
+  "pauses": [
+    {
+      "start": 3.9,
+      "end": 13.54,
+      "duration_seconds": 9.64
+    },
+    {
+      "start": 23.9,
+      "end": 26.62,
+      "duration_seconds": 2.72
+    },
+    {
+      "start": 67.28,
+      "end": 68.28,
+      "duration_seconds": 1.0
+    },
+    {
+      "start": 71.34,
+      "end": 79.98,
+      "duration_seconds": 8.64
+    },
+    {
+      "start": 118.52,
+      "end": 119.98,
+      "duration_seconds": 1.46
+    },
+    {
+      "start": 146.37,
+      "end": 149.0,
+      "duration_seconds": 2.63
+    },
+    {
+      "start": 162.22,
+      "end": 162.98,
+      "duration_seconds": 0.76
+    },
+    {
+      "start": 187.5,
+      "end": 198.03,
+      "duration_seconds": 10.53
+    },
+    {
+      "start": 215.66,
+      "end": 217.26,
+      "duration_seconds": 1.6
+    },
+    {
+      "start": 248.82,
+      "end": 249.66,
+      "duration_seconds": 0.84
+    },
+    {
+      "start": 323.13,
+      "end": 328.54,
+      "duration_seconds": 5.41
+    },
+    {
+      "start": 330.72,
+      "end": 335.64,
+      "duration_seconds": 4.92
+    },
+    {
+      "start": 399.6,
+      "end": 403.6,
+      "duration_seconds": 4.0
+    },
+    {
+      "start": 411.84,
+      "end": 413.8,
+      "duration_seconds": 1.96
+    },
+    {
+      "start": 417.28,
+      "end": 425.05,
+      "duration_seconds": 7.77
+    },
+    {
+      "start": 445.29,
+      "end": 447.15,
+      "duration_seconds": 1.86
+    },
+    {
+      "start": 449.13,
+      "end": 450.01,
+      "duration_seconds": 0.88
+    },
+    {
+      "start": 471.41,
+      "end": 472.57,
+      "duration_seconds": 1.16
+    },
+    {
+      "start": 473.65,
+      "end": 475.15,
+      "duration_seconds": 1.5
+    },
+    {
+      "start": 478.03,
+      "end": 479.11,
+      "duration_seconds": 1.08
+    },
+    {
+      "start": 504.03,
+      "end": 506.65,
+      "duration_seconds": 2.62
+    },
+    {
+      "start": 517.95,
+      "end": 522.56,
+      "duration_seconds": 4.61
+    },
+    {
+      "start": 530.7,
+      "end": 531.56,
+      "duration_seconds": 0.86
+    },
+    {
+      "start": 539.64,
+      "end": 541.88,
+      "duration_seconds": 2.24
+    },
+    {
+      "start": 555.17,
+      "end": 557.09,
+      "duration_seconds": 1.92
+    },
+    {
+      "start": 575.09,
+      "end": 579.83,
+      "duration_seconds": 4.74
+    }
+  ],
+  "segments": [
+    {
+      "start": 2.54,
+      "end": 3.9,
+      "text": "네, 시작하시면 됩니다",
+      "avg_logprob": -0.2416,
+      "no_speech_probability": 0.1524,
+      "words": [
+        {
+          "start": 2.54,
+          "end": 3.02,
+          "text": " 네,",
+          "probability": 0.2953
+        },
+        {
+          "start": 3.12,
+          "end": 3.58,
+          "text": " 시작하시면",
+          "probability": 0.9488
+        },
+        {
+          "start": 3.58,
+          "end": 3.9,
+          "text": " 됩니다",
+          "probability": 0.8937
+        }
+      ]
+    },
+    {
+      "start": 13.54,
+      "end": 17.94,
+      "text": "스탭과 힙 메모리의 차이점을 설명해주시고",
+      "avg_logprob": -0.2416,
+      "no_speech_probability": 0.1524,
+      "words": [
+        {
+          "start": 13.54,
+          "end": 14.92,
+          "text": " 스탭과",
+          "probability": 0.6707
+        },
+        {
+          "start": 14.92,
+          "end": 15.38,
+          "text": " 힙",
+          "probability": 0.6382
+        },
+        {
+          "start": 15.38,
+          "end": 16.2,
+          "text": " 메모리의",
+          "probability": 0.8656
+        },
+        {
+          "start": 16.2,
+          "end": 16.86,
+          "text": " 차이점을",
+          "probability": 0.9627
+        },
+        {
+          "start": 16.86,
+          "end": 17.94,
+          "text": " 설명해주시고",
+          "probability": 0.8695
+        }
+      ]
+    },
+    {
+      "start": 18.18,
+      "end": 23.9,
+      "text": "게임 개발해서 메모리 활동과 해질과 성능에 영향을 미친 이유가 무엇인지 설명해주세요",
+      "avg_logprob": -0.2416,
+      "no_speech_probability": 0.1524,
+      "words": [
+        {
+          "start": 18.18,
+          "end": 18.86,
+          "text": " 게임",
+          "probability": 0.74
+        },
+        {
+          "start": 18.86,
+          "end": 19.38,
+          "text": " 개발해서",
+          "probability": 0.5862
+        },
+        {
+          "start": 19.38,
+          "end": 19.76,
+          "text": " 메모리",
+          "probability": 0.9447
+        },
+        {
+          "start": 19.76,
+          "end": 20.24,
+          "text": " 활동과",
+          "probability": 0.5735
+        },
+        {
+          "start": 20.24,
+          "end": 20.82,
+          "text": " 해질과",
+          "probability": 0.7148
+        },
+        {
+          "start": 20.82,
+          "end": 21.5,
+          "text": " 성능에",
+          "probability": 0.8272
+        },
+        {
+          "start": 21.5,
+          "end": 21.94,
+          "text": " 영향을",
+          "probability": 0.9864
+        },
+        {
+          "start": 21.94,
+          "end": 22.18,
+          "text": " 미친",
+          "probability": 0.8848
+        },
+        {
+          "start": 22.18,
+          "end": 22.6,
+          "text": " 이유가",
+          "probability": 0.9928
+        },
+        {
+          "start": 22.6,
+          "end": 23.0,
+          "text": " 무엇인지",
+          "probability": 0.9389
+        },
+        {
+          "start": 23.0,
+          "end": 23.9,
+          "text": " 설명해주세요",
+          "probability": 0.853
+        }
+      ]
+    },
+    {
+      "start": 26.62,
+      "end": 32.72,
+      "text": "스탭의 경우, 함수가 호출되는 과정에서 사용이 되는데요",
+      "avg_logprob": -0.2416,
+      "no_speech_probability": 0.1524,
+      "words": [
+        {
+          "start": 26.62,
+          "end": 27.38,
+          "text": " 스탭의",
+          "probability": 0.9444
+        },
+        {
+          "start": 27.38,
+          "end": 27.68,
+          "text": " 경우,",
+          "probability": 0.9832
+        },
+        {
+          "start": 28.5,
+          "end": 29.24,
+          "text": " 함수가",
+          "probability": 0.8883
+        },
+        {
+          "start": 29.24,
+          "end": 30.02,
+          "text": " 호출되는",
+          "probability": 0.9507
+        },
+        {
+          "start": 30.02,
+          "end": 30.76,
+          "text": " 과정에서",
+          "probability": 0.9925
+        },
+        {
+          "start": 30.76,
+          "end": 31.62,
+          "text": " 사용이",
+          "probability": 0.9219
+        },
+        {
+          "start": 31.62,
+          "end": 32.72,
+          "text": " 되는데요",
+          "probability": 0.9271
+        }
+      ]
+    },
+    {
+      "start": 32.72,
+      "end": 38.0,
+      "text": "그래서 지역변수 혹은 함수가 호출되는 미치라든가",
+      "avg_logprob": -0.2416,
+      "no_speech_probability": 0.1524,
+      "words": [
+        {
+          "start": 32.72,
+          "end": 33.2,
+          "text": " 그래서",
+          "probability": 0.7568
+        },
+        {
+          "start": 33.2,
+          "end": 34.54,
+          "text": " 지역변수",
+          "probability": 0.7628
+        },
+        {
+          "start": 34.54,
+          "end": 35.04,
+          "text": " 혹은",
+          "probability": 0.9233
+        },
+        {
+          "start": 35.04,
+          "end": 35.56,
+          "text": " 함수가",
+          "probability": 0.9844
+        },
+        {
+          "start": 35.56,
+          "end": 36.28,
+          "text": " 호출되는",
+          "probability": 0.9872
+        },
+        {
+          "start": 36.28,
+          "end": 38.0,
+          "text": " 미치라든가",
+          "probability": 0.5444
+        }
+      ]
+    },
+    {
+      "start": 38.0,
+      "end": 42.5,
+      "text": "함수가 호출되는 과정에서 사용되는 메모리입니다",
+      "avg_logprob": -0.2416,
+      "no_speech_probability": 0.1524,
+      "words": [
+        {
+          "start": 38.0,
+          "end": 38.96,
+          "text": " 함수가",
+          "probability": 0.8101
+        },
+        {
+          "start": 38.96,
+          "end": 40.14,
+          "text": " 호출되는",
+          "probability": 0.9793
+        },
+        {
+          "start": 40.14,
+          "end": 40.92,
+          "text": " 과정에서",
+          "probability": 0.989
+        },
+        {
+          "start": 40.92,
+          "end": 41.52,
+          "text": " 사용되는",
+          "probability": 0.9813
+        },
+        {
+          "start": 41.52,
+          "end": 42.5,
+          "text": " 메모리입니다",
+          "probability": 0.9552
+        }
+      ]
+    },
+    {
+      "start": 42.5,
+      "end": 50.84,
+      "text": "알아서 정적으로 사전에 만들어진 메모리 용량만큼만 사용이 되는데요",
+      "avg_logprob": -0.1942,
+      "no_speech_probability": 0.0458,
+      "words": [
+        {
+          "start": 42.5,
+          "end": 44.04,
+          "text": " 알아서",
+          "probability": 0.5442
+        },
+        {
+          "start": 44.04,
+          "end": 45.06,
+          "text": " 정적으로",
+          "probability": 0.9055
+        },
+        {
+          "start": 45.06,
+          "end": 45.9,
+          "text": " 사전에",
+          "probability": 0.955
+        },
+        {
+          "start": 45.9,
+          "end": 46.76,
+          "text": " 만들어진",
+          "probability": 0.9745
+        },
+        {
+          "start": 46.76,
+          "end": 47.62,
+          "text": " 메모리",
+          "probability": 0.9321
+        },
+        {
+          "start": 47.62,
+          "end": 49.62,
+          "text": " 용량만큼만",
+          "probability": 0.788
+        },
+        {
+          "start": 49.62,
+          "end": 50.24,
+          "text": " 사용이",
+          "probability": 0.4678
+        },
+        {
+          "start": 50.24,
+          "end": 50.84,
+          "text": " 되는데요",
+          "probability": 0.8178
+        }
+      ]
+    },
+    {
+      "start": 50.84,
+      "end": 56.7,
+      "text": "그와 만드로 힙의 경우, 동적으로 메모리 용량이 관리가 됩니다",
+      "avg_logprob": -0.1942,
+      "no_speech_probability": 0.0458,
+      "words": [
+        {
+          "start": 50.84,
+          "end": 52.08,
+          "text": " 그와",
+          "probability": 0.4377
+        },
+        {
+          "start": 52.08,
+          "end": 52.44,
+          "text": " 만드로",
+          "probability": 0.525
+        },
+        {
+          "start": 52.44,
+          "end": 52.8,
+          "text": " 힙의",
+          "probability": 0.3933
+        },
+        {
+          "start": 52.8,
+          "end": 53.0,
+          "text": " 경우,",
+          "probability": 0.9788
+        },
+        {
+          "start": 53.4,
+          "end": 54.38,
+          "text": " 동적으로",
+          "probability": 0.9378
+        },
+        {
+          "start": 54.38,
+          "end": 55.2,
+          "text": " 메모리",
+          "probability": 0.9662
+        },
+        {
+          "start": 55.2,
+          "end": 55.78,
+          "text": " 용량이",
+          "probability": 0.9785
+        },
+        {
+          "start": 55.78,
+          "end": 56.18,
+          "text": " 관리가",
+          "probability": 0.9288
+        },
+        {
+          "start": 56.18,
+          "end": 56.7,
+          "text": " 됩니다",
+          "probability": 0.9883
+        }
+      ]
+    },
+    {
+      "start": 56.7,
+      "end": 67.28,
+      "text": "그래서 동적으로 생산될 변수나 배열 정보들이 담기는 위치입니다",
+      "avg_logprob": -0.1942,
+      "no_speech_probability": 0.0458,
+      "words": [
+        {
+          "start": 56.7,
+          "end": 57.32,
+          "text": " 그래서",
+          "probability": 0.4946
+        },
+        {
+          "start": 59.46,
+          "end": 60.88,
+          "text": " 동적으로",
+          "probability": 0.9442
+        },
+        {
+          "start": 60.88,
+          "end": 62.14,
+          "text": " 생산될",
+          "probability": 0.7794
+        },
+        {
+          "start": 62.14,
+          "end": 62.68,
+          "text": " 변수나",
+          "probability": 0.9815
+        },
+        {
+          "start": 62.68,
+          "end": 64.68,
+          "text": " 배열",
+          "probability": 0.8533
+        },
+        {
+          "start": 64.68,
+          "end": 65.34,
+          "text": " 정보들이",
+          "probability": 0.9598
+        },
+        {
+          "start": 65.34,
+          "end": 66.3,
+          "text": " 담기는",
+          "probability": 0.8892
+        },
+        {
+          "start": 66.3,
+          "end": 67.28,
+          "text": " 위치입니다",
+          "probability": 0.6657
+        }
+      ]
+    },
+    {
+      "start": 68.28,
+      "end": 71.34,
+      "text": "그래서 게임 개발을 하고 있어서",
+      "avg_logprob": -0.2451,
+      "no_speech_probability": 0.1166,
+      "words": [
+        {
+          "start": 68.28,
+          "end": 68.86,
+          "text": " 그래서",
+          "probability": 0.0981
+        },
+        {
+          "start": 68.86,
+          "end": 70.14,
+          "text": " 게임",
+          "probability": 0.8822
+        },
+        {
+          "start": 70.14,
+          "end": 70.7,
+          "text": " 개발을",
+          "probability": 0.8604
+        },
+        {
+          "start": 70.7,
+          "end": 70.9,
+          "text": " 하고",
+          "probability": 0.2891
+        },
+        {
+          "start": 70.9,
+          "end": 71.34,
+          "text": " 있어서",
+          "probability": 0.9753
+        }
+      ]
+    },
+    {
+      "start": 79.98,
+      "end": 86.74,
+      "text": "게임 개발해서 메모리 활동과 해제도 성능에 영향을 미친 이유가 무엇인지 설명해주세요",
+      "avg_logprob": -0.2451,
+      "no_speech_probability": 0.1166,
+      "words": [
+        {
+          "start": 79.98,
+          "end": 81.1,
+          "text": " 게임",
+          "probability": 0.0131
+        },
+        {
+          "start": 81.1,
+          "end": 82.22,
+          "text": " 개발해서",
+          "probability": 0.8298
+        },
+        {
+          "start": 82.22,
+          "end": 82.86,
+          "text": " 메모리",
+          "probability": 0.9095
+        },
+        {
+          "start": 82.86,
+          "end": 83.42,
+          "text": " 활동과",
+          "probability": 0.1208
+        },
+        {
+          "start": 83.42,
+          "end": 83.74,
+          "text": " 해제도",
+          "probability": 0.3476
+        },
+        {
+          "start": 83.74,
+          "end": 84.3,
+          "text": " 성능에",
+          "probability": 0.3755
+        },
+        {
+          "start": 84.3,
+          "end": 84.66,
+          "text": " 영향을",
+          "probability": 0.4876
+        },
+        {
+          "start": 84.66,
+          "end": 84.98,
+          "text": " 미친",
+          "probability": 0.5504
+        },
+        {
+          "start": 84.98,
+          "end": 85.5,
+          "text": " 이유가",
+          "probability": 0.892
+        },
+        {
+          "start": 85.5,
+          "end": 85.9,
+          "text": " 무엇인지",
+          "probability": 0.0723
+        },
+        {
+          "start": 85.9,
+          "end": 86.74,
+          "text": " 설명해주세요",
+          "probability": 0.137
+        }
+      ]
+    },
+    {
+      "start": 86.74,
+      "end": 91.18,
+      "text": "메모리 활동과 해제를 하는 과정에서",
+      "avg_logprob": -0.2451,
+      "no_speech_probability": 0.1166,
+      "words": [
+        {
+          "start": 86.74,
+          "end": 87.12,
+          "text": " 메모리",
+          "probability": 0.6829
+        },
+        {
+          "start": 87.12,
+          "end": 87.98,
+          "text": " 활동과",
+          "probability": 0.9834
+        },
+        {
+          "start": 87.98,
+          "end": 89.98,
+          "text": " 해제를",
+          "probability": 0.9634
+        },
+        {
+          "start": 89.98,
+          "end": 90.18,
+          "text": " 하는",
+          "probability": 0.8412
+        },
+        {
+          "start": 90.18,
+          "end": 91.18,
+          "text": " 과정에서",
+          "probability": 0.9188
+        }
+      ]
+    },
+    {
+      "start": 91.18,
+      "end": 96.5,
+      "text": "게임 엔진에서는 가비지 컬렉터라는 게 있는데요",
+      "avg_logprob": -0.2451,
+      "no_speech_probability": 0.1166,
+      "words": [
+        {
+          "start": 91.18,
+          "end": 93.0,
+          "text": " 게임",
+          "probability": 0.7287
+        },
+        {
+          "start": 93.0,
+          "end": 93.76,
+          "text": " 엔진에서는",
+          "probability": 0.5762
+        },
+        {
+          "start": 93.76,
+          "end": 95.1,
+          "text": " 가비지",
+          "probability": 0.8009
+        },
+        {
+          "start": 95.1,
+          "end": 96.02,
+          "text": " 컬렉터라는",
+          "probability": 0.9082
+        },
+        {
+          "start": 96.02,
+          "end": 96.26,
+          "text": " 게",
+          "probability": 0.8752
+        },
+        {
+          "start": 96.26,
+          "end": 96.5,
+          "text": " 있는데요",
+          "probability": 0.9363
+        }
+      ]
+    },
+    {
+      "start": 96.5,
+      "end": 105.68,
+      "text": "그런 생성과 해제가 많아지수록 가비지 컬렉터가 관리해야 하는 것들이 늘어나면서",
+      "avg_logprob": -0.2058,
+      "no_speech_probability": 0.0742,
+      "words": [
+        {
+          "start": 96.5,
+          "end": 97.76,
+          "text": " 그런",
+          "probability": 0.2569
+        },
+        {
+          "start": 97.76,
+          "end": 99.36,
+          "text": " 생성과",
+          "probability": 0.6957
+        },
+        {
+          "start": 99.36,
+          "end": 99.66,
+          "text": " 해제가",
+          "probability": 0.6267
+        },
+        {
+          "start": 99.66,
+          "end": 100.62,
+          "text": " 많아지수록",
+          "probability": 0.819
+        },
+        {
+          "start": 100.62,
+          "end": 101.02,
+          "text": " 가비지",
+          "probability": 0.8884
+        },
+        {
+          "start": 101.02,
+          "end": 101.64,
+          "text": " 컬렉터가",
+          "probability": 0.8057
+        },
+        {
+          "start": 101.64,
+          "end": 103.74,
+          "text": " 관리해야",
+          "probability": 0.8634
+        },
+        {
+          "start": 103.74,
+          "end": 104.06,
+          "text": " 하는",
+          "probability": 0.9057
+        },
+        {
+          "start": 104.06,
+          "end": 104.44,
+          "text": " 것들이",
+          "probability": 0.9503
+        },
+        {
+          "start": 104.44,
+          "end": 105.68,
+          "text": " 늘어나면서",
+          "probability": 0.9203
+        }
+      ]
+    },
+    {
+      "start": 105.68,
+      "end": 110.36,
+      "text": "성능상의 문제를 끼치는 걸로 알고 있습니다",
+      "avg_logprob": -0.2058,
+      "no_speech_probability": 0.0742,
+      "words": [
+        {
+          "start": 105.68,
+          "end": 107.16,
+          "text": " 성능상의",
+          "probability": 0.8149
+        },
+        {
+          "start": 107.16,
+          "end": 108.82,
+          "text": " 문제를",
+          "probability": 0.9833
+        },
+        {
+          "start": 108.82,
+          "end": 109.22,
+          "text": " 끼치는",
+          "probability": 0.9394
+        },
+        {
+          "start": 109.22,
+          "end": 109.5,
+          "text": " 걸로",
+          "probability": 0.6961
+        },
+        {
+          "start": 109.5,
+          "end": 109.98,
+          "text": " 알고",
+          "probability": 0.9963
+        },
+        {
+          "start": 109.98,
+          "end": 110.36,
+          "text": " 있습니다",
+          "probability": 0.9558
+        }
+      ]
+    },
+    {
+      "start": 110.36,
+      "end": 118.52,
+      "text": "그래서 그런 것들을 예방하기 위해서 플링이라는 오브젝트 기법을 사용하는데요",
+      "avg_logprob": -0.2058,
+      "no_speech_probability": 0.0742,
+      "words": [
+        {
+          "start": 110.36,
+          "end": 111.28,
+          "text": " 그래서",
+          "probability": 0.2666
+        },
+        {
+          "start": 111.28,
+          "end": 113.04,
+          "text": " 그런",
+          "probability": 0.9176
+        },
+        {
+          "start": 113.04,
+          "end": 114.06,
+          "text": " 것들을",
+          "probability": 0.988
+        },
+        {
+          "start": 114.06,
+          "end": 114.68,
+          "text": " 예방하기",
+          "probability": 0.9927
+        },
+        {
+          "start": 114.68,
+          "end": 114.94,
+          "text": " 위해서",
+          "probability": 0.952
+        },
+        {
+          "start": 114.94,
+          "end": 115.76,
+          "text": " 플링이라는",
+          "probability": 0.6085
+        },
+        {
+          "start": 115.76,
+          "end": 116.68,
+          "text": " 오브젝트",
+          "probability": 0.8272
+        },
+        {
+          "start": 116.68,
+          "end": 117.18,
+          "text": " 기법을",
+          "probability": 0.8989
+        },
+        {
+          "start": 117.18,
+          "end": 118.52,
+          "text": " 사용하는데요",
+          "probability": 0.8338
+        }
+      ]
+    },
+    {
+      "start": 119.98,
+      "end": 124.24,
+      "text": "입출력 과정이 빈번하게 이루어지는 기체의 경우",
+      "avg_logprob": -0.2256,
+      "no_speech_probability": 0.2576,
+      "words": [
+        {
+          "start": 119.98,
+          "end": 121.14,
+          "text": " 입출력",
+          "probability": 0.6295
+        },
+        {
+          "start": 121.14,
+          "end": 121.5,
+          "text": " 과정이",
+          "probability": 0.5552
+        },
+        {
+          "start": 121.5,
+          "end": 122.92,
+          "text": " 빈번하게",
+          "probability": 0.8195
+        },
+        {
+          "start": 122.92,
+          "end": 123.5,
+          "text": " 이루어지는",
+          "probability": 0.8866
+        },
+        {
+          "start": 123.5,
+          "end": 124.04,
+          "text": " 기체의",
+          "probability": 0.5165
+        },
+        {
+          "start": 124.04,
+          "end": 124.24,
+          "text": " 경우",
+          "probability": 0.9864
+        }
+      ]
+    },
+    {
+      "start": 124.24,
+      "end": 129.58,
+      "text": "사전에 비접한 만큼 최초의 한 번의 생성을 다하고",
+      "avg_logprob": -0.2256,
+      "no_speech_probability": 0.2576,
+      "words": [
+        {
+          "start": 124.24,
+          "end": 125.4,
+          "text": " 사전에",
+          "probability": 0.9275
+        },
+        {
+          "start": 125.4,
+          "end": 127.26,
+          "text": " 비접한",
+          "probability": 0.5733
+        },
+        {
+          "start": 127.26,
+          "end": 127.56,
+          "text": " 만큼",
+          "probability": 0.9924
+        },
+        {
+          "start": 127.56,
+          "end": 128.4,
+          "text": " 최초의",
+          "probability": 0.7421
+        },
+        {
+          "start": 128.4,
+          "end": 128.58,
+          "text": " 한",
+          "probability": 0.7399
+        },
+        {
+          "start": 128.58,
+          "end": 128.8,
+          "text": " 번의",
+          "probability": 0.7143
+        },
+        {
+          "start": 128.8,
+          "end": 129.08,
+          "text": " 생성을",
+          "probability": 0.5185
+        },
+        {
+          "start": 129.08,
+          "end": 129.58,
+          "text": " 다하고",
+          "probability": 0.6244
+        }
+      ]
+    },
+    {
+      "start": 129.58,
+      "end": 133.36,
+      "text": "디스트로이 파괴를 하는 게 아니라",
+      "avg_logprob": -0.2256,
+      "no_speech_probability": 0.2576,
+      "words": [
+        {
+          "start": 129.58,
+          "end": 131.24,
+          "text": " 디스트로이",
+          "probability": 0.9382
+        },
+        {
+          "start": 131.24,
+          "end": 132.32,
+          "text": " 파괴를",
+          "probability": 0.9286
+        },
+        {
+          "start": 132.32,
+          "end": 132.52,
+          "text": " 하는",
+          "probability": 0.9578
+        },
+        {
+          "start": 132.52,
+          "end": 133.12,
+          "text": " 게",
+          "probability": 0.6574
+        },
+        {
+          "start": 133.12,
+          "end": 133.36,
+          "text": " 아니라",
+          "probability": 0.9849
+        }
+      ]
+    },
+    {
+      "start": 133.36,
+      "end": 136.48,
+      "text": "비활성화 활성화 하는 방식으로",
+      "avg_logprob": -0.2256,
+      "no_speech_probability": 0.2576,
+      "words": [
+        {
+          "start": 133.36,
+          "end": 134.58,
+          "text": " 비활성화",
+          "probability": 0.8152
+        },
+        {
+          "start": 134.58,
+          "end": 135.6,
+          "text": " 활성화",
+          "probability": 0.7765
+        },
+        {
+          "start": 135.6,
+          "end": 135.84,
+          "text": " 하는",
+          "probability": 0.7875
+        },
+        {
+          "start": 135.84,
+          "end": 136.48,
+          "text": " 방식으로",
+          "probability": 0.9803
+        }
+      ]
+    },
+    {
+      "start": 136.48,
+      "end": 146.37,
+      "text": "가비지 컬렉터의 무리향을 덜어주는 기법을 사용하기도 하는 걸로 알고 있습니다",
+      "avg_logprob": -0.2256,
+      "no_speech_probability": 0.2576,
+      "words": [
+        {
+          "start": 136.48,
+          "end": 138.04,
+          "text": " 가비지",
+          "probability": 0.8304
+        },
+        {
+          "start": 138.04,
+          "end": 138.84,
+          "text": " 컬렉터의",
+          "probability": 0.802
+        },
+        {
+          "start": 138.84,
+          "end": 141.2,
+          "text": " 무리향을",
+          "probability": 0.8109
+        },
+        {
+          "start": 143.09,
+          "end": 144.01,
+          "text": " 덜어주는",
+          "probability": 0.9571
+        },
+        {
+          "start": 144.01,
+          "end": 144.83,
+          "text": " 기법을",
+          "probability": 0.9306
+        },
+        {
+          "start": 144.83,
+          "end": 145.33,
+          "text": " 사용하기도",
+          "probability": 0.9236
+        },
+        {
+          "start": 145.33,
+          "end": 145.77,
+          "text": " 하는",
+          "probability": 0.7451
+        },
+        {
+          "start": 145.77,
+          "end": 145.95,
+          "text": " 걸로",
+          "probability": 0.7552
+        },
+        {
+          "start": 145.95,
+          "end": 146.07,
+          "text": " 알고",
+          "probability": 0.9927
+        },
+        {
+          "start": 146.07,
+          "end": 146.37,
+          "text": " 있습니다",
+          "probability": 0.9776
+        }
+      ]
+    },
+    {
+      "start": 149.0,
+      "end": 154.66,
+      "text": "플링을 얘기해 주셨는데 플링 같은 경우에는 여러 가지 데이터 구조를 사용할 수 있잖아요",
+      "avg_logprob": -0.1778,
+      "no_speech_probability": 0.191,
+      "words": [
+        {
+          "start": 149.0,
+          "end": 149.86,
+          "text": " 플링을",
+          "probability": 0.5605
+        },
+        {
+          "start": 149.86,
+          "end": 150.22,
+          "text": " 얘기해",
+          "probability": 0.4223
+        },
+        {
+          "start": 150.22,
+          "end": 150.68,
+          "text": " 주셨는데",
+          "probability": 0.9598
+        },
+        {
+          "start": 150.68,
+          "end": 151.14,
+          "text": " 플링",
+          "probability": 0.7701
+        },
+        {
+          "start": 151.14,
+          "end": 151.3,
+          "text": " 같은",
+          "probability": 0.4799
+        },
+        {
+          "start": 151.3,
+          "end": 151.72,
+          "text": " 경우에는",
+          "probability": 0.9738
+        },
+        {
+          "start": 151.72,
+          "end": 152.34,
+          "text": " 여러",
+          "probability": 0.9253
+        },
+        {
+          "start": 152.34,
+          "end": 152.66,
+          "text": " 가지",
+          "probability": 0.3937
+        },
+        {
+          "start": 152.66,
+          "end": 153.12,
+          "text": " 데이터",
+          "probability": 0.8573
+        },
+        {
+          "start": 153.12,
+          "end": 154.0,
+          "text": " 구조를",
+          "probability": 0.9851
+        },
+        {
+          "start": 154.0,
+          "end": 154.32,
+          "text": " 사용할",
+          "probability": 0.9622
+        },
+        {
+          "start": 154.32,
+          "end": 154.38,
+          "text": " 수",
+          "probability": 0.9797
+        },
+        {
+          "start": 154.38,
+          "end": 154.66,
+          "text": " 있잖아요",
+          "probability": 0.4516
+        }
+      ]
+    },
+    {
+      "start": 154.66,
+      "end": 159.02,
+      "text": "혹시 실제 프로젝트를 진행하면서 플링 같은 거를 설명하셨다면",
+      "avg_logprob": -0.1778,
+      "no_speech_probability": 0.191,
+      "words": [
+        {
+          "start": 154.66,
+          "end": 155.1,
+          "text": " 혹시",
+          "probability": 0.2878
+        },
+        {
+          "start": 155.1,
+          "end": 155.58,
+          "text": " 실제",
+          "probability": 0.7818
+        },
+        {
+          "start": 155.58,
+          "end": 156.16,
+          "text": " 프로젝트를",
+          "probability": 0.9907
+        },
+        {
+          "start": 156.16,
+          "end": 156.8,
+          "text": " 진행하면서",
+          "probability": 0.9809
+        },
+        {
+          "start": 156.8,
+          "end": 157.76,
+          "text": " 플링",
+          "probability": 0.9855
+        },
+        {
+          "start": 157.76,
+          "end": 158.12,
+          "text": " 같은",
+          "probability": 0.5468
+        },
+        {
+          "start": 158.12,
+          "end": 158.4,
+          "text": " 거를",
+          "probability": 0.651
+        },
+        {
+          "start": 158.4,
+          "end": 159.02,
+          "text": " 설명하셨다면",
+          "probability": 0.7246
+        }
+      ]
+    },
+    {
+      "start": 159.02,
+      "end": 162.22,
+      "text": "어떤 데이터를 사용하셨는지 설명해 주시겠습니까?",
+      "avg_logprob": -0.1778,
+      "no_speech_probability": 0.191,
+      "words": [
+        {
+          "start": 159.02,
+          "end": 159.64,
+          "text": " 어떤",
+          "probability": 0.8985
+        },
+        {
+          "start": 159.64,
+          "end": 160.06,
+          "text": " 데이터를",
+          "probability": 0.7859
+        },
+        {
+          "start": 160.06,
+          "end": 161.06,
+          "text": " 사용하셨는지",
+          "probability": 0.8429
+        },
+        {
+          "start": 161.06,
+          "end": 161.68,
+          "text": " 설명해",
+          "probability": 0.6073
+        },
+        {
+          "start": 161.68,
+          "end": 162.22,
+          "text": " 주시겠습니까?",
+          "probability": 0.7871
+        }
+      ]
+    },
+    {
+      "start": 162.98,
+      "end": 166.52,
+      "text": "제가 플링을 경험해 본 거는",
+      "avg_logprob": -0.1778,
+      "no_speech_probability": 0.191,
+      "words": [
+        {
+          "start": 162.98,
+          "end": 163.28,
+          "text": " 제가",
+          "probability": 0.9144
+        },
+        {
+          "start": 163.28,
+          "end": 164.42,
+          "text": " 플링을",
+          "probability": 0.9935
+        },
+        {
+          "start": 164.42,
+          "end": 165.78,
+          "text": " 경험해",
+          "probability": 0.8441
+        },
+        {
+          "start": 165.78,
+          "end": 166.0,
+          "text": " 본",
+          "probability": 0.9673
+        },
+        {
+          "start": 166.0,
+          "end": 166.52,
+          "text": " 거는",
+          "probability": 0.6359
+        }
+      ]
+    },
+    {
+      "start": 166.52,
+      "end": 173.74,
+      "text": "최근에 2D 프로젝트를 할 때 적의 객체를 플링해야 하는 과정이 있었습니다",
+      "avg_logprob": -0.1778,
+      "no_speech_probability": 0.191,
+      "words": [
+        {
+          "start": 166.52,
+          "end": 167.32,
+          "text": " 최근에",
+          "probability": 0.9358
+        },
+        {
+          "start": 167.32,
+          "end": 167.62,
+          "text": " 2D",
+          "probability": 0.8957
+        },
+        {
+          "start": 167.62,
+          "end": 168.36,
+          "text": " 프로젝트를",
+          "probability": 0.9639
+        },
+        {
+          "start": 168.36,
+          "end": 168.6,
+          "text": " 할",
+          "probability": 0.9751
+        },
+        {
+          "start": 168.6,
+          "end": 168.8,
+          "text": " 때",
+          "probability": 0.996
+        },
+        {
+          "start": 168.8,
+          "end": 171.4,
+          "text": " 적의",
+          "probability": 0.7407
+        },
+        {
+          "start": 171.4,
+          "end": 171.84,
+          "text": " 객체를",
+          "probability": 0.935
+        },
+        {
+          "start": 171.84,
+          "end": 172.54,
+          "text": " 플링해야",
+          "probability": 0.897
+        },
+        {
+          "start": 172.54,
+          "end": 172.88,
+          "text": " 하는",
+          "probability": 0.9479
+        },
+        {
+          "start": 172.88,
+          "end": 173.22,
+          "text": " 과정이",
+          "probability": 0.4668
+        },
+        {
+          "start": 173.22,
+          "end": 173.74,
+          "text": " 있었습니다",
+          "probability": 0.9286
+        }
+      ]
+    },
+    {
+      "start": 173.74,
+      "end": 176.76,
+      "text": "적이랑 총알을 플링을 했어야 했었는데요",
+      "avg_logprob": -0.1778,
+      "no_speech_probability": 0.191,
+      "words": [
+        {
+          "start": 173.74,
+          "end": 174.38,
+          "text": " 적이랑",
+          "probability": 0.6416
+        },
+        {
+          "start": 174.38,
+          "end": 175.42,
+          "text": " 총알을",
+          "probability": 0.8649
+        },
+        {
+          "start": 175.42,
+          "end": 175.9,
+          "text": " 플링을",
+          "probability": 0.9476
+        },
+        {
+          "start": 175.9,
+          "end": 176.2,
+          "text": " 했어야",
+          "probability": 0.9601
+        },
+        {
+          "start": 176.2,
+          "end": 176.76,
+          "text": " 했었는데요",
+          "probability": 0.8496
+        }
+      ]
+    },
+    {
+      "start": 176.76,
+      "end": 181.0,
+      "text": "그 당시에 여러 자료 구조를 고민을 하다가",
+      "avg_logprob": -0.204,
+      "no_speech_probability": 0.0182,
+      "words": [
+        {
+          "start": 176.76,
+          "end": 177.62,
+          "text": " 그",
+          "probability": 0.7134
+        },
+        {
+          "start": 177.62,
+          "end": 177.88,
+          "text": " 당시에",
+          "probability": 0.8131
+        },
+        {
+          "start": 177.88,
+          "end": 178.14,
+          "text": " 여러",
+          "probability": 0.9961
+        },
+        {
+          "start": 178.14,
+          "end": 179.7,
+          "text": " 자료",
+          "probability": 0.9474
+        },
+        {
+          "start": 179.7,
+          "end": 180.0,
+          "text": " 구조를",
+          "probability": 0.9463
+        },
+        {
+          "start": 180.0,
+          "end": 180.48,
+          "text": " 고민을",
+          "probability": 0.9254
+        },
+        {
+          "start": 180.48,
+          "end": 181.0,
+          "text": " 하다가",
+          "probability": 0.9826
+        }
+      ]
+    },
+    {
+      "start": 181.0,
+      "end": 185.32,
+      "text": "제가 선택했던 거는 Q 자료 구조를 선택을 했습니다",
+      "avg_logprob": -0.204,
+      "no_speech_probability": 0.0182,
+      "words": [
+        {
+          "start": 181.0,
+          "end": 181.52,
+          "text": " 제가",
+          "probability": 0.8896
+        },
+        {
+          "start": 181.52,
+          "end": 182.58,
+          "text": " 선택했던",
+          "probability": 0.9739
+        },
+        {
+          "start": 182.58,
+          "end": 182.82,
+          "text": " 거는",
+          "probability": 0.3416
+        },
+        {
+          "start": 182.82,
+          "end": 183.52,
+          "text": " Q",
+          "probability": 0.7223
+        },
+        {
+          "start": 183.52,
+          "end": 184.14,
+          "text": " 자료",
+          "probability": 0.8793
+        },
+        {
+          "start": 184.14,
+          "end": 184.58,
+          "text": " 구조를",
+          "probability": 0.9584
+        },
+        {
+          "start": 184.58,
+          "end": 185.02,
+          "text": " 선택을",
+          "probability": 0.9017
+        },
+        {
+          "start": 185.02,
+          "end": 185.32,
+          "text": " 했습니다",
+          "probability": 0.9882
+        }
+      ]
+    },
+    {
+      "start": 185.32,
+      "end": 187.5,
+      "text": "Q의 경우",
+      "avg_logprob": -0.204,
+      "no_speech_probability": 0.0182,
+      "words": [
+        {
+          "start": 185.32,
+          "end": 187.06,
+          "text": " Q의",
+          "probability": 0.4761
+        },
+        {
+          "start": 187.06,
+          "end": 187.5,
+          "text": " 경우",
+          "probability": 0.9793
+        }
+      ]
+    },
+    {
+      "start": 198.03,
+      "end": 199.99,
+      "text": "먼저 들어온 친구가",
+      "avg_logprob": -0.204,
+      "no_speech_probability": 0.0182,
+      "words": [
+        {
+          "start": 198.03,
+          "end": 198.93,
+          "text": " 먼저",
+          "probability": 0.3129
+        },
+        {
+          "start": 198.93,
+          "end": 199.55,
+          "text": " 들어온",
+          "probability": 0.8631
+        },
+        {
+          "start": 199.55,
+          "end": 199.99,
+          "text": " 친구가",
+          "probability": 0.9727
+        }
+      ]
+    },
+    {
+      "start": 199.99,
+      "end": 206.08,
+      "text": "제일 먼저 들어온 친구가 제일 먼저 나가기 때문에",
+      "avg_logprob": -0.204,
+      "no_speech_probability": 0.0182,
+      "words": [
+        {
+          "start": 199.99,
+          "end": 200.97,
+          "text": " 제일",
+          "probability": 0.6258
+        },
+        {
+          "start": 204.3,
+          "end": 204.56,
+          "text": " 먼저",
+          "probability": 0.9962
+        },
+        {
+          "start": 204.56,
+          "end": 204.82,
+          "text": " 들어온",
+          "probability": 0.9068
+        },
+        {
+          "start": 204.82,
+          "end": 205.14,
+          "text": " 친구가",
+          "probability": 0.6763
+        },
+        {
+          "start": 205.14,
+          "end": 205.22,
+          "text": " 제일",
+          "probability": 0.8121
+        },
+        {
+          "start": 205.22,
+          "end": 205.36,
+          "text": " 먼저",
+          "probability": 0.9981
+        },
+        {
+          "start": 205.36,
+          "end": 205.74,
+          "text": " 나가기",
+          "probability": 0.9565
+        },
+        {
+          "start": 205.74,
+          "end": 206.08,
+          "text": " 때문에",
+          "probability": 0.9963
+        }
+      ]
+    },
+    {
+      "start": 206.71,
+      "end": 211.56,
+      "text": "그런 Q의 특성이 플링 구현함에 있어서",
+      "avg_logprob": -0.204,
+      "no_speech_probability": 0.0182,
+      "words": [
+        {
+          "start": 206.71,
+          "end": 207.16,
+          "text": " 그런",
+          "probability": 0.5227
+        },
+        {
+          "start": 207.16,
+          "end": 208.06,
+          "text": " Q의",
+          "probability": 0.9531
+        },
+        {
+          "start": 208.06,
+          "end": 208.52,
+          "text": " 특성이",
+          "probability": 0.8348
+        },
+        {
+          "start": 208.52,
+          "end": 209.76,
+          "text": " 플링",
+          "probability": 0.066
+        },
+        {
+          "start": 209.76,
+          "end": 211.3,
+          "text": " 구현함에",
+          "probability": 0.7717
+        },
+        {
+          "start": 211.3,
+          "end": 211.56,
+          "text": " 있어서",
+          "probability": 0.9982
+        }
+      ]
+    },
+    {
+      "start": 211.56,
+      "end": 215.66,
+      "text": "가장 적합하다고 생각을 했기 때문에 Q를 이용했었습니다",
+      "avg_logprob": -0.1935,
+      "no_speech_probability": 0.0513,
+      "words": [
+        {
+          "start": 211.56,
+          "end": 212.04,
+          "text": " 가장",
+          "probability": 0.075
+        },
+        {
+          "start": 212.04,
+          "end": 212.74,
+          "text": " 적합하다고",
+          "probability": 0.7841
+        },
+        {
+          "start": 212.74,
+          "end": 212.98,
+          "text": " 생각을",
+          "probability": 0.3156
+        },
+        {
+          "start": 212.98,
+          "end": 213.46,
+          "text": " 했기",
+          "probability": 0.9403
+        },
+        {
+          "start": 213.46,
+          "end": 213.8,
+          "text": " 때문에",
+          "probability": 0.991
+        },
+        {
+          "start": 213.8,
+          "end": 214.7,
+          "text": " Q를",
+          "probability": 0.8444
+        },
+        {
+          "start": 214.7,
+          "end": 215.66,
+          "text": " 이용했었습니다",
+          "probability": 0.7637
+        }
+      ]
+    },
+    {
+      "start": 217.26,
+      "end": 221.74,
+      "text": "추가적으로 플링할 때 딕션어리를 쓰기도 하는데",
+      "avg_logprob": -0.1935,
+      "no_speech_probability": 0.0513,
+      "words": [
+        {
+          "start": 217.26,
+          "end": 218.26,
+          "text": " 추가적으로",
+          "probability": 0.4996
+        },
+        {
+          "start": 218.26,
+          "end": 219.26,
+          "text": " 플링할",
+          "probability": 0.4699
+        },
+        {
+          "start": 219.26,
+          "end": 219.52,
+          "text": " 때",
+          "probability": 0.976
+        },
+        {
+          "start": 219.52,
+          "end": 220.36,
+          "text": " 딕션어리를",
+          "probability": 0.439
+        },
+        {
+          "start": 220.36,
+          "end": 221.2,
+          "text": " 쓰기도",
+          "probability": 0.5335
+        },
+        {
+          "start": 221.2,
+          "end": 221.74,
+          "text": " 하는데",
+          "probability": 0.6881
+        }
+      ]
+    },
+    {
+      "start": 221.74,
+      "end": 227.32,
+      "text": "혹시 어떤 경우에는 Q를 쓰게 되고 어떤 경우에는 딕션어리를 쓰게 되는지",
+      "avg_logprob": -0.1935,
+      "no_speech_probability": 0.0513,
+      "words": [
+        {
+          "start": 221.74,
+          "end": 222.54,
+          "text": " 혹시",
+          "probability": 0.4807
+        },
+        {
+          "start": 222.54,
+          "end": 223.62,
+          "text": " 어떤",
+          "probability": 0.9328
+        },
+        {
+          "start": 223.62,
+          "end": 223.94,
+          "text": " 경우에는",
+          "probability": 0.8199
+        },
+        {
+          "start": 223.94,
+          "end": 224.88,
+          "text": " Q를",
+          "probability": 0.9597
+        },
+        {
+          "start": 224.88,
+          "end": 225.24,
+          "text": " 쓰게",
+          "probability": 0.849
+        },
+        {
+          "start": 225.24,
+          "end": 225.36,
+          "text": " 되고",
+          "probability": 0.5671
+        },
+        {
+          "start": 225.36,
+          "end": 225.64,
+          "text": " 어떤",
+          "probability": 0.7675
+        },
+        {
+          "start": 225.64,
+          "end": 226.0,
+          "text": " 경우에는",
+          "probability": 0.8923
+        },
+        {
+          "start": 226.0,
+          "end": 226.62,
+          "text": " 딕션어리를",
+          "probability": 0.8916
+        },
+        {
+          "start": 226.62,
+          "end": 226.86,
+          "text": " 쓰게",
+          "probability": 0.7522
+        },
+        {
+          "start": 226.86,
+          "end": 227.32,
+          "text": " 되는지",
+          "probability": 0.8645
+        }
+      ]
+    },
+    {
+      "start": 227.32,
+      "end": 231.04,
+      "text": "혹시 차이점에 대해서 말씀해 주실 수 있나요?",
+      "avg_logprob": -0.1935,
+      "no_speech_probability": 0.0513,
+      "words": [
+        {
+          "start": 227.32,
+          "end": 228.22,
+          "text": " 혹시",
+          "probability": 0.4417
+        },
+        {
+          "start": 228.22,
+          "end": 229.32,
+          "text": " 차이점에",
+          "probability": 0.8755
+        },
+        {
+          "start": 229.32,
+          "end": 229.5,
+          "text": " 대해서",
+          "probability": 0.9318
+        },
+        {
+          "start": 229.5,
+          "end": 230.06,
+          "text": " 말씀해",
+          "probability": 0.7912
+        },
+        {
+          "start": 230.06,
+          "end": 230.22,
+          "text": " 주실",
+          "probability": 0.718
+        },
+        {
+          "start": 230.22,
+          "end": 230.34,
+          "text": " 수",
+          "probability": 0.9591
+        },
+        {
+          "start": 230.34,
+          "end": 231.04,
+          "text": " 있나요?",
+          "probability": 0.9798
+        }
+      ]
+    },
+    {
+      "start": 231.32,
+      "end": 233.96,
+      "text": "제가 개발할 때는 Q를 사용을 했었는데요",
+      "avg_logprob": -0.1935,
+      "no_speech_probability": 0.0513,
+      "words": [
+        {
+          "start": 231.32,
+          "end": 231.76,
+          "text": " 제가",
+          "probability": 0.5664
+        },
+        {
+          "start": 231.76,
+          "end": 232.28,
+          "text": " 개발할",
+          "probability": 0.859
+        },
+        {
+          "start": 232.28,
+          "end": 232.42,
+          "text": " 때는",
+          "probability": 0.9533
+        },
+        {
+          "start": 232.42,
+          "end": 233.08,
+          "text": " Q를",
+          "probability": 0.982
+        },
+        {
+          "start": 233.08,
+          "end": 233.5,
+          "text": " 사용을",
+          "probability": 0.6834
+        },
+        {
+          "start": 233.5,
+          "end": 233.96,
+          "text": " 했었는데요",
+          "probability": 0.8442
+        }
+      ]
+    },
+    {
+      "start": 234.46,
+      "end": 238.66,
+      "text": "그 당시에 딕션어리를 고려했기도 했습니다",
+      "avg_logprob": -0.1935,
+      "no_speech_probability": 0.0513,
+      "words": [
+        {
+          "start": 234.46,
+          "end": 234.96,
+          "text": " 그",
+          "probability": 0.8521
+        },
+        {
+          "start": 234.96,
+          "end": 235.38,
+          "text": " 당시에",
+          "probability": 0.8721
+        },
+        {
+          "start": 235.38,
+          "end": 236.62,
+          "text": " 딕션어리를",
+          "probability": 0.9278
+        },
+        {
+          "start": 236.62,
+          "end": 238.16,
+          "text": " 고려했기도",
+          "probability": 0.8479
+        },
+        {
+          "start": 238.16,
+          "end": 238.66,
+          "text": " 했습니다",
+          "probability": 0.9643
+        }
+      ]
+    },
+    {
+      "start": 238.66,
+      "end": 242.24,
+      "text": "왜냐하면 플링 같은 경우에",
+      "avg_logprob": -0.2212,
+      "no_speech_probability": 0.042,
+      "words": [
+        {
+          "start": 238.66,
+          "end": 239.1,
+          "text": " 왜냐하면",
+          "probability": 0.4509
+        },
+        {
+          "start": 239.1,
+          "end": 240.64,
+          "text": " 플링",
+          "probability": 0.4619
+        },
+        {
+          "start": 240.64,
+          "end": 241.02,
+          "text": " 같은",
+          "probability": 0.432
+        },
+        {
+          "start": 241.02,
+          "end": 242.24,
+          "text": " 경우에",
+          "probability": 0.9175
+        }
+      ]
+    },
+    {
+      "start": 242.24,
+      "end": 248.82,
+      "text": "보통 플링이라는 최적화 방법을 적용해야 하는 게임에서는",
+      "avg_logprob": -0.2212,
+      "no_speech_probability": 0.042,
+      "words": [
+        {
+          "start": 242.24,
+          "end": 243.34,
+          "text": " 보통",
+          "probability": 0.543
+        },
+        {
+          "start": 243.34,
+          "end": 245.54,
+          "text": " 플링이라는",
+          "probability": 0.4998
+        },
+        {
+          "start": 245.54,
+          "end": 246.86,
+          "text": " 최적화",
+          "probability": 0.9409
+        },
+        {
+          "start": 246.86,
+          "end": 247.3,
+          "text": " 방법을",
+          "probability": 0.6141
+        },
+        {
+          "start": 247.3,
+          "end": 247.82,
+          "text": " 적용해야",
+          "probability": 0.97
+        },
+        {
+          "start": 247.82,
+          "end": 248.3,
+          "text": " 하는",
+          "probability": 0.8897
+        },
+        {
+          "start": 248.3,
+          "end": 248.82,
+          "text": " 게임에서는",
+          "probability": 0.9769
+        }
+      ]
+    },
+    {
+      "start": 249.66,
+      "end": 255.48,
+      "text": "그 플링을 해야 하는 객체가 상가진만 있는 경우가 아니라",
+      "avg_logprob": -0.2212,
+      "no_speech_probability": 0.042,
+      "words": [
+        {
+          "start": 249.66,
+          "end": 250.46,
+          "text": " 그",
+          "probability": 0.8371
+        },
+        {
+          "start": 250.46,
+          "end": 251.34,
+          "text": " 플링을",
+          "probability": 0.9267
+        },
+        {
+          "start": 251.34,
+          "end": 251.48,
+          "text": " 해야",
+          "probability": 0.9423
+        },
+        {
+          "start": 251.48,
+          "end": 251.76,
+          "text": " 하는",
+          "probability": 0.5045
+        },
+        {
+          "start": 251.76,
+          "end": 252.14,
+          "text": " 객체가",
+          "probability": 0.825
+        },
+        {
+          "start": 252.14,
+          "end": 254.02,
+          "text": " 상가진만",
+          "probability": 0.716
+        },
+        {
+          "start": 254.02,
+          "end": 254.26,
+          "text": " 있는",
+          "probability": 0.9532
+        },
+        {
+          "start": 254.26,
+          "end": 255.34,
+          "text": " 경우가",
+          "probability": 0.9756
+        },
+        {
+          "start": 255.34,
+          "end": 255.48,
+          "text": " 아니라",
+          "probability": 0.9966
+        }
+      ]
+    },
+    {
+      "start": 255.48,
+      "end": 256.72,
+      "text": "보통 여러 가지가 있습니다",
+      "avg_logprob": -0.2212,
+      "no_speech_probability": 0.042,
+      "words": [
+        {
+          "start": 255.48,
+          "end": 255.94,
+          "text": " 보통",
+          "probability": 0.8956
+        },
+        {
+          "start": 255.94,
+          "end": 256.18,
+          "text": " 여러",
+          "probability": 0.9932
+        },
+        {
+          "start": 256.18,
+          "end": 256.48,
+          "text": " 가지가",
+          "probability": 0.7773
+        },
+        {
+          "start": 256.48,
+          "end": 256.72,
+          "text": " 있습니다",
+          "probability": 0.9961
+        }
+      ]
+    },
+    {
+      "start": 256.72,
+      "end": 263.1,
+      "text": "예를 들어 저 같은 경험에도 총알, 여러 가지 종류의 적을",
+      "avg_logprob": -0.2212,
+      "no_speech_probability": 0.042,
+      "words": [
+        {
+          "start": 256.72,
+          "end": 257.22,
+          "text": " 예를",
+          "probability": 0.8668
+        },
+        {
+          "start": 257.22,
+          "end": 257.4,
+          "text": " 들어",
+          "probability": 0.9633
+        },
+        {
+          "start": 257.4,
+          "end": 257.94,
+          "text": " 저",
+          "probability": 0.8818
+        },
+        {
+          "start": 257.94,
+          "end": 258.52,
+          "text": " 같은",
+          "probability": 0.8716
+        },
+        {
+          "start": 258.52,
+          "end": 259.54,
+          "text": " 경험에도",
+          "probability": 0.4679
+        },
+        {
+          "start": 259.54,
+          "end": 261.0,
+          "text": " 총알,",
+          "probability": 0.9631
+        },
+        {
+          "start": 261.18,
+          "end": 261.86,
+          "text": " 여러",
+          "probability": 0.6416
+        },
+        {
+          "start": 261.86,
+          "end": 262.24,
+          "text": " 가지",
+          "probability": 0.7719
+        },
+        {
+          "start": 262.24,
+          "end": 262.66,
+          "text": " 종류의",
+          "probability": 0.8435
+        },
+        {
+          "start": 262.66,
+          "end": 263.1,
+          "text": " 적을",
+          "probability": 0.1897
+        }
+      ]
+    },
+    {
+      "start": 263.1,
+      "end": 268.16,
+      "text": "그리고 아이템, 이런 식으로 여러 가지 객체가 있었어야 했는데",
+      "avg_logprob": -0.2918,
+      "no_speech_probability": 0.0573,
+      "words": [
+        {
+          "start": 263.1,
+          "end": 263.64,
+          "text": " 그리고",
+          "probability": 0.3919
+        },
+        {
+          "start": 263.64,
+          "end": 265.4,
+          "text": " 아이템,",
+          "probability": 0.7898
+        },
+        {
+          "start": 265.6,
+          "end": 265.76,
+          "text": " 이런",
+          "probability": 0.7561
+        },
+        {
+          "start": 265.76,
+          "end": 266.08,
+          "text": " 식으로",
+          "probability": 0.5415
+        },
+        {
+          "start": 266.08,
+          "end": 266.34,
+          "text": " 여러",
+          "probability": 0.9455
+        },
+        {
+          "start": 266.34,
+          "end": 266.58,
+          "text": " 가지",
+          "probability": 0.5477
+        },
+        {
+          "start": 266.58,
+          "end": 266.94,
+          "text": " 객체가",
+          "probability": 0.6199
+        },
+        {
+          "start": 266.94,
+          "end": 267.48,
+          "text": " 있었어야",
+          "probability": 0.8371
+        },
+        {
+          "start": 267.48,
+          "end": 268.16,
+          "text": " 했는데",
+          "probability": 0.2026
+        }
+      ]
+    },
+    {
+      "start": 268.16,
+      "end": 270.8,
+      "text": "그런 경우에 딕션어리의 경우",
+      "avg_logprob": -0.2918,
+      "no_speech_probability": 0.0573,
+      "words": [
+        {
+          "start": 268.16,
+          "end": 268.92,
+          "text": " 그런",
+          "probability": 0.6571
+        },
+        {
+          "start": 268.92,
+          "end": 269.6,
+          "text": " 경우에",
+          "probability": 0.8736
+        },
+        {
+          "start": 269.6,
+          "end": 270.62,
+          "text": " 딕션어리의",
+          "probability": 0.5578
+        },
+        {
+          "start": 270.62,
+          "end": 270.8,
+          "text": " 경우",
+          "probability": 0.9898
+        }
+      ]
+    },
+    {
+      "start": 270.8,
+      "end": 279.56,
+      "text": "타입과 키와 밸류의 객션어리 해시 테이프를 특성에 따라서",
+      "avg_logprob": -0.2918,
+      "no_speech_probability": 0.0573,
+      "words": [
+        {
+          "start": 270.8,
+          "end": 273.06,
+          "text": " 타입과",
+          "probability": 0.7667
+        },
+        {
+          "start": 273.06,
+          "end": 275.64,
+          "text": " 키와",
+          "probability": 0.7397
+        },
+        {
+          "start": 275.64,
+          "end": 276.28,
+          "text": " 밸류의",
+          "probability": 0.6543
+        },
+        {
+          "start": 276.28,
+          "end": 277.06,
+          "text": " 객션어리",
+          "probability": 0.7975
+        },
+        {
+          "start": 277.06,
+          "end": 277.88,
+          "text": " 해시",
+          "probability": 0.8012
+        },
+        {
+          "start": 277.88,
+          "end": 278.24,
+          "text": " 테이프를",
+          "probability": 0.677
+        },
+        {
+          "start": 278.24,
+          "end": 278.66,
+          "text": " 특성에",
+          "probability": 0.8054
+        },
+        {
+          "start": 278.66,
+          "end": 279.56,
+          "text": " 따라서",
+          "probability": 0.9829
+        }
+      ]
+    },
+    {
+      "start": 279.56,
+      "end": 287.6,
+      "text": "종류의 객체에 종류와 정보를 분리해서 담을 수 있기 때문에",
+      "avg_logprob": -0.2918,
+      "no_speech_probability": 0.0573,
+      "words": [
+        {
+          "start": 279.56,
+          "end": 281.74,
+          "text": " 종류의",
+          "probability": 0.5459
+        },
+        {
+          "start": 281.74,
+          "end": 282.08,
+          "text": " 객체에",
+          "probability": 0.7007
+        },
+        {
+          "start": 282.08,
+          "end": 282.64,
+          "text": " 종류와",
+          "probability": 0.8884
+        },
+        {
+          "start": 282.64,
+          "end": 284.26,
+          "text": " 정보를",
+          "probability": 0.7108
+        },
+        {
+          "start": 284.26,
+          "end": 285.82,
+          "text": " 분리해서",
+          "probability": 0.8895
+        },
+        {
+          "start": 285.82,
+          "end": 286.4,
+          "text": " 담을",
+          "probability": 0.8386
+        },
+        {
+          "start": 286.4,
+          "end": 286.46,
+          "text": " 수",
+          "probability": 0.9917
+        },
+        {
+          "start": 286.46,
+          "end": 286.54,
+          "text": " 있기",
+          "probability": 0.9893
+        },
+        {
+          "start": 286.54,
+          "end": 287.6,
+          "text": " 때문에",
+          "probability": 0.9981
+        }
+      ]
+    },
+    {
+      "start": 287.6,
+      "end": 292.94,
+      "text": "여러 종류의 오브젝트들을 플링해야 할 때",
+      "avg_logprob": -0.2918,
+      "no_speech_probability": 0.0573,
+      "words": [
+        {
+          "start": 287.6,
+          "end": 288.48,
+          "text": " 여러",
+          "probability": 0.9832
+        },
+        {
+          "start": 288.48,
+          "end": 289.84,
+          "text": " 종류의",
+          "probability": 0.9884
+        },
+        {
+          "start": 289.84,
+          "end": 292.0,
+          "text": " 오브젝트들을",
+          "probability": 0.8064
+        },
+        {
+          "start": 292.0,
+          "end": 292.58,
+          "text": " 플링해야",
+          "probability": 0.4456
+        },
+        {
+          "start": 292.58,
+          "end": 292.8,
+          "text": " 할",
+          "probability": 0.8859
+        },
+        {
+          "start": 292.8,
+          "end": 292.94,
+          "text": " 때",
+          "probability": 0.9897
+        }
+      ]
+    },
+    {
+      "start": 292.94,
+      "end": 296.92,
+      "text": "딕션어리를 좀 사용하는 것으로 알고 있습니다",
+      "avg_logprob": -0.19,
+      "no_speech_probability": 0.0378,
+      "words": [
+        {
+          "start": 292.94,
+          "end": 293.82,
+          "text": " 딕션어리를",
+          "probability": 0.4746
+        },
+        {
+          "start": 293.82,
+          "end": 294.94,
+          "text": " 좀",
+          "probability": 0.403
+        },
+        {
+          "start": 294.94,
+          "end": 295.64,
+          "text": " 사용하는",
+          "probability": 0.9423
+        },
+        {
+          "start": 295.64,
+          "end": 296.22,
+          "text": " 것으로",
+          "probability": 0.7848
+        },
+        {
+          "start": 296.22,
+          "end": 296.52,
+          "text": " 알고",
+          "probability": 0.9958
+        },
+        {
+          "start": 296.52,
+          "end": 296.92,
+          "text": " 있습니다",
+          "probability": 0.9524
+        }
+      ]
+    },
+    {
+      "start": 296.92,
+      "end": 307.77,
+      "text": "게임을 사용해 보셨다고 했는데",
+      "avg_logprob": -0.19,
+      "no_speech_probability": 0.0378,
+      "words": [
+        {
+          "start": 296.92,
+          "end": 297.66,
+          "text": " 게임을",
+          "probability": 0.6511
+        },
+        {
+          "start": 306.49,
+          "end": 307.05,
+          "text": " 사용해",
+          "probability": 0.673
+        },
+        {
+          "start": 307.05,
+          "end": 307.43,
+          "text": " 보셨다고",
+          "probability": 0.8292
+        },
+        {
+          "start": 307.43,
+          "end": 307.77,
+          "text": " 했는데",
+          "probability": 0.7615
+        }
+      ]
+    },
+    {
+      "start": 307.77,
+      "end": 310.57,
+      "text": "게임 최적화 기법 중에 하나잖아요",
+      "avg_logprob": -0.19,
+      "no_speech_probability": 0.0378,
+      "words": [
+        {
+          "start": 307.77,
+          "end": 308.87,
+          "text": " 게임",
+          "probability": 0.5012
+        },
+        {
+          "start": 308.87,
+          "end": 309.51,
+          "text": " 최적화",
+          "probability": 0.7244
+        },
+        {
+          "start": 309.51,
+          "end": 309.81,
+          "text": " 기법",
+          "probability": 0.8106
+        },
+        {
+          "start": 309.81,
+          "end": 310.07,
+          "text": " 중에",
+          "probability": 0.8381
+        },
+        {
+          "start": 310.07,
+          "end": 310.57,
+          "text": " 하나잖아요",
+          "probability": 0.684
+        }
+      ]
+    },
+    {
+      "start": 310.57,
+      "end": 313.77,
+      "text": "그 게임 최적화 기법 중에 하나인데",
+      "avg_logprob": -0.19,
+      "no_speech_probability": 0.0378,
+      "words": [
+        {
+          "start": 310.57,
+          "end": 311.41,
+          "text": " 그",
+          "probability": 0.5927
+        },
+        {
+          "start": 311.41,
+          "end": 312.05,
+          "text": " 게임",
+          "probability": 0.982
+        },
+        {
+          "start": 312.05,
+          "end": 312.57,
+          "text": " 최적화",
+          "probability": 0.9967
+        },
+        {
+          "start": 312.57,
+          "end": 312.99,
+          "text": " 기법",
+          "probability": 0.9852
+        },
+        {
+          "start": 312.99,
+          "end": 313.23,
+          "text": " 중에",
+          "probability": 0.8185
+        },
+        {
+          "start": 313.23,
+          "end": 313.77,
+          "text": " 하나인데",
+          "probability": 0.9376
+        }
+      ]
+    },
+    {
+      "start": 314.31,
+      "end": 319.71,
+      "text": "오브젝트 플링 외에 혹시 사용해 보신 경험이 있는지",
+      "avg_logprob": -0.19,
+      "no_speech_probability": 0.0378,
+      "words": [
+        {
+          "start": 314.31,
+          "end": 315.73,
+          "text": " 오브젝트",
+          "probability": 0.5924
+        },
+        {
+          "start": 315.73,
+          "end": 316.03,
+          "text": " 플링",
+          "probability": 0.4523
+        },
+        {
+          "start": 316.03,
+          "end": 316.55,
+          "text": " 외에",
+          "probability": 0.7265
+        },
+        {
+          "start": 316.55,
+          "end": 316.77,
+          "text": " 혹시",
+          "probability": 0.9766
+        },
+        {
+          "start": 316.77,
+          "end": 317.35,
+          "text": " 사용해",
+          "probability": 0.7711
+        },
+        {
+          "start": 317.35,
+          "end": 317.71,
+          "text": " 보신",
+          "probability": 0.9508
+        },
+        {
+          "start": 317.71,
+          "end": 319.19,
+          "text": " 경험이",
+          "probability": 0.8538
+        },
+        {
+          "start": 319.19,
+          "end": 319.71,
+          "text": " 있는지",
+          "probability": 0.9664
+        }
+      ]
+    },
+    {
+      "start": 319.71,
+      "end": 323.13,
+      "text": "게임 프로젝트가 하나예요",
+      "avg_logprob": -0.19,
+      "no_speech_probability": 0.0378,
+      "words": [
+        {
+          "start": 319.71,
+          "end": 321.71,
+          "text": " 게임",
+          "probability": 0.9527
+        },
+        {
+          "start": 321.71,
+          "end": 322.43,
+          "text": " 프로젝트가",
+          "probability": 0.9681
+        },
+        {
+          "start": 322.43,
+          "end": 323.13,
+          "text": " 하나예요",
+          "probability": 0.2759
+        }
+      ]
+    },
+    {
+      "start": 328.54,
+      "end": 330.72,
+      "text": "경험이 있다면 설명해 주시면 됩니다",
+      "avg_logprob": -0.19,
+      "no_speech_probability": 0.0378,
+      "words": [
+        {
+          "start": 328.54,
+          "end": 329.0,
+          "text": " 경험이",
+          "probability": 0.9129
+        },
+        {
+          "start": 329.0,
+          "end": 329.26,
+          "text": " 있다면",
+          "probability": 0.9316
+        },
+        {
+          "start": 329.26,
+          "end": 330.02,
+          "text": " 설명해",
+          "probability": 0.454
+        },
+        {
+          "start": 330.02,
+          "end": 330.34,
+          "text": " 주시면",
+          "probability": 0.7143
+        },
+        {
+          "start": 330.34,
+          "end": 330.72,
+          "text": " 됩니다",
+          "probability": 0.113
+        }
+      ]
+    },
+    {
+      "start": 335.64,
+      "end": 340.48,
+      "text": "우선 여러 가지 최적화 기법이 있는 걸로 알고 있는데",
+      "avg_logprob": -0.19,
+      "no_speech_probability": 0.0378,
+      "words": [
+        {
+          "start": 335.64,
+          "end": 336.3,
+          "text": " 우선",
+          "probability": 0.6101
+        },
+        {
+          "start": 336.3,
+          "end": 338.18,
+          "text": " 여러",
+          "probability": 0.7628
+        },
+        {
+          "start": 338.18,
+          "end": 338.4,
+          "text": " 가지",
+          "probability": 0.6896
+        },
+        {
+          "start": 338.4,
+          "end": 339.02,
+          "text": " 최적화",
+          "probability": 0.8712
+        },
+        {
+          "start": 339.02,
+          "end": 339.48,
+          "text": " 기법이",
+          "probability": 0.9712
+        },
+        {
+          "start": 339.48,
+          "end": 339.68,
+          "text": " 있는",
+          "probability": 0.9977
+        },
+        {
+          "start": 339.68,
+          "end": 339.9,
+          "text": " 걸로",
+          "probability": 0.5217
+        },
+        {
+          "start": 339.9,
+          "end": 340.14,
+          "text": " 알고",
+          "probability": 0.9993
+        },
+        {
+          "start": 340.14,
+          "end": 340.48,
+          "text": " 있는데",
+          "probability": 0.9721
+        }
+      ]
+    },
+    {
+      "start": 340.48,
+      "end": 344.9,
+      "text": "제가 사용했다 하는 걸로 기억이 나는 것은",
+      "avg_logprob": -0.2199,
+      "no_speech_probability": 0.0447,
+      "words": [
+        {
+          "start": 340.48,
+          "end": 341.1,
+          "text": " 제가",
+          "probability": 0.3449
+        },
+        {
+          "start": 341.1,
+          "end": 342.28,
+          "text": " 사용했다",
+          "probability": 0.7929
+        },
+        {
+          "start": 342.28,
+          "end": 344.06,
+          "text": " 하는",
+          "probability": 0.8781
+        },
+        {
+          "start": 344.06,
+          "end": 344.2,
+          "text": " 걸로",
+          "probability": 0.3738
+        },
+        {
+          "start": 344.2,
+          "end": 344.46,
+          "text": " 기억이",
+          "probability": 0.9419
+        },
+        {
+          "start": 344.46,
+          "end": 344.64,
+          "text": " 나는",
+          "probability": 0.9691
+        },
+        {
+          "start": 344.64,
+          "end": 344.9,
+          "text": " 것은",
+          "probability": 0.9433
+        }
+      ]
+    },
+    {
+      "start": 345.48,
+      "end": 351.88,
+      "text": "유니티에서 캔버스 드로우를 따로 하는데요",
+      "avg_logprob": -0.2199,
+      "no_speech_probability": 0.0447,
+      "words": [
+        {
+          "start": 345.48,
+          "end": 347.36,
+          "text": " 유니티에서",
+          "probability": 0.6759
+        },
+        {
+          "start": 347.36,
+          "end": 348.1,
+          "text": " 캔버스",
+          "probability": 0.8184
+        },
+        {
+          "start": 348.1,
+          "end": 350.5,
+          "text": " 드로우를",
+          "probability": 0.6856
+        },
+        {
+          "start": 350.5,
+          "end": 350.98,
+          "text": " 따로",
+          "probability": 0.989
+        },
+        {
+          "start": 350.98,
+          "end": 351.88,
+          "text": " 하는데요",
+          "probability": 0.8301
+        }
+      ]
+    },
+    {
+      "start": 352.24,
+      "end": 357.6,
+      "text": "예를 들어 HP를 프로그레스 바로 표현을 하거나",
+      "avg_logprob": -0.2199,
+      "no_speech_probability": 0.0447,
+      "words": [
+        {
+          "start": 352.24,
+          "end": 352.92,
+          "text": " 예를",
+          "probability": 0.7405
+        },
+        {
+          "start": 352.92,
+          "end": 353.18,
+          "text": " 들어",
+          "probability": 0.9351
+        },
+        {
+          "start": 353.18,
+          "end": 354.74,
+          "text": " HP를",
+          "probability": 0.5822
+        },
+        {
+          "start": 354.74,
+          "end": 356.24,
+          "text": " 프로그레스",
+          "probability": 0.6277
+        },
+        {
+          "start": 356.24,
+          "end": 356.44,
+          "text": " 바로",
+          "probability": 0.8677
+        },
+        {
+          "start": 356.44,
+          "end": 356.82,
+          "text": " 표현을",
+          "probability": 0.9358
+        },
+        {
+          "start": 356.82,
+          "end": 357.6,
+          "text": " 하거나",
+          "probability": 0.9914
+        }
+      ]
+    },
+    {
+      "start": 357.6,
+      "end": 362.62,
+      "text": "아니면 시간초가 바뀌는, 실시간으로 바뀌는",
+      "avg_logprob": -0.2199,
+      "no_speech_probability": 0.0447,
+      "words": [
+        {
+          "start": 357.6,
+          "end": 357.96,
+          "text": " 아니면",
+          "probability": 0.8765
+        },
+        {
+          "start": 357.96,
+          "end": 360.06,
+          "text": " 시간초가",
+          "probability": 0.4864
+        },
+        {
+          "start": 360.06,
+          "end": 360.66,
+          "text": " 바뀌는,",
+          "probability": 0.9573
+        },
+        {
+          "start": 361.04,
+          "end": 361.56,
+          "text": " 실시간으로",
+          "probability": 0.909
+        },
+        {
+          "start": 361.56,
+          "end": 362.62,
+          "text": " 바뀌는",
+          "probability": 0.986
+        }
+      ]
+    },
+    {
+      "start": 362.62,
+      "end": 368.48,
+      "text": "그런 UI들을 캔버스에 많이 넣을수록",
+      "avg_logprob": -0.2199,
+      "no_speech_probability": 0.0447,
+      "words": [
+        {
+          "start": 362.62,
+          "end": 362.86,
+          "text": " 그런",
+          "probability": 0.8993
+        },
+        {
+          "start": 362.86,
+          "end": 364.3,
+          "text": " UI들을",
+          "probability": 0.611
+        },
+        {
+          "start": 364.3,
+          "end": 365.3,
+          "text": " 캔버스에",
+          "probability": 0.9879
+        },
+        {
+          "start": 365.3,
+          "end": 365.68,
+          "text": " 많이",
+          "probability": 0.9808
+        },
+        {
+          "start": 365.68,
+          "end": 368.48,
+          "text": " 넣을수록",
+          "probability": 0.9447
+        }
+      ]
+    },
+    {
+      "start": 368.48,
+      "end": 373.66,
+      "text": "그리고 그 매크린마다 해당 실시간 변화하는 UI들이",
+      "avg_logprob": -0.1591,
+      "no_speech_probability": 0.0206,
+      "words": [
+        {
+          "start": 368.48,
+          "end": 368.8,
+          "text": " 그리고",
+          "probability": 0.6711
+        },
+        {
+          "start": 368.8,
+          "end": 369.32,
+          "text": " 그",
+          "probability": 0.8616
+        },
+        {
+          "start": 369.32,
+          "end": 370.08,
+          "text": " 매크린마다",
+          "probability": 0.7215
+        },
+        {
+          "start": 370.08,
+          "end": 371.04,
+          "text": " 해당",
+          "probability": 0.9741
+        },
+        {
+          "start": 371.04,
+          "end": 372.4,
+          "text": " 실시간",
+          "probability": 0.8159
+        },
+        {
+          "start": 372.4,
+          "end": 373.02,
+          "text": " 변화하는",
+          "probability": 0.9035
+        },
+        {
+          "start": 373.02,
+          "end": 373.66,
+          "text": " UI들이",
+          "probability": 0.6906
+        }
+      ]
+    },
+    {
+      "start": 373.66,
+      "end": 377.44,
+      "text": "한 분씩 변화할 때마다 캔버스를 다시 그리게 됩니다",
+      "avg_logprob": -0.1591,
+      "no_speech_probability": 0.0206,
+      "words": [
+        {
+          "start": 373.66,
+          "end": 374.24,
+          "text": " 한",
+          "probability": 0.7406
+        },
+        {
+          "start": 374.24,
+          "end": 374.7,
+          "text": " 분씩",
+          "probability": 0.9765
+        },
+        {
+          "start": 374.7,
+          "end": 375.18,
+          "text": " 변화할",
+          "probability": 0.9351
+        },
+        {
+          "start": 375.18,
+          "end": 375.44,
+          "text": " 때마다",
+          "probability": 0.9653
+        },
+        {
+          "start": 375.44,
+          "end": 376.12,
+          "text": " 캔버스를",
+          "probability": 0.9318
+        },
+        {
+          "start": 376.12,
+          "end": 376.82,
+          "text": " 다시",
+          "probability": 0.9833
+        },
+        {
+          "start": 376.82,
+          "end": 377.16,
+          "text": " 그리게",
+          "probability": 0.6049
+        },
+        {
+          "start": 377.16,
+          "end": 377.44,
+          "text": " 됩니다",
+          "probability": 0.966
+        }
+      ]
+    },
+    {
+      "start": 377.44,
+      "end": 382.38,
+      "text": "이러한 다시 그리는 과정을 최적화기 위해서",
+      "avg_logprob": -0.1591,
+      "no_speech_probability": 0.0206,
+      "words": [
+        {
+          "start": 377.44,
+          "end": 379.54,
+          "text": " 이러한",
+          "probability": 0.7064
+        },
+        {
+          "start": 379.54,
+          "end": 379.84,
+          "text": " 다시",
+          "probability": 0.9486
+        },
+        {
+          "start": 379.84,
+          "end": 380.28,
+          "text": " 그리는",
+          "probability": 0.9794
+        },
+        {
+          "start": 380.28,
+          "end": 380.98,
+          "text": " 과정을",
+          "probability": 0.9935
+        },
+        {
+          "start": 380.98,
+          "end": 382.06,
+          "text": " 최적화기",
+          "probability": 0.5259
+        },
+        {
+          "start": 382.06,
+          "end": 382.38,
+          "text": " 위해서",
+          "probability": 0.9758
+        }
+      ]
+    },
+    {
+      "start": 382.38,
+      "end": 389.96,
+      "text": "동적으로 움직이는 UI들이 담긴 캔버스와",
+      "avg_logprob": -0.1591,
+      "no_speech_probability": 0.0206,
+      "words": [
+        {
+          "start": 382.38,
+          "end": 384.38,
+          "text": " 동적으로",
+          "probability": 0.7556
+        },
+        {
+          "start": 384.38,
+          "end": 385.6,
+          "text": " 움직이는",
+          "probability": 0.7665
+        },
+        {
+          "start": 385.6,
+          "end": 389.06,
+          "text": " UI들이",
+          "probability": 0.6016
+        },
+        {
+          "start": 389.06,
+          "end": 389.32,
+          "text": " 담긴",
+          "probability": 0.9883
+        },
+        {
+          "start": 389.32,
+          "end": 389.96,
+          "text": " 캔버스와",
+          "probability": 0.9608
+        }
+      ]
+    },
+    {
+      "start": 390.48,
+      "end": 395.64,
+      "text": "정적으로 항상 동일한 내용을 표시하는 UI를",
+      "avg_logprob": -0.1591,
+      "no_speech_probability": 0.0206,
+      "words": [
+        {
+          "start": 390.48,
+          "end": 391.84,
+          "text": " 정적으로",
+          "probability": 0.9272
+        },
+        {
+          "start": 391.84,
+          "end": 392.64,
+          "text": " 항상",
+          "probability": 0.7843
+        },
+        {
+          "start": 392.64,
+          "end": 393.92,
+          "text": " 동일한",
+          "probability": 0.9622
+        },
+        {
+          "start": 393.92,
+          "end": 394.26,
+          "text": " 내용을",
+          "probability": 0.9934
+        },
+        {
+          "start": 394.26,
+          "end": 394.7,
+          "text": " 표시하는",
+          "probability": 0.9895
+        },
+        {
+          "start": 394.7,
+          "end": 395.64,
+          "text": " UI를",
+          "probability": 0.9157
+        }
+      ]
+    },
+    {
+      "start": 395.64,
+      "end": 399.6,
+      "text": "분리하는 최적화 기법을 사용한 적이 있습니다",
+      "avg_logprob": -0.2411,
+      "no_speech_probability": 0.05,
+      "words": [
+        {
+          "start": 395.64,
+          "end": 397.02,
+          "text": " 분리하는",
+          "probability": 0.6263
+        },
+        {
+          "start": 397.02,
+          "end": 398.14,
+          "text": " 최적화",
+          "probability": 0.8876
+        },
+        {
+          "start": 398.14,
+          "end": 398.62,
+          "text": " 기법을",
+          "probability": 0.7898
+        },
+        {
+          "start": 398.62,
+          "end": 399.0,
+          "text": " 사용한",
+          "probability": 0.9472
+        },
+        {
+          "start": 399.0,
+          "end": 399.2,
+          "text": " 적이",
+          "probability": 0.9616
+        },
+        {
+          "start": 399.2,
+          "end": 399.6,
+          "text": " 있습니다",
+          "probability": 0.9908
+        }
+      ]
+    },
+    {
+      "start": 403.6,
+      "end": 407.52,
+      "text": "그 다음으로 메모리 스태카 팁에 대해서",
+      "avg_logprob": -0.2411,
+      "no_speech_probability": 0.05,
+      "words": [
+        {
+          "start": 403.6,
+          "end": 404.44,
+          "text": " 그",
+          "probability": 0.0539
+        },
+        {
+          "start": 404.44,
+          "end": 405.04,
+          "text": " 다음으로",
+          "probability": 0.9659
+        },
+        {
+          "start": 405.04,
+          "end": 405.92,
+          "text": " 메모리",
+          "probability": 0.8805
+        },
+        {
+          "start": 405.92,
+          "end": 406.78,
+          "text": " 스태카",
+          "probability": 0.7703
+        },
+        {
+          "start": 406.78,
+          "end": 407.16,
+          "text": " 팁에",
+          "probability": 0.7771
+        },
+        {
+          "start": 407.16,
+          "end": 407.52,
+          "text": " 대해서",
+          "probability": 0.8413
+        }
+      ]
+    },
+    {
+      "start": 407.52,
+      "end": 409.4,
+      "text": "자세히 설명해 주셨는데",
+      "avg_logprob": -0.2411,
+      "no_speech_probability": 0.05,
+      "words": [
+        {
+          "start": 407.52,
+          "end": 408.42,
+          "text": " 자세히",
+          "probability": 0.7815
+        },
+        {
+          "start": 408.42,
+          "end": 408.7,
+          "text": " 설명해",
+          "probability": 0.7733
+        },
+        {
+          "start": 408.7,
+          "end": 409.4,
+          "text": " 주셨는데",
+          "probability": 0.9906
+        }
+      ]
+    },
+    {
+      "start": 409.4,
+      "end": 411.84,
+      "text": "메모리 활달하는 과정에서",
+      "avg_logprob": -0.2411,
+      "no_speech_probability": 0.05,
+      "words": [
+        {
+          "start": 409.4,
+          "end": 410.34,
+          "text": " 메모리",
+          "probability": 0.6244
+        },
+        {
+          "start": 410.34,
+          "end": 411.12,
+          "text": " 활달하는",
+          "probability": 0.4377
+        },
+        {
+          "start": 411.12,
+          "end": 411.84,
+          "text": " 과정에서",
+          "probability": 0.9307
+        }
+      ]
+    },
+    {
+      "start": 413.8,
+      "end": 417.28,
+      "text": "메모리 담편하나 그런 개념에 대해서 혹시 아실까요?",
+      "avg_logprob": -0.2411,
+      "no_speech_probability": 0.05,
+      "words": [
+        {
+          "start": 413.8,
+          "end": 414.76,
+          "text": " 메모리",
+          "probability": 0.7107
+        },
+        {
+          "start": 414.76,
+          "end": 415.42,
+          "text": " 담편하나",
+          "probability": 0.6612
+        },
+        {
+          "start": 415.42,
+          "end": 415.78,
+          "text": " 그런",
+          "probability": 0.9129
+        },
+        {
+          "start": 415.78,
+          "end": 416.44,
+          "text": " 개념에",
+          "probability": 0.7913
+        },
+        {
+          "start": 416.44,
+          "end": 416.64,
+          "text": " 대해서",
+          "probability": 0.8673
+        },
+        {
+          "start": 416.64,
+          "end": 416.82,
+          "text": " 혹시",
+          "probability": 0.8173
+        },
+        {
+          "start": 416.82,
+          "end": 417.28,
+          "text": " 아실까요?",
+          "probability": 0.9765
+        }
+      ]
+    },
+    {
+      "start": 425.05,
+      "end": 428.49,
+      "text": "운영체제 단계에서 메모리 관리하는 데 있어서",
+      "avg_logprob": -0.2411,
+      "no_speech_probability": 0.05,
+      "words": [
+        {
+          "start": 425.05,
+          "end": 425.51,
+          "text": " 운영체제",
+          "probability": 0.8193
+        },
+        {
+          "start": 425.51,
+          "end": 426.11,
+          "text": " 단계에서",
+          "probability": 0.7513
+        },
+        {
+          "start": 426.11,
+          "end": 427.07,
+          "text": " 메모리",
+          "probability": 0.8152
+        },
+        {
+          "start": 427.07,
+          "end": 428.01,
+          "text": " 관리하는",
+          "probability": 0.8231
+        },
+        {
+          "start": 428.01,
+          "end": 428.17,
+          "text": " 데",
+          "probability": 0.5983
+        },
+        {
+          "start": 428.17,
+          "end": 428.49,
+          "text": " 있어서",
+          "probability": 0.9574
+        }
+      ]
+    },
+    {
+      "start": 428.49,
+      "end": 432.25,
+      "text": "해당 메모리 내부 담편하 혹은",
+      "avg_logprob": -0.2411,
+      "no_speech_probability": 0.05,
+      "words": [
+        {
+          "start": 428.49,
+          "end": 430.25,
+          "text": " 해당",
+          "probability": 0.5594
+        },
+        {
+          "start": 430.25,
+          "end": 430.97,
+          "text": " 메모리",
+          "probability": 0.7852
+        },
+        {
+          "start": 430.97,
+          "end": 431.37,
+          "text": " 내부",
+          "probability": 0.8911
+        },
+        {
+          "start": 431.37,
+          "end": 431.83,
+          "text": " 담편하",
+          "probability": 0.5858
+        },
+        {
+          "start": 431.83,
+          "end": 432.25,
+          "text": " 혹은",
+          "probability": 0.9169
+        }
+      ]
+    },
+    {
+      "start": 432.25,
+      "end": 435.01,
+      "text": "외부 담편하가 일어날 수 있는 곳으로 알고 있습니다",
+      "avg_logprob": -0.2411,
+      "no_speech_probability": 0.05,
+      "words": [
+        {
+          "start": 432.25,
+          "end": 432.55,
+          "text": " 외부",
+          "probability": 0.8702
+        },
+        {
+          "start": 432.55,
+          "end": 433.15,
+          "text": " 담편하가",
+          "probability": 0.9536
+        },
+        {
+          "start": 433.15,
+          "end": 433.61,
+          "text": " 일어날",
+          "probability": 0.9039
+        },
+        {
+          "start": 433.61,
+          "end": 433.79,
+          "text": " 수",
+          "probability": 0.9936
+        },
+        {
+          "start": 433.79,
+          "end": 433.95,
+          "text": " 있는",
+          "probability": 0.9885
+        },
+        {
+          "start": 433.95,
+          "end": 434.43,
+          "text": " 곳으로",
+          "probability": 0.8462
+        },
+        {
+          "start": 434.43,
+          "end": 434.65,
+          "text": " 알고",
+          "probability": 0.9976
+        },
+        {
+          "start": 434.65,
+          "end": 435.01,
+          "text": " 있습니다",
+          "probability": 0.9794
+        }
+      ]
+    },
+    {
+      "start": 435.01,
+      "end": 440.09,
+      "text": "물론 최근에는 이미 정영화된 기법이 되어있지만",
+      "avg_logprob": -0.2262,
+      "no_speech_probability": 0.0192,
+      "words": [
+        {
+          "start": 435.01,
+          "end": 436.47,
+          "text": " 물론",
+          "probability": 0.2743
+        },
+        {
+          "start": 436.47,
+          "end": 437.81,
+          "text": " 최근에는",
+          "probability": 0.8898
+        },
+        {
+          "start": 437.81,
+          "end": 438.61,
+          "text": " 이미",
+          "probability": 0.4763
+        },
+        {
+          "start": 438.61,
+          "end": 439.25,
+          "text": " 정영화된",
+          "probability": 0.7165
+        },
+        {
+          "start": 439.25,
+          "end": 439.65,
+          "text": " 기법이",
+          "probability": 0.9225
+        },
+        {
+          "start": 439.65,
+          "end": 440.09,
+          "text": " 되어있지만",
+          "probability": 0.8037
+        }
+      ]
+    },
+    {
+      "start": 440.09,
+      "end": 445.29,
+      "text": "우선 페이징 기법이랑 세그멘테이션 기법으로 나뉘어져 있는데요",
+      "avg_logprob": -0.2262,
+      "no_speech_probability": 0.0192,
+      "words": [
+        {
+          "start": 440.09,
+          "end": 441.19,
+          "text": " 우선",
+          "probability": 0.5463
+        },
+        {
+          "start": 441.19,
+          "end": 442.07,
+          "text": " 페이징",
+          "probability": 0.8569
+        },
+        {
+          "start": 442.07,
+          "end": 442.57,
+          "text": " 기법이랑",
+          "probability": 0.8541
+        },
+        {
+          "start": 442.57,
+          "end": 443.57,
+          "text": " 세그멘테이션",
+          "probability": 0.8067
+        },
+        {
+          "start": 443.57,
+          "end": 444.23,
+          "text": " 기법으로",
+          "probability": 0.98
+        },
+        {
+          "start": 444.23,
+          "end": 444.85,
+          "text": " 나뉘어져",
+          "probability": 0.8977
+        },
+        {
+          "start": 444.85,
+          "end": 445.29,
+          "text": " 있는데요",
+          "probability": 0.5244
+        }
+      ]
+    },
+    {
+      "start": 447.15,
+      "end": 449.13,
+      "text": "세그멘테이션 기법의 경우",
+      "avg_logprob": -0.2262,
+      "no_speech_probability": 0.0192,
+      "words": [
+        {
+          "start": 447.15,
+          "end": 448.47,
+          "text": " 세그멘테이션",
+          "probability": 0.9072
+        },
+        {
+          "start": 448.47,
+          "end": 448.97,
+          "text": " 기법의",
+          "probability": 0.884
+        },
+        {
+          "start": 448.97,
+          "end": 449.13,
+          "text": " 경우",
+          "probability": 0.9542
+        }
+      ]
+    },
+    {
+      "start": 450.01,
+      "end": 456.29,
+      "text": "해당 메모리 애를 섹션물로 분류를 해서",
+      "avg_logprob": -0.2262,
+      "no_speech_probability": 0.0192,
+      "words": [
+        {
+          "start": 450.01,
+          "end": 451.09,
+          "text": " 해당",
+          "probability": 0.6752
+        },
+        {
+          "start": 451.09,
+          "end": 451.57,
+          "text": " 메모리",
+          "probability": 0.7853
+        },
+        {
+          "start": 451.57,
+          "end": 452.83,
+          "text": " 애를",
+          "probability": 0.5257
+        },
+        {
+          "start": 452.83,
+          "end": 455.39,
+          "text": " 섹션물로",
+          "probability": 0.7431
+        },
+        {
+          "start": 455.39,
+          "end": 455.95,
+          "text": " 분류를",
+          "probability": 0.7564
+        },
+        {
+          "start": 455.95,
+          "end": 456.29,
+          "text": " 해서",
+          "probability": 0.9866
+        }
+      ]
+    },
+    {
+      "start": 456.85,
+      "end": 461.17,
+      "text": "이걸 넣는 과정에도 방법이 있지만",
+      "avg_logprob": -0.2262,
+      "no_speech_probability": 0.0192,
+      "words": [
+        {
+          "start": 456.85,
+          "end": 457.51,
+          "text": " 이걸",
+          "probability": 0.5241
+        },
+        {
+          "start": 457.51,
+          "end": 458.97,
+          "text": " 넣는",
+          "probability": 0.9719
+        },
+        {
+          "start": 458.97,
+          "end": 459.63,
+          "text": " 과정에도",
+          "probability": 0.9864
+        },
+        {
+          "start": 459.63,
+          "end": 460.77,
+          "text": " 방법이",
+          "probability": 0.9488
+        },
+        {
+          "start": 460.77,
+          "end": 461.17,
+          "text": " 있지만",
+          "probability": 0.9629
+        }
+      ]
+    },
+    {
+      "start": 461.17,
+      "end": 463.91,
+      "text": "그거는 간단하게 넘어가고",
+      "avg_logprob": -0.1339,
+      "no_speech_probability": 0.0477,
+      "words": [
+        {
+          "start": 461.17,
+          "end": 461.89,
+          "text": " 그거는",
+          "probability": 0.599
+        },
+        {
+          "start": 461.89,
+          "end": 463.15,
+          "text": " 간단하게",
+          "probability": 0.9568
+        },
+        {
+          "start": 463.15,
+          "end": 463.91,
+          "text": " 넘어가고",
+          "probability": 0.9617
+        }
+      ]
+    },
+    {
+      "start": 463.91,
+      "end": 466.47,
+      "text": "섹션물로 나눠서 넣는 걸로 알고 있고요",
+      "avg_logprob": -0.1339,
+      "no_speech_probability": 0.0477,
+      "words": [
+        {
+          "start": 463.91,
+          "end": 465.23,
+          "text": " 섹션물로",
+          "probability": 0.5164
+        },
+        {
+          "start": 465.23,
+          "end": 465.65,
+          "text": " 나눠서",
+          "probability": 0.9671
+        },
+        {
+          "start": 465.65,
+          "end": 465.89,
+          "text": " 넣는",
+          "probability": 0.9587
+        },
+        {
+          "start": 465.89,
+          "end": 466.01,
+          "text": " 걸로",
+          "probability": 0.5657
+        },
+        {
+          "start": 466.01,
+          "end": 466.19,
+          "text": " 알고",
+          "probability": 0.9965
+        },
+        {
+          "start": 466.19,
+          "end": 466.47,
+          "text": " 있고요",
+          "probability": 0.7106
+        }
+      ]
+    },
+    {
+      "start": 466.47,
+      "end": 471.41,
+      "text": "페이징 기법의 경우 한 페이징 별로 나눠서",
+      "avg_logprob": -0.1339,
+      "no_speech_probability": 0.0477,
+      "words": [
+        {
+          "start": 466.47,
+          "end": 467.03,
+          "text": " 페이징",
+          "probability": 0.7375
+        },
+        {
+          "start": 467.03,
+          "end": 467.41,
+          "text": " 기법의",
+          "probability": 0.7788
+        },
+        {
+          "start": 467.41,
+          "end": 467.59,
+          "text": " 경우",
+          "probability": 0.9571
+        },
+        {
+          "start": 467.59,
+          "end": 468.39,
+          "text": " 한",
+          "probability": 0.832
+        },
+        {
+          "start": 468.39,
+          "end": 468.99,
+          "text": " 페이징",
+          "probability": 0.9928
+        },
+        {
+          "start": 468.99,
+          "end": 469.51,
+          "text": " 별로",
+          "probability": 0.5889
+        },
+        {
+          "start": 469.51,
+          "end": 471.41,
+          "text": " 나눠서",
+          "probability": 0.9844
+        }
+      ]
+    },
+    {
+      "start": 472.57,
+      "end": 473.65,
+      "text": "자체를",
+      "avg_logprob": -0.1339,
+      "no_speech_probability": 0.0477,
+      "words": [
+        {
+          "start": 472.57,
+          "end": 473.65,
+          "text": " 자체를",
+          "probability": 0.6851
+        }
+      ]
+    },
+    {
+      "start": 475.15,
+      "end": 478.03,
+      "text": "페이징 페이징 자체를 넣어서",
+      "avg_logprob": -0.1339,
+      "no_speech_probability": 0.0477,
+      "words": [
+        {
+          "start": 475.15,
+          "end": 476.23,
+          "text": " 페이징",
+          "probability": 0.9306
+        },
+        {
+          "start": 476.23,
+          "end": 476.65,
+          "text": " 페이징",
+          "probability": 0.9454
+        },
+        {
+          "start": 476.65,
+          "end": 477.13,
+          "text": " 자체를",
+          "probability": 0.99
+        },
+        {
+          "start": 477.13,
+          "end": 478.03,
+          "text": " 넣어서",
+          "probability": 0.9914
+        }
+      ]
+    },
+    {
+      "start": 479.11,
+      "end": 481.67,
+      "text": "메모리 구성하는 곳으로 알고 있습니다",
+      "avg_logprob": -0.1339,
+      "no_speech_probability": 0.0477,
+      "words": [
+        {
+          "start": 479.11,
+          "end": 479.65,
+          "text": " 메모리",
+          "probability": 0.4829
+        },
+        {
+          "start": 479.65,
+          "end": 480.53,
+          "text": " 구성하는",
+          "probability": 0.7657
+        },
+        {
+          "start": 480.53,
+          "end": 480.81,
+          "text": " 곳으로",
+          "probability": 0.3748
+        },
+        {
+          "start": 480.81,
+          "end": 481.21,
+          "text": " 알고",
+          "probability": 0.995
+        },
+        {
+          "start": 481.21,
+          "end": 481.67,
+          "text": " 있습니다",
+          "probability": 0.9735
+        }
+      ]
+    },
+    {
+      "start": 481.67,
+      "end": 483.51,
+      "text": "결론적으로 말씀드리면",
+      "avg_logprob": -0.1339,
+      "no_speech_probability": 0.0477,
+      "words": [
+        {
+          "start": 481.67,
+          "end": 482.89,
+          "text": " 결론적으로",
+          "probability": 0.7959
+        },
+        {
+          "start": 482.89,
+          "end": 483.51,
+          "text": " 말씀드리면",
+          "probability": 0.9766
+        }
+      ]
+    },
+    {
+      "start": 483.95,
+      "end": 487.87,
+      "text": "페이징 기법의 경우에는 이 페이징 전체를 다소기 때문에",
+      "avg_logprob": -0.1339,
+      "no_speech_probability": 0.0477,
+      "words": [
+        {
+          "start": 483.95,
+          "end": 484.49,
+          "text": " 페이징",
+          "probability": 0.9648
+        },
+        {
+          "start": 484.49,
+          "end": 484.87,
+          "text": " 기법의",
+          "probability": 0.9725
+        },
+        {
+          "start": 484.87,
+          "end": 485.19,
+          "text": " 경우에는",
+          "probability": 0.9248
+        },
+        {
+          "start": 485.19,
+          "end": 485.91,
+          "text": " 이",
+          "probability": 0.478
+        },
+        {
+          "start": 485.91,
+          "end": 486.43,
+          "text": " 페이징",
+          "probability": 0.9909
+        },
+        {
+          "start": 486.43,
+          "end": 486.99,
+          "text": " 전체를",
+          "probability": 0.9771
+        },
+        {
+          "start": 486.99,
+          "end": 487.51,
+          "text": " 다소기",
+          "probability": 0.7082
+        },
+        {
+          "start": 487.51,
+          "end": 487.87,
+          "text": " 때문에",
+          "probability": 0.9917
+        }
+      ]
+    },
+    {
+      "start": 487.87,
+      "end": 491.01,
+      "text": "내부 담편안이 일어나지 않지만",
+      "avg_logprob": -0.0958,
+      "no_speech_probability": 0.0176,
+      "words": [
+        {
+          "start": 487.87,
+          "end": 489.35,
+          "text": " 내부",
+          "probability": 0.5311
+        },
+        {
+          "start": 489.35,
+          "end": 489.81,
+          "text": " 담편안이",
+          "probability": 0.5428
+        },
+        {
+          "start": 489.81,
+          "end": 490.13,
+          "text": " 일어나지",
+          "probability": 0.9287
+        },
+        {
+          "start": 490.13,
+          "end": 491.01,
+          "text": " 않지만",
+          "probability": 0.9803
+        }
+      ]
+    },
+    {
+      "start": 491.01,
+      "end": 493.13,
+      "text": "대신에 페이징과 페이징 사이에",
+      "avg_logprob": -0.0958,
+      "no_speech_probability": 0.0176,
+      "words": [
+        {
+          "start": 491.01,
+          "end": 491.49,
+          "text": " 대신에",
+          "probability": 0.6701
+        },
+        {
+          "start": 491.49,
+          "end": 492.51,
+          "text": " 페이징과",
+          "probability": 0.8363
+        },
+        {
+          "start": 492.51,
+          "end": 492.81,
+          "text": " 페이징",
+          "probability": 0.9832
+        },
+        {
+          "start": 492.81,
+          "end": 493.13,
+          "text": " 사이에",
+          "probability": 0.9237
+        }
+      ]
+    },
+    {
+      "start": 493.87,
+      "end": 495.39,
+      "text": "담편화가 발생할 수 있어서",
+      "avg_logprob": -0.0958,
+      "no_speech_probability": 0.0176,
+      "words": [
+        {
+          "start": 493.87,
+          "end": 494.65,
+          "text": " 담편화가",
+          "probability": 0.6138
+        },
+        {
+          "start": 494.65,
+          "end": 495.01,
+          "text": " 발생할",
+          "probability": 0.9671
+        },
+        {
+          "start": 495.01,
+          "end": 495.09,
+          "text": " 수",
+          "probability": 0.9798
+        },
+        {
+          "start": 495.09,
+          "end": 495.39,
+          "text": " 있어서",
+          "probability": 0.9822
+        }
+      ]
+    },
+    {
+      "start": 495.39,
+      "end": 497.15,
+      "text": "외부 담편화가 발생할 수 있고요",
+      "avg_logprob": -0.0958,
+      "no_speech_probability": 0.0176,
+      "words": [
+        {
+          "start": 495.39,
+          "end": 495.93,
+          "text": " 외부",
+          "probability": 0.9386
+        },
+        {
+          "start": 495.93,
+          "end": 496.43,
+          "text": " 담편화가",
+          "probability": 0.964
+        },
+        {
+          "start": 496.43,
+          "end": 496.79,
+          "text": " 발생할",
+          "probability": 0.9568
+        },
+        {
+          "start": 496.79,
+          "end": 496.89,
+          "text": " 수",
+          "probability": 0.9778
+        },
+        {
+          "start": 496.89,
+          "end": 497.15,
+          "text": " 있고요",
+          "probability": 0.5204
+        }
+      ]
+    },
+    {
+      "start": 497.61,
+      "end": 499.79,
+      "text": "그 반대로 세그멘테이션 기법의 경우",
+      "avg_logprob": -0.0958,
+      "no_speech_probability": 0.0176,
+      "words": [
+        {
+          "start": 497.61,
+          "end": 498.05,
+          "text": " 그",
+          "probability": 0.2172
+        },
+        {
+          "start": 498.05,
+          "end": 498.45,
+          "text": " 반대로",
+          "probability": 0.9579
+        },
+        {
+          "start": 498.45,
+          "end": 499.17,
+          "text": " 세그멘테이션",
+          "probability": 0.8007
+        },
+        {
+          "start": 499.17,
+          "end": 499.59,
+          "text": " 기법의",
+          "probability": 0.7442
+        },
+        {
+          "start": 499.59,
+          "end": 499.79,
+          "text": " 경우",
+          "probability": 0.9813
+        }
+      ]
+    },
+    {
+      "start": 499.79,
+      "end": 504.03,
+      "text": "메모리 자체를 섹션물로 분류를 하기 때문에",
+      "avg_logprob": -0.0958,
+      "no_speech_probability": 0.0176,
+      "words": [
+        {
+          "start": 499.79,
+          "end": 501.39,
+          "text": " 메모리",
+          "probability": 0.8152
+        },
+        {
+          "start": 501.39,
+          "end": 502.35,
+          "text": " 자체를",
+          "probability": 0.9546
+        },
+        {
+          "start": 502.35,
+          "end": 503.01,
+          "text": " 섹션물로",
+          "probability": 0.5787
+        },
+        {
+          "start": 503.01,
+          "end": 503.47,
+          "text": " 분류를",
+          "probability": 0.5538
+        },
+        {
+          "start": 503.47,
+          "end": 503.61,
+          "text": " 하기",
+          "probability": 0.9824
+        },
+        {
+          "start": 503.61,
+          "end": 504.03,
+          "text": " 때문에",
+          "probability": 0.9941
+        }
+      ]
+    },
+    {
+      "start": 506.65,
+      "end": 512.39,
+      "text": "디테일하게 자기들끼리 붙이기 때문에",
+      "avg_logprob": -0.0958,
+      "no_speech_probability": 0.0176,
+      "words": [
+        {
+          "start": 506.65,
+          "end": 507.53,
+          "text": " 디테일하게",
+          "probability": 0.9144
+        },
+        {
+          "start": 507.53,
+          "end": 508.41,
+          "text": " 자기들끼리",
+          "probability": 0.9283
+        },
+        {
+          "start": 508.41,
+          "end": 510.07,
+          "text": " 붙이기",
+          "probability": 0.8679
+        },
+        {
+          "start": 511.51,
+          "end": 512.39,
+          "text": " 때문에",
+          "probability": 0.9918
+        }
+      ]
+    },
+    {
+      "start": 512.39,
+      "end": 514.43,
+      "text": "외부 담편안에 발생하지 않지만",
+      "avg_logprob": -0.0958,
+      "no_speech_probability": 0.0176,
+      "words": [
+        {
+          "start": 512.39,
+          "end": 512.81,
+          "text": " 외부",
+          "probability": 0.9912
+        },
+        {
+          "start": 512.81,
+          "end": 513.39,
+          "text": " 담편안에",
+          "probability": 0.8501
+        },
+        {
+          "start": 513.39,
+          "end": 513.85,
+          "text": " 발생하지",
+          "probability": 0.994
+        },
+        {
+          "start": 513.85,
+          "end": 514.43,
+          "text": " 않지만",
+          "probability": 0.987
+        }
+      ]
+    },
+    {
+      "start": 514.43,
+      "end": 517.95,
+      "text": "오히려 내부 담편화가 발생할 수 있는 단점이 있는 것으로 알고 있습니다",
+      "avg_logprob": -0.0958,
+      "no_speech_probability": 0.0176,
+      "words": [
+        {
+          "start": 514.43,
+          "end": 514.87,
+          "text": " 오히려",
+          "probability": 0.8283
+        },
+        {
+          "start": 514.87,
+          "end": 515.23,
+          "text": " 내부",
+          "probability": 0.9462
+        },
+        {
+          "start": 515.23,
+          "end": 515.73,
+          "text": " 담편화가",
+          "probability": 0.9762
+        },
+        {
+          "start": 515.73,
+          "end": 516.15,
+          "text": " 발생할",
+          "probability": 0.9953
+        },
+        {
+          "start": 516.15,
+          "end": 516.23,
+          "text": " 수",
+          "probability": 0.9948
+        },
+        {
+          "start": 516.23,
+          "end": 516.45,
+          "text": " 있는",
+          "probability": 0.9881
+        },
+        {
+          "start": 516.45,
+          "end": 516.95,
+          "text": " 단점이",
+          "probability": 0.9864
+        },
+        {
+          "start": 516.95,
+          "end": 517.05,
+          "text": " 있는",
+          "probability": 0.9758
+        },
+        {
+          "start": 517.05,
+          "end": 517.35,
+          "text": " 것으로",
+          "probability": 0.9837
+        },
+        {
+          "start": 517.35,
+          "end": 517.61,
+          "text": " 알고",
+          "probability": 0.9985
+        },
+        {
+          "start": 517.61,
+          "end": 517.95,
+          "text": " 있습니다",
+          "probability": 0.9854
+        }
+      ]
+    },
+    {
+      "start": 522.56,
+      "end": 526.76,
+      "text": "시샵에서 딜리게이트와 이벤트의 차이점에 대해서",
+      "avg_logprob": -0.2362,
+      "no_speech_probability": 0.0446,
+      "words": [
+        {
+          "start": 522.56,
+          "end": 523.9,
+          "text": " 시샵에서",
+          "probability": 0.5386
+        },
+        {
+          "start": 523.9,
+          "end": 525.14,
+          "text": " 딜리게이트와",
+          "probability": 0.6104
+        },
+        {
+          "start": 525.14,
+          "end": 525.76,
+          "text": " 이벤트의",
+          "probability": 0.8346
+        },
+        {
+          "start": 525.76,
+          "end": 526.32,
+          "text": " 차이점에",
+          "probability": 0.8332
+        },
+        {
+          "start": 526.32,
+          "end": 526.76,
+          "text": " 대해서",
+          "probability": 0.9013
+        }
+      ]
+    },
+    {
+      "start": 526.76,
+      "end": 528.28,
+      "text": "설명해주셨습니다",
+      "avg_logprob": -0.2362,
+      "no_speech_probability": 0.0446,
+      "words": [
+        {
+          "start": 526.76,
+          "end": 528.28,
+          "text": " 설명해주셨습니다",
+          "probability": 0.6179
+        }
+      ]
+    },
+    {
+      "start": 528.28,
+      "end": 530.7,
+      "text": "딜리게이트의 경우",
+      "avg_logprob": -0.2362,
+      "no_speech_probability": 0.0446,
+      "words": [
+        {
+          "start": 528.28,
+          "end": 530.48,
+          "text": " 딜리게이트의",
+          "probability": 0.7896
+        },
+        {
+          "start": 530.48,
+          "end": 530.7,
+          "text": " 경우",
+          "probability": 0.9736
+        }
+      ]
+    },
+    {
+      "start": 531.56,
+      "end": 535.9,
+      "text": "함수를 변수처럼 사용할 때",
+      "avg_logprob": -0.2362,
+      "no_speech_probability": 0.0446,
+      "words": [
+        {
+          "start": 531.56,
+          "end": 532.32,
+          "text": " 함수를",
+          "probability": 0.536
+        },
+        {
+          "start": 532.32,
+          "end": 533.98,
+          "text": " 변수처럼",
+          "probability": 0.784
+        },
+        {
+          "start": 533.98,
+          "end": 535.74,
+          "text": " 사용할",
+          "probability": 0.7713
+        },
+        {
+          "start": 535.74,
+          "end": 535.9,
+          "text": " 때",
+          "probability": 0.9807
+        }
+      ]
+    },
+    {
+      "start": 535.9,
+      "end": 538.28,
+      "text": "이제 딜리게이트를 사용하는데요",
+      "avg_logprob": -0.2362,
+      "no_speech_probability": 0.0446,
+      "words": [
+        {
+          "start": 535.9,
+          "end": 536.26,
+          "text": " 이제",
+          "probability": 0.2972
+        },
+        {
+          "start": 536.26,
+          "end": 536.98,
+          "text": " 딜리게이트를",
+          "probability": 0.8757
+        },
+        {
+          "start": 536.98,
+          "end": 538.28,
+          "text": " 사용하는데요",
+          "probability": 0.8793
+        }
+      ]
+    },
+    {
+      "start": 538.28,
+      "end": 539.64,
+      "text": "예를 들어서",
+      "avg_logprob": -0.2362,
+      "no_speech_probability": 0.0446,
+      "words": [
+        {
+          "start": 538.28,
+          "end": 539.18,
+          "text": " 예를",
+          "probability": 0.7755
+        },
+        {
+          "start": 539.18,
+          "end": 539.64,
+          "text": " 들어서",
+          "probability": 0.9674
+        }
+      ]
+    },
+    {
+      "start": 541.88,
+      "end": 545.83,
+      "text": "예를 들어서",
+      "avg_logprob": -0.2362,
+      "no_speech_probability": 0.0446,
+      "words": [
+        {
+          "start": 541.88,
+          "end": 543.28,
+          "text": " 예를",
+          "probability": 0.4911
+        },
+        {
+          "start": 545.45,
+          "end": 545.83,
+          "text": " 들어서",
+          "probability": 0.9943
+        }
+      ]
+    },
+    {
+      "start": 545.83,
+      "end": 549.63,
+      "text": "적을 소환을 하고 해당적이",
+      "avg_logprob": -0.2362,
+      "no_speech_probability": 0.0446,
+      "words": [
+        {
+          "start": 545.83,
+          "end": 547.35,
+          "text": " 적을",
+          "probability": 0.8841
+        },
+        {
+          "start": 547.35,
+          "end": 548.31,
+          "text": " 소환을",
+          "probability": 0.9
+        },
+        {
+          "start": 548.31,
+          "end": 548.55,
+          "text": " 하고",
+          "probability": 0.981
+        },
+        {
+          "start": 548.55,
+          "end": 549.63,
+          "text": " 해당적이",
+          "probability": 0.8988
+        }
+      ]
+    },
+    {
+      "start": 549.63,
+      "end": 551.83,
+      "text": "자신을 소환한 객체한테",
+      "avg_logprob": -0.2362,
+      "no_speech_probability": 0.0446,
+      "words": [
+        {
+          "start": 549.63,
+          "end": 550.85,
+          "text": " 자신을",
+          "probability": 0.9653
+        },
+        {
+          "start": 550.85,
+          "end": 551.33,
+          "text": " 소환한",
+          "probability": 0.8878
+        },
+        {
+          "start": 551.33,
+          "end": 551.83,
+          "text": " 객체한테",
+          "probability": 0.6935
+        }
+      ]
+    },
+    {
+      "start": 551.83,
+      "end": 553.47,
+      "text": "자신이 죽었을 때",
+      "avg_logprob": -0.2362,
+      "no_speech_probability": 0.0446,
+      "words": [
+        {
+          "start": 551.83,
+          "end": 552.83,
+          "text": " 자신이",
+          "probability": 0.9836
+        },
+        {
+          "start": 552.83,
+          "end": 553.31,
+          "text": " 죽었을",
+          "probability": 0.9938
+        },
+        {
+          "start": 553.31,
+          "end": 553.47,
+          "text": " 때",
+          "probability": 0.9516
+        }
+      ]
+    },
+    {
+      "start": 553.47,
+      "end": 555.17,
+      "text": "그걸 알리고 싶을 때",
+      "avg_logprob": -0.2026,
+      "no_speech_probability": 0.0248,
+      "words": [
+        {
+          "start": 553.47,
+          "end": 554.07,
+          "text": " 그걸",
+          "probability": 0.171
+        },
+        {
+          "start": 554.07,
+          "end": 554.65,
+          "text": " 알리고",
+          "probability": 0.9846
+        },
+        {
+          "start": 554.65,
+          "end": 555.01,
+          "text": " 싶을",
+          "probability": 0.9874
+        },
+        {
+          "start": 555.01,
+          "end": 555.17,
+          "text": " 때",
+          "probability": 0.9211
+        }
+      ]
+    },
+    {
+      "start": 557.09,
+      "end": 561.67,
+      "text": "알림을 받는 함수를 딜리게이트해서",
+      "avg_logprob": -0.2026,
+      "no_speech_probability": 0.0248,
+      "words": [
+        {
+          "start": 557.09,
+          "end": 558.25,
+          "text": " 알림을",
+          "probability": 0.8462
+        },
+        {
+          "start": 558.25,
+          "end": 559.41,
+          "text": " 받는",
+          "probability": 0.9886
+        },
+        {
+          "start": 559.41,
+          "end": 559.87,
+          "text": " 함수를",
+          "probability": 0.8595
+        },
+        {
+          "start": 559.87,
+          "end": 561.67,
+          "text": " 딜리게이트해서",
+          "probability": 0.6343
+        }
+      ]
+    },
+    {
+      "start": 561.67,
+      "end": 563.69,
+      "text": "하는 방식으로 사용됩니다",
+      "avg_logprob": -0.2026,
+      "no_speech_probability": 0.0248,
+      "words": [
+        {
+          "start": 561.67,
+          "end": 562.35,
+          "text": " 하는",
+          "probability": 0.9779
+        },
+        {
+          "start": 562.35,
+          "end": 562.93,
+          "text": " 방식으로",
+          "probability": 0.9548
+        },
+        {
+          "start": 562.93,
+          "end": 563.69,
+          "text": " 사용됩니다",
+          "probability": 0.7819
+        }
+      ]
+    },
+    {
+      "start": 563.69,
+      "end": 565.23,
+      "text": "즉 그",
+      "avg_logprob": -0.2026,
+      "no_speech_probability": 0.0248,
+      "words": [
+        {
+          "start": 563.69,
+          "end": 564.95,
+          "text": " 즉",
+          "probability": 0.7188
+        },
+        {
+          "start": 564.95,
+          "end": 565.23,
+          "text": " 그",
+          "probability": 0.7496
+        }
+      ]
+    },
+    {
+      "start": 565.23,
+      "end": 567.09,
+      "text": "바인딩을 할 때",
+      "avg_logprob": -0.2026,
+      "no_speech_probability": 0.0248,
+      "words": [
+        {
+          "start": 565.23,
+          "end": 566.69,
+          "text": " 바인딩을",
+          "probability": 0.6125
+        },
+        {
+          "start": 566.69,
+          "end": 566.91,
+          "text": " 할",
+          "probability": 0.97
+        },
+        {
+          "start": 566.91,
+          "end": 567.09,
+          "text": " 때",
+          "probability": 0.9964
+        }
+      ]
+    },
+    {
+      "start": 567.09,
+      "end": 569.37,
+      "text": "이벤트를 활용해서",
+      "avg_logprob": -0.2026,
+      "no_speech_probability": 0.0248,
+      "words": [
+        {
+          "start": 567.09,
+          "end": 568.91,
+          "text": " 이벤트를",
+          "probability": 0.9653
+        },
+        {
+          "start": 568.91,
+          "end": 569.37,
+          "text": " 활용해서",
+          "probability": 0.9905
+        }
+      ]
+    },
+    {
+      "start": 569.37,
+      "end": 570.11,
+      "text": "바인딩을 하고요",
+      "avg_logprob": -0.2026,
+      "no_speech_probability": 0.0248,
+      "words": [
+        {
+          "start": 569.37,
+          "end": 569.87,
+          "text": " 바인딩을",
+          "probability": 0.8171
+        },
+        {
+          "start": 569.87,
+          "end": 570.11,
+          "text": " 하고요",
+          "probability": 0.8996
+        }
+      ]
+    },
+    {
+      "start": 570.11,
+      "end": 571.47,
+      "text": "딜리게이트는",
+      "avg_logprob": -0.2026,
+      "no_speech_probability": 0.0248,
+      "words": [
+        {
+          "start": 570.11,
+          "end": 571.47,
+          "text": " 딜리게이트는",
+          "probability": 0.8348
+        }
+      ]
+    },
+    {
+      "start": 571.47,
+      "end": 573.63,
+      "text": "함수를 변수화하는 것을",
+      "avg_logprob": -0.2026,
+      "no_speech_probability": 0.0248,
+      "words": [
+        {
+          "start": 571.47,
+          "end": 572.23,
+          "text": " 함수를",
+          "probability": 0.6753
+        },
+        {
+          "start": 572.23,
+          "end": 573.41,
+          "text": " 변수화하는",
+          "probability": 0.8545
+        },
+        {
+          "start": 573.41,
+          "end": 573.63,
+          "text": " 것을",
+          "probability": 0.7466
+        }
+      ]
+    },
+    {
+      "start": 573.63,
+      "end": 575.09,
+      "text": "뜻하는 것으로 알고 있습니다",
+      "avg_logprob": -0.2026,
+      "no_speech_probability": 0.0248,
+      "words": [
+        {
+          "start": 573.63,
+          "end": 574.23,
+          "text": " 뜻하는",
+          "probability": 0.9804
+        },
+        {
+          "start": 574.23,
+          "end": 574.47,
+          "text": " 것으로",
+          "probability": 0.9291
+        },
+        {
+          "start": 574.47,
+          "end": 574.75,
+          "text": " 알고",
+          "probability": 0.9974
+        },
+        {
+          "start": 574.75,
+          "end": 575.09,
+          "text": " 있습니다",
+          "probability": 0.9748
+        }
+      ]
+    },
+    {
+      "start": 579.83,
+      "end": 580.63,
+      "text": "잘했습니다",
+      "avg_logprob": -0.48,
+      "no_speech_probability": 0.9773,
+      "words": [
+        {
+          "start": 579.83,
+          "end": 580.63,
+          "text": " 잘했습니다",
+          "probability": 0.4179
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "ASR confidence is not a calibrated intelligibility score.",
+    "The transcript does not identify interviewer and candidate speakers.",
+    "This report cannot assess voice quality, emotion, personality, or accent.",
+    "Review segment timestamps against the source audio before assigning a voice score."
+  ]
+}
