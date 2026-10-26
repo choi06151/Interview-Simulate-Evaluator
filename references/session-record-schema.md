@@ -8,7 +8,7 @@
 - 면접 한 회당 새 세션 폴더를 만든다. 기존 회차를 덮어쓰지 않는다.
 - 질문 점수는 실제 면접에서 묻고 답한 평가 질문 단위로 기록한다. 동일 질문의 후속 질문은 해당 단위 안에 포함한다.
 - `text_score`는 `question_scores`에 기록된 채점 가능 질문 점수의 단순 평균을 정수 반올림한 값이다. 태그별 점수는 만들지 않는다.
-- 음성 자료가 있으면 `voice_score`는 음성 평가 루브릭의 4개 항목 점수 합계다. 음성 자료가 없거나 분석할 수 없으면 `null`로 기록한다.
+- 음성 자료가 있고 후보자 화자 및 전달 근거를 확인할 수 있으면 `voice_score`는 음성 평가 루브릭 v2.0의 5개 항목 점수 합계다. 화자 식별 또는 음향 근거가 불충분하면 `null`로 기록한다.
 - 두 점수가 모두 있으면 `total_score`는 `(text_score + voice_score) / 2`를 정수 반올림한 값이며 최대 100점이다. 음성 점수가 `null`이면 최종 총점도 `null`이다. 기존 `/100` 텍스트 단독 기록은 소급해 환산하지 않는다.
 - 질문에 답하지 않았으면 0점이다. 질문하지 않은 주제는 질문 배열에 억지로 넣지 않고 `unassessed_areas`에 기록한다.
 - 원문은 transcript.md에 그대로 보존한다. 정정 시 기존 원문을 덮어쓰지 않는다.
@@ -24,7 +24,7 @@
   "role": "게임 엔진 클라이언트 프로그래머",
   "level": "미제공",
   "interview_type": "모의 면접",
-  "rubric_version": "text-2.0+voice-1.0",
+  "rubric_version": "text-2.0+voice-2.0",
   "transcript_scope": "제공된 대화 전문",
   "audio_provided": true,
   "audio_scope": "전체 면접 녹음",
@@ -56,10 +56,11 @@
   "text_score": 50,
   "voice_score": 72,
   "voice_score_breakdown": {
-    "intelligibility": 30,
-    "spoken_structure": 22,
-    "question_responsiveness": 14,
-    "delivery_control": 6
+    "intelligibility": 22,
+    "pace_stability": 15,
+    "breathing_pauses_fluency": 14,
+    "loudness_signal_stability": 11,
+    "prosody": 10
   },
   "total_score": 61,
   "total_score_max": 100,
@@ -76,7 +77,7 @@
 }
 ```
 
-예시 점수는 형식 설명용이다. 운영 시 `text_score`가 채점된 질문 점수의 평균과, `total_score`가 텍스트·음성 점수의 평균을 정수 반올림한 값인지 확인한다. 음성 미평가 시 `voice_score`, 네 항목 점수, `total_score`는 `null`로 두고 사유를 기록한다.
+예시 점수는 형식 설명용이다. 운영 시 `text_score`가 채점된 질문 점수의 평균과, `total_score`가 텍스트·음성 점수의 평균을 정수 반올림한 값인지 확인한다. 음성 미평가 시 `voice_score`, 다섯 항목 점수, `total_score`는 `null`로 두고 사유를 기록한다.
 
 ## 참가자 목록
 

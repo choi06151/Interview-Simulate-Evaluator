@@ -1,0 +1,3 @@
+faster-whisper>=1.1,<2.0
+sounddevice>=0.5,<1.0
+-r requirements-audio-diarization.txt

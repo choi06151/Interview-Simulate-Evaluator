@@ -1,4 +1,5 @@
 .audio-venv/
+models/
 __pycache__/
 *.py[cod]
 .DS_Store
