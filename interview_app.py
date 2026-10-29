@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import calendar as month_calendar
 import json
 import queue
+import random
 import re
 import shutil
 import subprocess
@@ -148,6 +150,7 @@ class InterviewApp(tk.Tk):
         self.candidate_speaker = ""
         self.live_assistance: list[tuple[str, dict[str, object]]] = []
         self.analysis_active = False
+        self.analysis_pending_chunks: list[dict[str, object]] = []
         self.analysis_last_chunk = 0
         self.live_session: dict[str, object] | None = None
         self.question_set_date = tk.StringVar(value=date.today().isoformat())
@@ -157,6 +160,7 @@ class InterviewApp(tk.Tk):
         self._style()
         self._build()
         self._refresh_list()
+        self.after(0, self._refresh_local_models)
         self.after(150, self._poll_live_events)
 
     def _style(self) -> None:
@@ -196,6 +200,89 @@ class InterviewApp(tk.Tk):
         except (OSError, ValueError, json.JSONDecodeError):
             return []
 
+    def _open_question_date_picker(self) -> None:
+        try:
+            selected = datetime.strptime(self.question_set_date.get().strip(), "%Y-%m-%d").date()
+        except ValueError:
+            selected = date.today()
+
+        window = tk.Toplevel(self)
+        window.title("면접 날짜 선택")
+        window.resizable(False, False)
+        window.transient(self)
+        window.grab_set()
+        month_state = {"year": selected.year, "month": selected.month}
+        month_label = tk.StringVar()
+
+        header = ttk.Frame(window, padding=(12, 12, 12, 6))
+        header.pack(fill="x")
+        ttk.Button(header, text="◀", width=3, command=lambda: change_month(-1)).pack(side="left")
+        ttk.Label(header, textvariable=month_label, anchor="center", font=("Segoe UI", 11, "bold")).pack(side="left", expand=True, fill="x", padx=8)
+        ttk.Button(header, text="▶", width=3, command=lambda: change_month(1)).pack(side="right")
+
+        calendar_grid = ttk.Frame(window, padding=(12, 0, 12, 6))
+        calendar_grid.pack()
+        footer = ttk.Frame(window, padding=(12, 0, 12, 12))
+        footer.pack(fill="x")
+
+        def choose_day(day: int) -> None:
+            current_day = self.question_set_date.get().strip()
+            current_questions = self._parsed_question_lines()
+            try:
+                current_saved = self._read_daily_questions(current_day)
+            except ValueError:
+                current_saved = []
+            if current_questions != current_saved:
+                if not messagebox.askyesno(
+                    "편집 내용 확인",
+                    "아직 저장하지 않은 질문 내용이 있습니다. 선택한 날짜의 질문을 불러오면 현재 편집 내용이 바뀝니다. 계속할까요?",
+                    parent=window,
+                ):
+                    return
+            selected_day = date(month_state["year"], month_state["month"], day).isoformat()
+            self.question_set_date.set(selected_day)
+            window.destroy()
+            self._load_daily_question_set()
+
+        def render_month() -> None:
+            for child in calendar_grid.winfo_children():
+                child.destroy()
+            year, month = month_state["year"], month_state["month"]
+            month_label.set(f"{year}년 {month}월")
+            for column, weekday in enumerate(("월", "화", "수", "목", "금", "토", "일")):
+                ttk.Label(calendar_grid, text=weekday, anchor="center", width=5).grid(row=0, column=column, padx=1, pady=(4, 6))
+            for row, week in enumerate(month_calendar.monthcalendar(year, month), start=1):
+                for column, day in enumerate(week):
+                    if day == 0:
+                        ttk.Label(calendar_grid, text="", width=5).grid(row=row, column=column, padx=1, pady=1)
+                    else:
+                        ttk.Button(
+                            calendar_grid, text=str(day), width=4,
+                            command=lambda value=day: choose_day(value),
+                        ).grid(row=row, column=column, padx=1, pady=1)
+
+        def change_month(offset: int) -> None:
+            moved = month_state["month"] + offset
+            if moved < 1:
+                month_state["year"] -= 1
+                month_state["month"] = 12
+            elif moved > 12:
+                month_state["year"] += 1
+                month_state["month"] = 1
+            else:
+                month_state["month"] = moved
+            render_month()
+
+        def choose_today() -> None:
+            today = date.today()
+            month_state.update(year=today.year, month=today.month)
+            render_month()
+            choose_day(today.day)
+
+        ttk.Button(footer, text="오늘", command=choose_today).pack(side="left")
+        ttk.Button(footer, text="닫기", command=window.destroy).pack(side="right")
+        render_month()
+
     def _build_question_setup_page(self, parent: ttk.Frame) -> None:
         parent.columnconfigure(0, weight=1)
         parent.rowconfigure(3, weight=1)
@@ -210,8 +297,10 @@ class InterviewApp(tk.Tk):
         toolbar.grid(row=2, column=0, sticky="ew", pady=(0, 10))
         ttk.Label(toolbar, text="면접 날짜").pack(side="left", padx=(0, 8))
         ttk.Entry(toolbar, textvariable=self.question_set_date, width=14).pack(side="left")
+        ttk.Button(toolbar, text="달력에서 선택", command=self._open_question_date_picker).pack(side="left", padx=(6, 0))
         ttk.Button(toolbar, text="날짜 질문 불러오기", command=self._load_daily_question_set).pack(side="left", padx=(8, 0))
         ttk.Button(toolbar, text="30개 저장", command=self._save_daily_question_set, style="Accent.TButton").pack(side="left", padx=(8, 0))
+        ttk.Button(toolbar, text="날짜 질문 삭제", command=self._delete_daily_question_set).pack(side="left", padx=(8, 0))
         self.question_count_label = ttk.Label(toolbar, text="0 / 30 질문", style="Sub.TLabel")
         self.question_count_label.pack(side="right")
 
@@ -272,6 +361,34 @@ class InterviewApp(tk.Tk):
         if show_message:
             self.status.configure(text=f"{day} 질문 {len(questions)}개를 불러왔습니다.")
 
+    def _delete_daily_question_set(self) -> None:
+        day = self.question_set_date.get().strip()
+        try:
+            path = self._question_file_for_date(day)
+        except ValueError:
+            messagebox.showerror("날짜 형식", "날짜는 YYYY-MM-DD 형식으로 입력해 주세요.", parent=self)
+            return
+        if self._active_session_uses_question_date(day):
+            messagebox.showinfo("면접 진행 중", "현재 녹음에서 사용하는 질문 세트는 녹음이 끝난 뒤에 삭제할 수 있습니다.", parent=self)
+            return
+        if not messagebox.askyesno(
+            "날짜 질문 삭제",
+            f"{day}에 저장된 공통 질문 목록을 삭제하고 편집기 내용을 비울까요?\n면접 기록과 각 회차에 저장된 질문은 삭제되지 않습니다.",
+            parent=self,
+        ):
+            return
+        try:
+            path.unlink(missing_ok=True)
+        except OSError as error:
+            messagebox.showerror("질문 목록 삭제 실패", str(error), parent=self)
+            return
+        self.question_editor.delete("1.0", tk.END)
+        self._update_question_count()
+        if day == date.today().isoformat():
+            self.daily_questions = []
+            self._refresh_live_question_choices()
+        self.status.configure(text=f"{day} 공통 질문 목록을 삭제했습니다. 면접 기록은 보존했습니다.")
+
     def _save_daily_question_set(self) -> None:
         day = self.question_set_date.get().strip()
         try:
@@ -287,10 +404,25 @@ class InterviewApp(tk.Tk):
             messagebox.showinfo("질문 개수 확인", f"질문을 한 줄에 하나씩 정확히 30개 입력해 주세요. 현재 {len(questions)}개입니다.", parent=self)
             return
         existing_questions = self._read_daily_questions(day)
-        already_used_today = any(str(session["date"]) == day for session in self.sessions)
-        if already_used_today and questions != existing_questions:
-            messagebox.showinfo("공통 질문 고정", "이 날짜에는 이미 면접 기록이 있습니다. 모든 참가자에게 같은 질문을 사용하도록 당일 질문 세트는 수정할 수 없습니다.", parent=self)
-            return
+        # 기록 삭제 등으로 화면을 연 뒤 저장 데이터가 바뀌었을 수 있으므로
+        # 저장 직전에 디스크 기준으로 회차 목록을 다시 읽습니다.
+        self.sessions = find_sessions()
+        sessions_on_day = [session for session in self.sessions if str(session["date"])[:10] == day]
+        if sessions_on_day and questions != existing_questions:
+            participants = ", ".join(sorted({str(session["participant_name"]) for session in sessions_on_day}))
+            if path.exists():
+                messagebox.showinfo(
+                    "공통 질문 고정",
+                    f"{day} 날짜에 저장된 면접 기록이 있어 질문 세트를 바로 수정할 수 없습니다.\n기록 참가자: {participants}\n기존 질문 목록을 먼저 삭제해 주세요.",
+                    parent=self,
+                )
+                return
+            if not messagebox.askyesno(
+                "과거 기록 보존",
+                f"{day} 날짜에는 이미 면접 기록이 있습니다.\n기록 참가자: {participants}\n\n삭제된 공통 질문 세트를 새로 저장할까요? 기존 면접 기록에 저장된 질문과 평가는 변경되지 않습니다.",
+                parent=self,
+            ):
+                return
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps({"date": day, "questions": questions}, ensure_ascii=False, indent=2), encoding="utf-8")
         if day == date.today().isoformat():
@@ -311,8 +443,7 @@ class InterviewApp(tk.Tk):
             return
         self.question_choice_map = {}
         for index, question in enumerate(self.daily_questions, start=1):
-            preview = question if len(question) <= 72 else question[:69].rstrip() + "…"
-            self.question_choice_map[f"{index:02d}. {preview}"] = question
+            self.question_choice_map[f"{index:02d}. {question}"] = question
         self.live_question_selector.configure(values=list(self.question_choice_map))
         self.live_question_choice.set("")
         self.live_question.set("")
@@ -335,20 +466,14 @@ class InterviewApp(tk.Tk):
     def _on_question_selected(self, _event: object = None) -> None:
         self._activate_question(self.live_question_choice.get())
 
-    def _next_question(self) -> None:
+    def _random_question(self) -> None:
         choices = list(self.question_choice_map)
         if not choices:
             self.live_state.configure(text="먼저 질문 준비에서 오늘의 공통 질문 30개를 저장해 주세요.")
             return
-        try:
-            current = choices.index(self.live_question_choice.get())
-        except ValueError:
-            current = -1
-        next_index = current + 1
-        if next_index >= len(choices):
-            self.live_state.configure(text="30개 질문을 모두 선택했습니다.")
-            return
-        choice = choices[next_index]
+        current = self.live_question_choice.get()
+        candidates = [choice for choice in choices if choice != current] or choices
+        choice = random.choice(candidates)
         self.live_question_choice.set(choice)
         self._activate_question(choice)
 
@@ -485,9 +610,16 @@ class InterviewApp(tk.Tk):
         self.live_question_selector = ttk.Combobox(question_picker, textvariable=self.live_question_choice, state="readonly")
         self.live_question_selector.grid(row=0, column=0, sticky="ew")
         self.live_question_selector.bind("<<ComboboxSelected>>", self._on_question_selected)
-        ttk.Button(question_picker, text="다음 질문 →", command=self._next_question).grid(row=0, column=1, padx=(8, 0))
+        ttk.Button(question_picker, text="랜덤 질문", command=self._random_question).grid(row=0, column=1, padx=(8, 0))
         self._refresh_live_question_choices()
-        ttk.Label(settings, text="면접 전에 준비한 공통 질문을 선택하거나 다음 질문 버튼을 누르세요.", style="Sub.TLabel").grid(row=3, column=1, sticky="w", pady=(0, 5))
+        self.live_question_display = ttk.Label(
+            settings,
+            textvariable=self.live_question,
+            style="Sub.TLabel",
+            justify="left",
+            wraplength=900,
+        )
+        self.live_question_display.grid(row=3, column=1, sticky="ew", pady=(2, 8))
 
         ttk.Label(settings, text="로컬 분석 모델", style="Panel.TLabel").grid(row=4, column=0, sticky="w", padx=(0, 10), pady=(8, 4))
         model_row = ttk.Frame(settings, style="Panel.TFrame")
@@ -514,7 +646,17 @@ class InterviewApp(tk.Tk):
         self.speaker_state = ttk.Label(speaker_row, text="화자 분석 결과를 기다리는 중", style="Sub.TLabel")
         self.speaker_state.grid(row=0, column=1, sticky="w", padx=10)
 
-        ttk.Label(settings, text="처음 실행 시 공개 SpeechBrain 화자 모델을 자동으로 내려받습니다. Hugging Face 토큰은 필요하지 않습니다.", style="Sub.TLabel").grid(row=7, column=1, sticky="w", pady=(0, 4))
+        ttk.Label(settings, text="예상 화자 수", style="Panel.TLabel").grid(row=7, column=0, sticky="w", padx=(0, 10), pady=5)
+        speaker_count_row = ttk.Frame(settings, style="Panel.TFrame")
+        speaker_count_row.grid(row=7, column=1, sticky="ew", pady=5)
+        self.expected_speaker_count = tk.StringVar(value="3")
+        self.expected_speaker_selector = ttk.Combobox(
+            speaker_count_row, textvariable=self.expected_speaker_count,
+            values=tuple(str(count) for count in range(1, 7)), state="readonly", width=6,
+        )
+        self.expected_speaker_selector.pack(side="left")
+        ttk.Label(speaker_count_row, text="실제 인원수에 맞추면 한 사람을 여러 화자로 나누는 오류를 줄입니다.", style="Sub.TLabel").pack(side="left", padx=(8, 0))
+        ttk.Label(settings, text="질문을 선택하면 분석이 더 정확해집니다. 면접자 화자를 지정하면 해당 발화만 분석하고, 지정 전에도 최근 대화로 분석을 시작합니다.", style="Sub.TLabel").grid(row=8, column=1, sticky="w", pady=(0, 4))
 
         controls = ttk.Frame(parent)
         controls.grid(row=3, column=0, sticky="ew", pady=(0, 12))
@@ -532,8 +674,8 @@ class InterviewApp(tk.Tk):
         parent.rowconfigure(4, weight=1)
         transcript_panel = ttk.Frame(panes, style="Panel.TFrame", padding=10)
         advice_panel = ttk.Frame(panes, style="Panel.TFrame", padding=10)
-        panes.add(transcript_panel, weight=3)
-        panes.add(advice_panel, weight=2)
+        panes.add(transcript_panel, weight=2)
+        panes.add(advice_panel, weight=3)
         ttk.Label(transcript_panel, text="실시간 전사", style="Panel.TLabel", font=("Segoe UI", 12, "bold")).pack(anchor="w", pady=(2, 8))
         transcript_tabs = ttk.Notebook(transcript_panel)
         transcript_tabs.pack(fill="both", expand=True)
@@ -547,11 +689,16 @@ class InterviewApp(tk.Tk):
         self.live_candidate_view = tk.Text(candidate_transcript_tab, wrap="word", bg=PANEL, fg=INK, relief="flat", borderwidth=0,
                                            padx=10, pady=10, font=("Segoe UI", 10), state="disabled")
         self.live_candidate_view.pack(fill="both", expand=True)
-        ttk.Label(advice_panel, text="AI 면접관 메모", style="Panel.TLabel", font=("Segoe UI", 12, "bold")).pack(anchor="w", pady=(2, 8))
+        ttk.Label(advice_panel, text="AI 면접관 메모", style="Panel.TLabel", font=("Segoe UI", 12, "bold")).pack(anchor="w", pady=(2, 2))
+        self.live_ai_state = ttk.Label(advice_panel, text="대기 중 · 녹음 시작 후 AI 상태가 여기에 표시됩니다", style="Sub.TLabel", wraplength=600)
+        self.live_ai_state.pack(anchor="w", fill="x", pady=(0, 8))
         self.live_advice_view = tk.Text(advice_panel, wrap="word", bg=PANEL, fg=INK, relief="flat", borderwidth=0,
-                                        padx=10, pady=10, font=("Segoe UI", 10), state="disabled")
-        self.live_advice_view.pack(fill="both", expand=True)
-        ttk.Label(parent, text="화자는 약 20초 구간으로 로컬 분리합니다. 감지된 화자 중 면접자를 지정하면 후보자 답변을 로컬 모델이 분석합니다.", style="Sub.TLabel").grid(row=5, column=0, sticky="w", pady=(10, 0))
+                                        padx=12, pady=12, font=("Segoe UI", 11), state="disabled")
+        advice_scrollbar = ttk.Scrollbar(advice_panel, orient="vertical", command=self.live_advice_view.yview)
+        self.live_advice_view.configure(yscrollcommand=advice_scrollbar.set)
+        self.live_advice_view.pack(side="left", fill="both", expand=True)
+        advice_scrollbar.pack(side="right", fill="y")
+        ttk.Label(parent, text="화자 분리는 추정이라 오분류될 수 있습니다. 면접자 화자를 지정하면 해당 발화를 중심으로, 지정 전에는 최근 대화 문맥으로 Ollama가 답변 메모와 꼬리질문을 생성합니다.", style="Sub.TLabel").grid(row=5, column=0, sticky="w", pady=(10, 0))
 
     def _resolve_participant_id(self, name: str) -> str:
         normalized = name.casefold()
@@ -612,6 +759,7 @@ class InterviewApp(tk.Tk):
             "date": today,
             "round_label": round_label,
             "topic": self.live_topic.get().strip(),
+            "expected_speakers": int(self.expected_speaker_count.get()),
             "question": "",
             "question_set_date": today,
             "question_set": list(self.daily_questions),
@@ -629,6 +777,7 @@ class InterviewApp(tk.Tk):
         self.speaker_selector.configure(values=())
         self.speaker_state.configure(text="화자 분석 결과를 기다리는 중")
         self.live_assistance = []
+        self.analysis_pending_chunks = []
         self.analysis_last_chunk = 0
         self.questions_asked = []
         self.live_question_choice.set("")
@@ -636,10 +785,16 @@ class InterviewApp(tk.Tk):
         self._render_live_transcript()
         self.live_state.configure(text="마이크 연결과 로컬 음성 인식 모델을 준비하고 있습니다…")
         self._put_text(self.live_advice_view, "전사 내용이 쌓이면 로컬 AI가 확인할 주장과 꼬리질문을 제안합니다.")
+        self.live_ai_state.configure(text="전사 대기 중 · Ollama 로컬 모델로 분석합니다")
         self.live_state.configure(text="준비 중")
         self.start_live_button.configure(state="disabled")
         self.stop_live_button.configure(state="normal")
-        self.live_capture = LiveAudioCapture(audio_path, model_size="base")
+        asr_prompt = (
+            f"한국어 게임 클라이언트 개발 면접. 지원자 이름은 {self.live_session['participant_name']}. "
+            "기술 용어: 게임 클라이언트, 게임 엔진, C++, C#, Unity, Unreal Engine, 렌더링, 셰이더, "
+            "프레임, 최적화, 메모리 관리, 자료구조, 알고리즘, 네트워크, 멀티스레드, 객체지향, 디버깅, 포트폴리오."
+        )
+        self.live_capture = LiveAudioCapture(audio_path, model_size="small", initial_prompt=asr_prompt)
         self.live_capture.start()
 
     def _stop_live(self) -> None:
@@ -679,28 +834,43 @@ class InterviewApp(tk.Tk):
                     self.diarization_turns.extend(event.get("turns", []))
                     self.diarization_turns.sort(key=lambda turn: (float(turn["start"]), float(turn["end"])))
                     self._apply_speaker_turns()
-                    self.speaker_state.configure(text=f"로컬 화자 분석 완료 · {len(self.speaker_selector.cget('values'))}명 감지")
+                    speaker_count = len(self.speaker_selector.cget("values"))
+                    self.speaker_state.configure(text=f"로컬 화자 분석 완료 · {speaker_count}명 감지")
+                    if not self.candidate_speaker:
+                        self.live_state.configure(text=f"화자 {speaker_count}명 감지 · 면접자 화자를 지정하면 후보자 발화만 분석합니다. 미지정 상태도 최근 대화 분석을 계속합니다.")
                     self._save_live_session()
                     self._request_live_analysis(manual=False)
                     if self.pending_diarization:
                         self._request_speaker_diarization(*self.pending_diarization.pop(0))
                 elif kind == "diarization_error":
                     self.diarization_active = False
-                    self.speaker_state.configure(text=str(event.get("message", "화자 분석에 실패했습니다.")))
+                    error_message = str(event.get("message", "화자 분석에 실패했습니다."))
+                    self.speaker_state.configure(text=error_message)
+                    self.live_state.configure(text=f"화자 분리 실패 · AI 후보자 분석은 시작되지 않았습니다: {error_message}")
                     self.pending_diarization.clear()
                 elif kind == "ai_result":
                     self.analysis_active = False
                     result = event.get("result", {})
                     excerpt = str(event.get("excerpt", ""))
+                    for chunk in self.analysis_pending_chunks:
+                        chunk["analyzed"] = True
+                    self.analysis_pending_chunks = []
                     if isinstance(result, dict):
                         self.live_assistance.append((excerpt, result))
                         self._render_live_assistance()
                         self._save_live_assistance()
                     self.live_state.configure(text="AI 참고 의견을 받았습니다 · 최종 판단은 면접관이 확인하세요")
+                    self.live_ai_state.configure(text="분석 완료 · 최신 의견을 패널 맨 위에 표시했습니다")
                     self.analyze_live_button.configure(state="normal")
+                    self._request_live_analysis(manual=False)
                 elif kind == "ai_error":
                     self.analysis_active = False
-                    self.live_state.configure(text=str(event.get("message", "AI 분석에 실패했습니다.")))
+                    for chunk in self.analysis_pending_chunks:
+                        chunk["analyzed"] = False
+                    self.analysis_pending_chunks = []
+                    error_message = str(event.get("message", "AI 분석에 실패했습니다."))
+                    self.live_state.configure(text=error_message)
+                    self.live_ai_state.configure(text=f"AI 분석 실패 · {error_message}")
                     self.analyze_live_button.configure(state="normal")
                 elif kind == "error":
                     self.live_state.configure(text=str(event.get("message", "실시간 처리 오류")))
@@ -758,10 +928,11 @@ class InterviewApp(tk.Tk):
             return
         self.diarization_active = True
         self.speaker_state.configure(text=f"{int(end_seconds)}초까지 화자 구분 중…")
+        expected_speakers = int(self.live_session.get("expected_speakers", 2)) if self.live_session else 2
         event_queue = self.live_capture.events if self.live_capture else None
         def run_diarization() -> None:
             try:
-                turns = diarize_audio_samples(audio, 16_000, start_seconds)
+                turns = diarize_audio_samples(audio, 16_000, start_seconds, max_speakers=expected_speakers)
                 if event_queue:
                     event_queue.put({"type": "diarization_result", "turns": turns, "end_seconds": end_seconds, "final": final})
             except Exception as error:
@@ -798,42 +969,55 @@ class InterviewApp(tk.Tk):
         self._apply_speaker_turns()
         if self.candidate_speaker:
             self.speaker_state.configure(text=f"{self.candidate_speaker}를 면접자로 지정했습니다")
+            self.live_state.configure(text="면접자를 지정했습니다 · 답변 전사가 모이면 AI 메모가 자동으로 생성됩니다.")
             self._request_live_analysis(manual=False)
             self._save_live_session()
+        else:
+            self.live_state.configure(text="면접자 화자를 지정하지 않아도 최근 대화 분석을 진행합니다.")
 
     def _request_live_analysis(self, manual: bool) -> None:
         if not self.live_chunks:
             if manual:
                 self.live_state.configure(text="먼저 답변 전사를 받아야 분석할 수 있습니다.")
             return
-        if not self.candidate_speaker:
-            if manual:
-                self.live_state.configure(text="화자 분석이 끝난 뒤 면접자 화자를 선택해 주세요. 면접자 발화만 분석합니다.")
-            return
         if self.analysis_active:
             return
         model = self.local_model.get().strip()
         if not model:
-            if manual:
-                self.live_state.configure(text="로컬 분석 모델을 선택하거나 모델 이름을 입력해 주세요.")
+            message = "로컬 분석 모델이 없습니다. Ollama에서 로컬 모델을 내려받은 뒤 ‘설치된 모델 새로고침’을 눌러 주세요."
+            self.live_state.configure(text=message)
+            self.live_ai_state.configure(text=f"AI 분석 대기: {message}")
             return
-        candidate_chunks = [chunk for chunk in self.live_chunks if chunk.get("speaker") == self.candidate_speaker]
-        selected = candidate_chunks[-3:] if manual else [chunk for chunk in candidate_chunks if not chunk.get("analyzed")]
-        if not manual and len(selected) < 2:
+        if self.candidate_speaker:
+            candidate_chunks = [chunk for chunk in self.live_chunks if chunk.get("speaker") == self.candidate_speaker]
+            selected = candidate_chunks[-3:] if manual else [chunk for chunk in candidate_chunks if not chunk.get("analyzed")]
+        else:
+            # 화자 선택/분리가 지연되더라도 면접 보조가 멈추지 않도록 최근 대화를 분석합니다.
+            # 로컬 모델에게 면접관 발화와 후보자 답변을 문맥으로 구분하도록 지시합니다.
+            selected = self.live_chunks[-4:] if manual else [chunk for chunk in self.live_chunks if not chunk.get("analyzed")][-4:]
+        if not selected:
+            if manual:
+                self.live_state.configure(text="분석할 면접자 전사를 기다리는 중입니다.")
             return
         excerpt = "\n".join(
-            f"[{int(float(chunk['start']) // 60):02d}:{int(float(chunk['start']) % 60):02d}] {chunk['text']}"
+            f"[{int(float(chunk['start']) // 60):02d}:{int(float(chunk['start']) % 60):02d}] [{chunk.get('speaker') or '화자 미확정'}] {chunk['text']}"
             for chunk in selected
         )
-        if len(excerpt) < 24:
+        transcript_length = sum(len(str(chunk.get("text", ""))) for chunk in selected)
+        if transcript_length < 24:
+            self.live_ai_state.configure(text=f"전사 수집 중 · {transcript_length}/24자")
             if manual:
                 self.live_state.configure(text="분석할 전사 내용이 조금 더 필요합니다.")
+            else:
+                self.live_state.configure(text="전사 문장이 24자 이상 쌓이면 AI 분석을 시작합니다.")
             return
-        for chunk in selected:
+        self.analysis_pending_chunks = list(selected)
+        for chunk in self.analysis_pending_chunks:
             chunk["analyzed"] = True
         self.analysis_active = True
         self.analyze_live_button.configure(state="disabled")
         self.live_state.configure(text=f"{model} 로컬 모델이 답변을 분석 중입니다…")
+        self.live_ai_state.configure(text=f"분석 중 · {model} · 로컬 모델 응답을 기다리는 중")
         question = self.live_question.get().strip()
         if self.live_session:
             self.live_session["question"] = question
@@ -842,6 +1026,7 @@ class InterviewApp(tk.Tk):
         def run_analysis() -> None:
             try:
                 result = analyze_answer(question, excerpt, model)
+                result["_question"] = question
                 if event_queue:
                     event_queue.put({"type": "ai_result", "result": result, "excerpt": excerpt})
                 else:
@@ -857,39 +1042,87 @@ class InterviewApp(tk.Tk):
 
     def _accept_standalone_analysis(self, excerpt: str, result: dict[str, object]) -> None:
         self.analysis_active = False
+        for chunk in self.analysis_pending_chunks:
+            chunk["analyzed"] = True
+        self.analysis_pending_chunks = []
         self.live_assistance.append((excerpt, result))
         self._render_live_assistance()
         self._save_live_assistance()
         self.live_state.configure(text="AI 참고 의견을 받았습니다 · 최종 판단은 면접관이 확인하세요")
+        self.live_ai_state.configure(text="분석 완료 · 최신 의견을 패널 맨 위에 표시했습니다")
         self.analyze_live_button.configure(state="normal")
 
     def _standalone_analysis_error(self, message: str) -> None:
         self.analysis_active = False
+        for chunk in self.analysis_pending_chunks:
+            chunk["analyzed"] = False
+        self.analysis_pending_chunks = []
         self.live_state.configure(text=message)
+        self.live_ai_state.configure(text=f"AI 분석 실패 · {message}")
         self.analyze_live_button.configure(state="normal")
 
     def _render_live_assistance(self) -> None:
-        sections = []
-        for index, (excerpt, result) in enumerate(self.live_assistance, start=1):
-            lines = [f"분석 {index} · 신뢰도 참고: {result.get('confidence', '미표기')}",
-                     f"요약: {result.get('answer_summary', '요약 없음')}", "확인할 주장:"]
+        view = self.live_advice_view
+        view.configure(state="normal")
+        view.delete("1.0", tk.END)
+        view.tag_configure("analysis_title", foreground=ACCENT, font=("Segoe UI", 11, "bold"), spacing1=10, spacing3=5)
+        view.tag_configure("section_title", foreground=INK, font=("Segoe UI", 10, "bold"), spacing1=7, spacing3=2)
+        view.tag_configure("keyword", foreground="#174ea6", background="#eaf2ff", font=("Segoe UI", 11, "bold"), lmargin1=4, lmargin2=4, spacing1=3, spacing3=7)
+        view.tag_configure("followup", foreground="#147a45", background="#eef9f1", lmargin1=8, lmargin2=8, spacing1=2, spacing3=3)
+        view.tag_configure("muted", foreground=MUTED)
+
+        if not self.live_assistance:
+            view.insert(tk.END, "아직 AI 의견이 없습니다. 전사 내용이 모이면 요약과 꼬리질문이 표시됩니다.")
+        for index, (excerpt, result) in reversed(list(enumerate(self.live_assistance, start=1))):
+            times = re.findall(r"\[(\d{2}:\d{2})\]", excerpt)
+            time_label = f"{times[0]}–{times[-1]}" if times else "시간 미확인"
+            question = str(result.get("_question", "")).strip() or "대화에서 질문 문맥 추정"
+            view.insert(tk.END, f"분석 {index}  ·  {time_label}  ·  신뢰도 {result.get('confidence', '미표기')}\n", "analysis_title")
+            view.insert(tk.END, f"질문: {question}\n", "muted")
+            keywords = result.get("keywords", [])
+            if isinstance(keywords, list):
+                keywords = [str(keyword).strip() for keyword in keywords if str(keyword).strip()]
+            else:
+                keywords = []
+            view.insert(tk.END, "키워드  ", "section_title")
+            view.insert(tk.END, "  ·  ".join(keywords) if keywords else "추출된 키워드 없음", "keyword" if keywords else "muted")
+            view.insert(tk.END, "\n")
+            view.insert(tk.END, "핵심 요약\n", "section_title")
+            view.insert(tk.END, f"{result.get('answer_summary', '요약 없음')}\n")
+
+            view.insert(tk.END, "답변에서 확인할 주장\n", "section_title")
             claims = result.get("claims", [])
             if isinstance(claims, list) and claims:
                 for claim in claims:
                     if isinstance(claim, dict):
-                        lines.append(f"• {claim.get('assessment', '검토 필요')} — {claim.get('claim', '')}\n  {claim.get('reason', '')}")
+                        assessment = str(claim.get("assessment", "검토 필요"))
+                        statement = str(claim.get("claim", ""))
+                        reason = str(claim.get("reason", ""))
+                        view.insert(tk.END, f"• {assessment}  |  {statement}\n")
+                        if reason:
+                            view.insert(tk.END, f"  근거: {reason}\n", "muted")
             else:
-                lines.append("• 전사에서 분명한 답변 주장을 구분하지 못했습니다.")
-            lines.append("추천 꼬리질문:")
+                view.insert(tk.END, "• 뚜렷한 주장을 찾지 못했습니다. 전사 문장을 확인해 주세요.\n", "muted")
+
+            view.insert(tk.END, "바로 이어서 물어볼 꼬리질문\n", "section_title")
             followups = result.get("follow_up_questions", [])
-            lines.extend(f"• {question}" for question in followups if isinstance(question, str))
-            lines.append("추가 확인:")
+            if isinstance(followups, list) and followups:
+                for question_index, followup in enumerate(followups, start=1):
+                    if isinstance(followup, str) and followup.strip():
+                        view.insert(tk.END, f"{question_index}. {followup.strip()}\n", "followup")
+            else:
+                view.insert(tk.END, "추천 질문이 없습니다.\n", "muted")
+
             checks = result.get("what_to_verify", [])
-            lines.extend(f"• {item}" for item in checks if isinstance(item, str))
-            lines.extend(["전사 근거:", excerpt, "─" * 32])
-            sections.append("\n".join(lines))
-        self._put_text(self.live_advice_view, "\n\n".join(sections) or "아직 AI 의견이 없습니다.")
-        self.live_advice_view.yview_moveto(1.0)
+            if isinstance(checks, list) and checks:
+                view.insert(tk.END, "추가로 확인할 점\n", "section_title")
+                for item in checks:
+                    if isinstance(item, str) and item.strip():
+                        view.insert(tk.END, f"• {item.strip()}\n")
+            view.insert(tk.END, "\n────────────────────────\n", "muted")
+
+        view.configure(state="disabled")
+        view.yview_moveto(0.0)
 
     def _save_live_session(self) -> None:
         session = self.live_session
@@ -995,7 +1228,14 @@ class InterviewApp(tk.Tk):
         if not self.live_assistance:
             sections.extend(["로컬 분석 결과가 아직 없습니다. Ollama 실행 여부와 모델 설치를 확인하세요.", ""])
         for index, (excerpt, result) in enumerate(self.live_assistance, start=1):
-            sections.extend([f"## 분석 {index}", "", f"질문 맥락: {session.get('question') or '미입력'}", "", f"요약: {result.get('answer_summary', '')}", "", "### 확인할 주장", ""])
+            times = re.findall(r"\[(\d{2}:\d{2})\]", excerpt)
+            time_label = f"{times[0]}–{times[-1]}" if times else "시간 미확인"
+            sections.extend([
+                f"## 분석 {index} · {time_label}", "",
+                f"질문 맥락: {result.get('_question') or '대화에서 자동 추정'}", "",
+                f"신뢰도 참고: {result.get('confidence', '미표기')}", "",
+                f"요약: {result.get('answer_summary', '')}", "", "### 확인할 주장", "",
+            ])
             claims = result.get("claims", [])
             if isinstance(claims, list):
                 for claim in claims:

@@ -1,0 +1,272 @@
+[
+  {
+    "start": 0.0,
+    "end": 5.0,
+    "speaker": "SPEAKER_00"
+  },
+  {
+    "start": 5.0,
+    "end": 20.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 20.0,
+    "end": 25.0,
+    "speaker": "SPEAKER_02"
+  },
+  {
+    "start": 25.0,
+    "end": 30.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 45.0,
+    "end": 60.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 65.0,
+    "end": 70.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 75.0,
+    "end": 80.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 85.0,
+    "end": 90.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 90.0,
+    "end": 95.0,
+    "speaker": "SPEAKER_02"
+  },
+  {
+    "start": 95.0,
+    "end": 100.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 100.0,
+    "end": 105.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 110.0,
+    "end": 120.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 120.0,
+    "end": 140.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 140.0,
+    "end": 155.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 160.0,
+    "end": 170.0,
+    "speaker": "SPEAKER_02"
+  },
+  {
+    "start": 175.0,
+    "end": 180.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 180.0,
+    "end": 200.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 200.0,
+    "end": 210.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 210.0,
+    "end": 215.0,
+    "speaker": "SPEAKER_00"
+  },
+  {
+    "start": 215.0,
+    "end": 220.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 220.0,
+    "end": 230.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 235.0,
+    "end": 240.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 240.0,
+    "end": 255.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 255.0,
+    "end": 260.0,
+    "speaker": "SPEAKER_02"
+  },
+  {
+    "start": 260.0,
+    "end": 270.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 280.0,
+    "end": 285.0,
+    "speaker": "SPEAKER_02"
+  },
+  {
+    "start": 285.0,
+    "end": 300.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 300.0,
+    "end": 320.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 320.0,
+    "end": 340.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 340.0,
+    "end": 350.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 350.0,
+    "end": 355.0,
+    "speaker": "SPEAKER_02"
+  },
+  {
+    "start": 365.0,
+    "end": 370.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 375.0,
+    "end": 380.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 380.0,
+    "end": 385.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 390.0,
+    "end": 400.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 400.0,
+    "end": 410.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 415.0,
+    "end": 420.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 420.0,
+    "end": 430.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 445.0,
+    "end": 450.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 450.0,
+    "end": 455.0,
+    "speaker": "SPEAKER_00"
+  },
+  {
+    "start": 455.0,
+    "end": 460.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 460.0,
+    "end": 480.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 490.0,
+    "end": 500.0,
+    "speaker": "SPEAKER_00"
+  },
+  {
+    "start": 505.0,
+    "end": 520.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 525.0,
+    "end": 530.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 540.0,
+    "end": 545.0,
+    "speaker": "SPEAKER_02"
+  },
+  {
+    "start": 545.0,
+    "end": 560.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 560.0,
+    "end": 580.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 580.0,
+    "end": 595.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 595.0,
+    "end": 600.0,
+    "speaker": "SPEAKER_00"
+  },
+  {
+    "start": 600.0,
+    "end": 605.0,
+    "speaker": "SPEAKER_00"
+  },
+  {
+    "start": 610.0,
+    "end": 620.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 620.0,
+    "end": 640.0,
+    "speaker": "SPEAKER_01"
+  },
+  {
+    "start": 640.0,
+    "end": 645.1,
+    "speaker": "SPEAKER_00"
+  }
+]

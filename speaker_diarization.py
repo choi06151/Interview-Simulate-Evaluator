@@ -2,12 +2,14 @@
 
 from __future__ import annotations
 
+import contextlib
+import io
 import threading
 from pathlib import Path
 from typing import Any
 
-_SAMPLE_SECONDS = 3.0
-_MIN_SAMPLE_SECONDS = 1.8
+_SAMPLE_SECONDS = 5.0
+_MIN_SAMPLE_SECONDS = 4.0
 _MATCH_THRESHOLD = 0.48
 _MAX_SPEAKERS = 6
 _MODEL: Any = None
@@ -32,21 +34,31 @@ def _speaker_model() -> Any:
         if _MODEL is None:
             try:
                 from speechbrain.inference.speaker import SpeakerRecognition
+                from speechbrain.utils.fetching import LocalStrategy
             except ImportError as error:
                 raise RuntimeError(
                     "로컬 화자 분리 패키지가 없습니다. 실시간 기능 설치 파일을 다시 실행해 주세요."
                 ) from error
+            stdout_capture, stderr_capture = io.StringIO(), io.StringIO()
             try:
-                model_dir = Path(__file__).resolve().parent / "models" / "speechbrain-spkrec-ecapa-voxceleb"
-                source = str(model_dir) if (model_dir / "hyperparams.yaml").is_file() else "speechbrain/spkrec-ecapa-voxceleb"
-                _MODEL = SpeakerRecognition.from_hparams(
-                    source=source,
-                    savedir=str(model_dir),
-                    run_opts={"device": "cpu"},
-                )
+                # 실행.bat은 pythonw.exe를 사용하므로 콘솔 출력 스트림이 None일 수 있습니다.
+                # 첫 모델 다운로드 중 tqdm/Hugging Face가 None.write()를 호출하지 않도록
+                # 이 구간의 출력을 임시로 받아 둡니다.
+                with contextlib.redirect_stdout(stdout_capture), contextlib.redirect_stderr(stderr_capture):
+                    model_dir = Path(__file__).resolve().parent / "models" / "speechbrain-spkrec-ecapa-voxceleb"
+                    source = str(model_dir) if (model_dir / "hyperparams.yaml").is_file() else "speechbrain/spkrec-ecapa-voxceleb"
+                    _MODEL = SpeakerRecognition.from_hparams(
+                        source=source,
+                        savedir=str(model_dir),
+                        local_strategy=LocalStrategy.COPY,
+                        run_opts={"device": "cpu"},
+                    )
             except Exception as error:
+                details = "\n".join(
+                    part.strip() for part in (str(error), stderr_capture.getvalue()[-1200:], stdout_capture.getvalue()[-1200:]) if part.strip()
+                )
                 raise RuntimeError(
-                    f"공개 화자 임베딩 모델을 내려받거나 불러오지 못했습니다: {error}"
+                    f"공개 화자 임베딩 모델을 내려받거나 불러오지 못했습니다: {details}"
                 ) from error
     return _MODEL
 

@@ -12,11 +12,12 @@ from typing import Any
 class LiveAudioCapture:
     """Capture mono audio and emit local, timestamped transcript and diarization snapshots."""
 
-    def __init__(self, output_path: Path, model_size: str = "base", chunk_seconds: int = 8,
-                 diarization_interval: int = 20) -> None:
+    def __init__(self, output_path: Path, model_size: str = "small", chunk_seconds: int = 8,
+                 diarization_interval: int = 20, initial_prompt: str = "") -> None:
         self.output_path = output_path
         self.model_size = model_size
         self.chunk_seconds = chunk_seconds
+        self.initial_prompt = initial_prompt.strip()
         self.diarization_interval = diarization_interval
         self.events: queue.Queue[dict[str, Any]] = queue.Queue()
         self._audio_blocks: queue.Queue[Any] = queue.Queue()
@@ -124,10 +125,11 @@ class LiveAudioCapture:
                 audio,
                 language="ko",
                 task="transcribe",
-                beam_size=1,
+                beam_size=5,
                 temperature=0,
                 vad_filter=True,
                 condition_on_previous_text=False,
+                initial_prompt=self.initial_prompt or None,
                 without_timestamps=False,
             )
             for segment in segments:
